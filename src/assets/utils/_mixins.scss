@@ -1,0 +1,46 @@
+@import 'breakpoints';
+
+// breakpoint with a dynamic parameter
+@mixin respond-to($breakpoint) {
+  @media (max-width: map-get($breakpoints, $breakpoint)) {
+    @content;
+  }
+}
+
+@mixin lines-div {
+  display: flex;
+  flex-direction: column;
+  margin: 1rem 1rem;
+}
+
+@mixin lines-base {
+  width: 4rem;
+  height: 0.3rem;
+  margin: 4px 0;
+}
+
+/*
+@mixin respond-to($breakpoint) {
+  @if $breakpoint == xs {
+    @media (max-width: $breakpoint-xs) {
+      @content;
+    }
+  } @else if $breakpoint == sm {
+    @media (max-width: $breakpoint-sm) {
+      @content;
+    }
+  } @else if $breakpoint == md {
+    @media (max-width: $breakpoint-md) {
+      @content;
+    }
+  } @else if $breakpoint == lg {
+    @media (max-width: $breakpoint-lg) {
+      @content;
+    }
+  } @else if $breakpoint == xl {
+    @media (max-width: $breakpoint-xl) {
+      @content;
+    }
+  }
+}
+*/

@@ -1,0 +1,12 @@
+$enable-scroll-snap: false;
+
+// Use the variable to conditionally apply the scroll snap styles
+@if $enable-scroll-snap {
+  html {
+    scroll-snap-type: y mandatory;
+    scroll-behavior: smooth;
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+}

@@ -1,0 +1,29 @@
+/* 
+1 rem = 1em = 16px 
+px/16px = em
+*/
+
+// MOBILE
+$breakpoint-xs: 30em; //480px
+$breakpoint-sm: 37.5em; //600px
+// TABLETS
+$breakpoint-tablet-sm: 48em; //768px
+$breakpoint-tablet-lg: 64em; //1024px
+// SM DESK (1025-1280)
+$breakpoint-md: 80em;
+/*-----------------------------*/
+// L DESK (1281-1440)
+$breakpoint-lg: 90em;
+// XL SCREENS (1441+)
+$breakpoint-xl: 112.5em; //1800px
+
+// BREAKPOINTS MAP
+$breakpoints: (
+  xs: $breakpoint-xs,
+  sm: $breakpoint-sm,
+  tsm: $breakpoint-tablet-sm,
+  tlg: $breakpoint-tablet-lg,
+  md: $breakpoint-md,
+  lg: $breakpoint-lg,
+  xl: $breakpoint-xl
+);

@@ -1,0 +1,168 @@
+.btn-primary {
+  position: relative;
+  display: inline-flex;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: all 0.3s;
+
+  .text,
+  .icon {
+    vertical-align: middle;
+  }
+
+  .text {
+    color: white;
+    text-transform: uppercase;
+    font-size: $font-size-smaller;
+    padding: -50px 5px;
+    text-decoration: none;
+  }
+
+  .icon {
+    padding-left: 10px;
+    font-size: $font-size-small;
+    color: $color-white;
+    transition: transform 0.4s ease-in-out;
+  }
+
+  &:hover {
+    .icon {
+      transform: translate(10px);
+    }
+    .text {
+      z-index: 1;
+    }
+  }
+}
+
+.btn-primary--forward {
+  background: $color-primary-darker;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 10px;
+    background: $color-secondary;
+  }
+}
+
+.btn-primary--sweep {
+  background: $color-primary-darker;
+  transform: perspective(1px) translateZ(0);
+  transition: color 0.3s;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    background: $color-secondary;
+    transform: scaleX(0);
+    transform-origin: 0 50%;
+    transition: transform 0.3s ease-out;
+  }
+
+  &:hover::before {
+    transform: scaleX(1);
+  }
+}
+
+.btn-primary--sweep-variant-1 {
+  background: transparent;
+  transform: perspective(1px) translateZ(0);
+  transition: color 0.3s;
+  border: 1px solid $color-primary;
+
+  .text {
+    color: $color-primary-darker;
+    text-transform: uppercase;
+  }
+
+  .icon {
+    padding-left: 10px;
+    font-size: $font-size-small;
+    color: $color-primary;
+    transition: transform 0.4s ease-in-out;
+  }
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    background: $color-primary;
+    transform: scaleX(0);
+    transform-origin: 0 50%;
+    transition: transform 0.3s ease-out;
+  }
+
+  &:hover {
+    &::before {
+      transform: scaleX(1);
+    }
+
+    .text {
+      color: $color-white;
+    }
+
+    .icon {
+      color: $color-white;
+    }
+  }
+}
+.btn-primary--sweep-variant-2 {
+  background: transparent;
+  transform: perspective(1px) translateZ(0);
+  transition: color 0.3s;
+  border: 1px solid $color-secondary;
+
+  .text {
+    color: $color-secondary-darker;
+    text-transform: uppercase;
+  }
+
+  .icon {
+    padding-left: 10px;
+    font-size: $font-size-small;
+    color: $color-secondary;
+    transition: transform 0.4s ease-in-out;
+  }
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    background: $color-secondary;
+    transform: scaleX(0);
+    transform-origin: 0 50%;
+    transition: transform 0.3s ease-out;
+  }
+
+  &:hover {
+    &::before {
+      transform: scaleX(1);
+    }
+
+    .text {
+      color: $color-white;
+    }
+
+    .icon {
+      color: $color-white;
+    }
+  }
+}

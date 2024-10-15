@@ -1,0 +1,37 @@
+{
+  "name": "devian",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs --fix --ignore-path .gitignore",
+    "format": "prettier --write src/"
+  },
+  "dependencies": {
+    "@emailjs/browser": "^4.4.1",
+    "@primevue/themes": "^4.1.0",
+    "@tsparticles/vue3": "^3.0.1",
+    "@vueuse/core": "^11.1.0",
+    "@vueuse/motion": "^2.2.5",
+    "primevue": "^4.1.0",
+    "tsparticles": "^3.5.0",
+    "vue": "^3.4.29",
+    "vue-router": "^4.4.5",
+    "vue-scroll-snap": "^0.1.11",
+    "vue3-carousel": "^0.3.4"
+  },
+  "devDependencies": {
+    "@rushstack/eslint-patch": "^1.8.0",
+    "@vitejs/plugin-vue": "^5.0.5",
+    "@vue/eslint-config-prettier": "^9.0.0",
+    "eslint": "^8.57.0",
+    "eslint-plugin-vue": "^9.23.0",
+    "prettier": "^3.2.5",
+    "sass": "^1.79.4",
+    "sass-embedded": "^1.79.4",
+    "vite": "^5.3.1"
+  }
+}

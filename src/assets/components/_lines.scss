@@ -1,0 +1,84 @@
+.lines-wave {
+  @include lines-div;
+
+  .line {
+    @include lines-base;
+
+    transition: all 0.3s ease;
+    animation: wave 3s ease-in-out infinite;
+
+    &:nth-child(1) {
+      margin-left: 2rem;
+      background: $color-pink;
+    }
+    &:nth-child(2) {
+      margin-top: 0.7rem;
+
+      background: $sky-blue-dark;
+    }
+  }
+}
+
+.lines-pulse-color {
+  @include lines-div;
+
+  .line {
+    @include lines-base;
+    transition: all 0.3s ease;
+
+    &:nth-child(1) {
+      margin-left: 2rem;
+      background: $color-primary;
+      animation: pulse-color--1 3s ease-in-out infinite;
+    }
+    &:nth-child(2) {
+      margin-top: 0.7rem;
+      background: $color-secondary;
+      animation: pulse-color--2 3s ease-in-out infinite;
+    }
+  }
+}
+
+.lines-grow {
+  @include lines-div;
+  margin: 1rem 0.1rem;
+
+  .line {
+    @include lines-base;
+
+    transition: all 0.3s ease;
+    animation: grow 3s ease-in-out infinite;
+
+    &:nth-child(1) {
+      margin-left: 2rem;
+      background: $color-secondary;
+    }
+    &:nth-child(2) {
+      margin-top: 0.7rem;
+
+      background: $color-primary;
+    }
+  }
+}
+
+.lines-wave-2 {
+  @include lines-div;
+  margin: 1rem 0.1rem;
+
+  .line {
+    @include lines-base;
+
+    transition: all 0.3s ease;
+    animation: wave 3s ease-in-out infinite;
+
+    &:nth-child(1) {
+      margin-left: 2rem;
+      background: $color-secondary;
+    }
+    &:nth-child(2) {
+      margin-top: 0.7rem;
+
+      background: $color-primary;
+    }
+  }
+}

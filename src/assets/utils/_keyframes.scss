@@ -1,0 +1,147 @@
+@keyframes pulse-color {
+  0% {
+    background-color: $color-pink;
+    transform: scaleX(1);
+  }
+  50% {
+    background-color: $sky-blue-dark;
+    transform: scaleX(1.2);
+  }
+  100% {
+    background-color: $color-pink;
+    transform: scaleX(1);
+  }
+}
+
+@keyframes pulse-color--1 {
+  0% {
+    background-color: $color-secondary;
+    transform: scaleX(1);
+  }
+  50% {
+    background-color: $color-pink;
+    transform: scaleX(1.2);
+  }
+  100% {
+    background-color: $color-secondary;
+    transform: scaleX(1);
+  }
+}
+
+@keyframes pulse-color--2 {
+  0% {
+    background-color: $color-primary;
+    transform: scaleX(1);
+  }
+  50% {
+    background-color: $color-secondary;
+    transform: scaleX(1.2);
+  }
+  100% {
+    background-color: $color-primary;
+    transform: scaleX(1);
+  }
+}
+//
+@keyframes pulse {
+  0% {
+    transform: scaleX(1);
+  }
+  50% {
+    transform: scaleX(1.2);
+  }
+  100% {
+    transform: scaleX(1);
+  }
+}
+//
+
+@keyframes wave {
+  0% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  50% {
+    transform: translateX(10px);
+    opacity: 0.5;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+//
+
+@keyframes slide {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+//
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+//
+
+@keyframes typewriter {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 4rem;
+  }
+}
+//
+
+@keyframes bounce {
+  0% {
+    transform: translateY(0) scale(1);
+  }
+  50% {
+    transform: translateY(-10px) scale(1.2);
+  }
+  100% {
+    transform: translateY(0) scale(1);
+  }
+}
+//
+
+@keyframes grow {
+  0% {
+    width: 0;
+  }
+
+  50% {
+    width: 3.5rem;
+  }
+  100% {
+    width: 0;
+  }
+}
+
+@keyframes autoRunLeft {
+  from {
+    left: 100%;
+  }
+  to {
+    left: calc(100% * -1);
+  }
+}
+
+@keyframes autoRunRight {
+  from {
+    right: 100%;
+  }
+  to {
+    right: calc(100% * -1);
+  }
+}
