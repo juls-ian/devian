@@ -51,7 +51,6 @@ import PatternsVariantRight from '@/components/shapes/PatternsVariantRight.vue';
   }
 
   @include respond-to(xs) {
-    flex-direction: column-reverse;
   }
 
   &__pattern {
@@ -108,7 +107,7 @@ import PatternsVariantRight from '@/components/shapes/PatternsVariantRight.vue';
     }
 
     @include respond-to(xs) {
-      margin: 0 0;
+      margin: -5rem 0;
     }
   }
 
