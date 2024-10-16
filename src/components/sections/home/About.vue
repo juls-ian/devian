@@ -22,10 +22,10 @@ import Patterns from '@/components/shapes/Patterns.vue';
           Crafting web solutions with a strong emphasis on seamless user experience, security, and
           adherence to best practices with front-end and back-end prowess.
         </h5>
-        <a class="about__button btn-primary btn-primary--sweep">
+        <RouterLink to="about" class="about__button btn-primary btn-primary--sweep">
           <span class="text">Get to know me</span>
           <span class="icon"><IconArrowRight /></span>
-        </a>
+        </RouterLink>
       </div>
     </div>
 
@@ -47,6 +47,10 @@ import Patterns from '@/components/shapes/Patterns.vue';
   align-items: center;
   position: relative;
   height: 100vh;
+
+  &__button {
+    text-decoration: none;
+  }
 
   @include respond-to(sm) {
     flex-direction: column;
