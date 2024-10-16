@@ -75,16 +75,6 @@ const currentYear = date.getFullYear();
     padding: 5rem 2rem;
   }
 
-  &__button {
-    position: absolute;
-    bottom: 5rem;
-    right: 6rem;
-
-    @include respond-to(sm) {
-      bottom: 1rem;
-    }
-  }
-
   &__content {
     display: flex;
     flex-direction: column;
@@ -109,8 +99,8 @@ const currentYear = date.getFullYear();
     padding-bottom: 9rem;
 
     @include respond-to(sm) {
-      gap: 0 6rem;
-      padding-bottom: 5rem;
+      flex-direction: column;
+      padding-bottom: 3rem;
     }
 
     a {
@@ -158,6 +148,7 @@ const currentYear = date.getFullYear();
 
     @include respond-to(sm) {
       padding-top: 2rem;
+      flex-direction: column;
     }
 
     p {
@@ -165,6 +156,10 @@ const currentYear = date.getFullYear();
       font-family: $font-poppins;
       color: $color-secondary;
       font-weight: 400;
+
+      @include respond-to(sm) {
+        font-size: $font-size-smaller;
+      }
     }
   }
 
@@ -174,6 +169,7 @@ const currentYear = date.getFullYear();
       color: $color-primary;
       cursor: pointer;
       @include respond-to(sm) {
+        margin-top: 1rem;
         margin-right: 0.5rem;
       }
     }
@@ -184,14 +180,21 @@ const currentYear = date.getFullYear();
     }
   }
 
-  .footer__inspiration {
+  &__inspiration {
     font-size: $font-size-smallest;
     font-family: $font-poppins;
     color: $color-secondary;
     font-weight: 300;
+  }
+
+  &__button {
+    position: absolute;
+    bottom: 5rem;
+    right: 6rem;
 
     @include respond-to(sm) {
-      font-weight: 200;
+      bottom: 1rem;
+      right: 2rem;
     }
   }
 }

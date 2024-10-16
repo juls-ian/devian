@@ -13,20 +13,26 @@ IconArrowRight;
           <p class="pursuits__description pursuits__description--career">
             Web apps, experimental, and personal projects
           </p>
-          <a class="pursuits__button btn-primary btn-primary--sweep-variant-1">
-            <RouterLink class="text" to="projects">See my works</RouterLink>
+          <RouterLink
+            to="projects"
+            class="pursuits__button btn-primary btn-primary--sweep-variant-1"
+          >
+            <span class="text" to="projects">See my works</span>
             <span class="icon"><IconArrowRight /></span>
-          </a>
+          </RouterLink>
         </div>
         <div class="pursuits__hobby">
-          <h1 class="pursuits__heading pursuits__heading--hobby">I photograph, sometimes</h1>
+          <h1 class="pursuits__heading pursuits__heading--hobby">I take pictures, sometimes</h1>
           <p class="pursuits__description pursuits__description--hobby">
             Capturing portraits, landscapes, and journalism
           </p>
-          <a class="pursuits__button btn-primary btn-primary--sweep-variant-2">
-            <RouterLink class="text" to="photo-exhibit">Check my gallery</RouterLink>
+          <RouterLink
+            to="photo-exhibit"
+            class="pursuits__button btn-primary btn-primary--sweep-variant-2"
+          >
+            <span class="text" to="photo-exhibit">Check my gallery</span>
             <span class="icon"><IconArrowRight /></span>
-          </a>
+          </RouterLink>
         </div>
       </div>
     </div>
@@ -88,8 +94,13 @@ IconArrowRight;
 
   &__hobby {
     padding: 7rem 0 10rem 6rem;
+
     @include respond-to(sm) {
       padding: 4rem 0 3rem 3rem;
+    }
+
+    @include respond-to(xs) {
+      padding: 4rem 3rem 3rem 3rem;
     }
   }
 
@@ -100,6 +111,10 @@ IconArrowRight;
 
     @include respond-to(sm) {
       font-size: $font-size-base;
+    }
+
+    @include respond-to(xs) {
+      font-size: $font-size-small;
     }
 
     &--career {

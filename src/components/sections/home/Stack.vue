@@ -56,13 +56,13 @@ import PatternsVariantRight from '@/components/shapes/PatternsVariantRight.vue';
 
     &--left {
       bottom: 4rem;
-      right: 50rem;
+      right: 50%;
       z-index: -1;
-      height: 8rem;
 
       @include respond-to(sm) {
-        right: 15rem;
-        bottom: 32rem;
+        left: 5%;
+        bottom: 1%;
+        height: 10rem;
       }
     }
 
@@ -71,8 +71,8 @@ import PatternsVariantRight from '@/components/shapes/PatternsVariantRight.vue';
       z-index: -1;
 
       @include respond-to(sm) {
-        top: 22rem;
-        left: 5rem;
+        top: 10%;
+        left: 30%;
         height: 8rem;
       }
     }

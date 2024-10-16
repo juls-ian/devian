@@ -6,8 +6,8 @@ import Patterns from '@/components/shapes/Patterns.vue';
 
 <template>
   <section class="about" id="about">
-    <GeometricShapes class="about__bg-shapes" />
-    <Patterns class="about__bg-shapes" />
+    <GeometricShapes class="about__bg-shapes about__bg-shapes--1" />
+    <Patterns class="about__bg-shapes about__bg-shapes--2" />
     <div class="about__content about__content--left">
       <div class="about__details">
         <p class="about__greetings">Good day!</p>
@@ -66,10 +66,19 @@ import Patterns from '@/components/shapes/Patterns.vue';
     z-index: -1;
 
     @include respond-to(sm) {
-      top: 31rem;
+      top: 30%;
       left: -1.8rem;
       width: 100%;
       height: auto;
+    }
+
+    &--1 {
+      top: 60%;
+      left: 5%;
+    }
+
+    &--2 {
+      top: 70%;
     }
   }
 
@@ -103,8 +112,12 @@ import Patterns from '@/components/shapes/Patterns.vue';
 
   &__greetings {
     font-family: $font-poppins;
+    font-size: $font-size-base;
     font-weight: 600;
     padding: 1rem 0 2rem 0;
+    @include respond-to(xs) {
+      font-size: $font-size-small;
+    }
   }
 
   &__text {
@@ -122,6 +135,11 @@ import Patterns from '@/components/shapes/Patterns.vue';
 
     @include respond-to(sm) {
       font-size: $font-size-large;
+    }
+
+    @include respond-to(xs) {
+      margin-top: -1rem;
+      font-size: $font-size-base-1;
     }
   }
 
@@ -148,6 +166,12 @@ import Patterns from '@/components/shapes/Patterns.vue';
         padding-top: 1rem;
         margin-top: 2rem;
         height: 20rem;
+      }
+
+      @include respond-to(xs) {
+        padding-top: 0.7rem;
+        margin-top: 0.7rem;
+        height: 15rem;
       }
     }
   }

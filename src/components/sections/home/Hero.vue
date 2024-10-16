@@ -99,7 +99,12 @@ import Wave from '@/components/shapes/Wave.vue';
 
   &__greetings {
     font-family: $font-poppins;
+    font-size: $font-size-base;
     font-weight: 600;
+
+    @include respond-to(xs) {
+      font-size: $font-size-small;
+    }
   }
 
   &__name {
@@ -111,8 +116,11 @@ import Wave from '@/components/shapes/Wave.vue';
     letter-spacing: 0.8rem;
 
     @include respond-to(sm) {
-      font-size: $font-size-larger;
-      padding-left: 2rem;
+      font-size: $font-size-large;
+    }
+
+    @include respond-to(xs) {
+      font-size: $font-size-base-1;
     }
 
     span {
