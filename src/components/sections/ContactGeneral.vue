@@ -119,6 +119,7 @@ const sendEmail = () => {
       font-weight: 600;
       text-align: start;
       color: $color-primary;
+      line-height: 4rem;
       @include respond-to(sm) {
         font-size: $font-size-base;
       }

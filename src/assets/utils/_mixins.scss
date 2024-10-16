@@ -17,6 +17,11 @@
   width: 4rem;
   height: 0.3rem;
   margin: 4px 0;
+
+  @include respond-to(tlg) {
+    width: 3.5rem;
+    margin: 1px 0;
+  }
 }
 
 /*

@@ -14,8 +14,8 @@ import PatternsVariantRight from '@/components/shapes/PatternsVariantRight.vue';
         <h1 class="stack__text stack__text--frontend">Frontend</h1>
         <p class="stack__description stack__description--front">
           Probably not the most fond of frontend side but I can build it. You'll mostly find me
-          contemplating on the best mixes of colors, fonts, responsiveness, and layouts. I'm
-          dedicated in developing seamless user experience with Vue.
+          contemplating on the best mixes of colors, fonts, responsiveness, and layouts. Sometimes I
+          can't even center a div. I'm dedicated in developing seamless user experience with Vue.
         </p>
       </div>
       <div class="stack__right">
@@ -83,7 +83,11 @@ import PatternsVariantRight from '@/components/shapes/PatternsVariantRight.vue';
     flex-direction: row;
     justify-content: center;
     gap: 9rem;
-    padding: 8rem 10rem;
+    margin: 8rem 10rem;
+
+    @include respond-to(tlg) {
+      margin: 8rem 4rem;
+    }
 
     @include respond-to(sm) {
       flex-direction: column;
@@ -94,6 +98,10 @@ import PatternsVariantRight from '@/components/shapes/PatternsVariantRight.vue';
 
   &__left {
     margin-bottom: 12rem;
+
+    @include respond-to(tsm) {
+      margin-top: 5rem;
+    }
     @include respond-to(sm) {
       margin-bottom: 1rem;
     }
@@ -101,6 +109,9 @@ import PatternsVariantRight from '@/components/shapes/PatternsVariantRight.vue';
 
   &__right {
     margin-top: 12rem;
+    @include respond-to(tsm) {
+      margin-top: 11rem;
+    }
     @include respond-to(sm) {
       margin-top: 1rem;
     }
@@ -109,6 +120,11 @@ import PatternsVariantRight from '@/components/shapes/PatternsVariantRight.vue';
   &__text {
     font-size: $font-size-larger;
     font-family: $font-poppins;
+
+    @include respond-to(tlg) {
+      font-size: $font-size-base-2;
+    }
+
     @include respond-to(sm) {
       font-size: $font-size-base-1;
     }
@@ -128,6 +144,11 @@ import PatternsVariantRight from '@/components/shapes/PatternsVariantRight.vue';
     font-weight: 300;
     font-size: $font-size-small;
     color: $color-white !important;
+
+    @include respond-to(tlg) {
+      font-size: $font-size-smaller;
+      text-align: start;
+    }
   }
 }
 </style>

@@ -2,6 +2,7 @@
 import RippleBackground from '@/components/backgrounds/RippleBackground.vue';
 import IconArrowRight from '@/components/icons/IconArrowRight.vue';
 import Wave from '@/components/shapes/Wave.vue';
+import pdf from '@/assets/pdf/DevianResume.pdf';
 </script>
 
 <template>
@@ -21,7 +22,7 @@ import Wave from '@/components/shapes/Wave.vue';
         <h5 class="hero__profession">
           Full Stack Developer <code class="html-sign">&lt;/&gt;</code>
         </h5>
-        <a class="hero__button btn-primary btn-primary--forward">
+        <a class="hero__button btn-primary btn-primary--forward" :href="pdf" target="_blank">
           <span class="text">Get Resume</span>
           <span class="icon"><IconArrowRight /></span>
         </a>
@@ -102,6 +103,10 @@ import Wave from '@/components/shapes/Wave.vue';
     font-size: $font-size-base;
     font-weight: 600;
 
+    @include respond-to(tlg) {
+      font-size: $font-size-base;
+    }
+
     @include respond-to(xs) {
       font-size: $font-size-small;
     }
@@ -114,6 +119,10 @@ import Wave from '@/components/shapes/Wave.vue';
     text-transform: uppercase;
     font-size: $font-size-largest;
     letter-spacing: 0.8rem;
+
+    @include respond-to(tlg) {
+      font-size: $font-size-base-2;
+    }
 
     @include respond-to(sm) {
       font-size: $font-size-large;
@@ -136,6 +145,7 @@ import Wave from '@/components/shapes/Wave.vue';
     margin: 2rem 0;
     color: $color-gray-darker !important;
     font-family: $font-oxygen;
+    font-size: $font-size-base;
 
     .html-sign {
       color: $color-secondary;

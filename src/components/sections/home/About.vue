@@ -48,13 +48,13 @@ import Patterns from '@/components/shapes/Patterns.vue';
   position: relative;
   height: 100vh;
 
-  &__button {
-    text-decoration: none;
-  }
-
   @include respond-to(sm) {
     flex-direction: column;
     height: 100%;
+  }
+
+  &__button {
+    text-decoration: none;
   }
 
   &__bg-shapes {
@@ -73,12 +73,16 @@ import Patterns from '@/components/shapes/Patterns.vue';
     }
 
     &--1 {
-      top: 60%;
-      left: 5%;
+      @include respond-to(sm) {
+        top: 60%;
+        left: 5%;
+      }
     }
 
     &--2 {
-      top: 70%;
+      @include respond-to(sm) {
+        top: 70%;
+      }
     }
   }
 
@@ -88,13 +92,24 @@ import Patterns from '@/components/shapes/Patterns.vue';
     padding: 8rem 6rem;
     width: 100%;
 
+    @include respond-to(tlg) {
+      padding: 5rem 5rem;
+    }
     @include respond-to(sm) {
       padding: 1rem 2rem;
     }
 
     &--left {
+      display: flex;
+      flex-direction: column;
       width: 100%;
       flex-basis: 70%;
+
+      @include respond-to(tlg) {
+        display: flex;
+        flex-direction: row-reverse;
+        flex-basis: 100%;
+      }
 
       @include respond-to(sm) {
         height: 10%;
@@ -115,22 +130,31 @@ import Patterns from '@/components/shapes/Patterns.vue';
     font-size: $font-size-base;
     font-weight: 600;
     padding: 1rem 0 2rem 0;
+
     @include respond-to(xs) {
       font-size: $font-size-small;
+    }
+    @include respond-to(sm) {
+      padding: 5rem 0 2rem 0;
     }
   }
 
   &__text {
-    display: flex;
-    flex-direction: column;
+    width: 100%;
+    margin-top: -2rem;
     font-family: $font-poppins;
     font-size: $font-size-largest;
     letter-spacing: 0.2rem;
     padding-left: 1rem;
+    width: 100%;
 
     span {
       margin-bottom: 0;
       line-height: 1;
+    }
+
+    @include respond-to(tlg) {
+      font-size: $font-size-base-1;
     }
 
     @include respond-to(sm) {
@@ -143,6 +167,9 @@ import Patterns from '@/components/shapes/Patterns.vue';
     }
   }
 
+  &__lines {
+  }
+
   &__description {
     margin: 2rem 0;
     // color: $color-gray-lighter;
@@ -151,17 +178,35 @@ import Patterns from '@/components/shapes/Patterns.vue';
     font-weight: 500;
     font-size: $font-size-base;
 
+    @include respond-to(tlg) {
+      font-size: $font-size-small;
+      width: 90%;
+      margin: 1rem 0;
+    }
+
     @include respond-to(sm) {
       font-size: $font-size-small;
     }
   }
 
-  &__lines {
-  }
-
   &__photo {
     img {
       height: 30rem;
+
+      @include respond-to(tlg) {
+        margin-top: 9rem;
+        margin-left: 3rem;
+        height: 20rem;
+        position: absolute;
+        left: 60%;
+        bottom: 15%;
+      }
+
+      @include respond-to(tsm) {
+        height: 20rem;
+        left: 55%;
+      }
+
       @include respond-to(sm) {
         padding-top: 1rem;
         margin-top: 2rem;

@@ -105,6 +105,11 @@ const sendEmail = () => {
     text-align: center;
   }
 
+  @include respond-to(lg) {
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+  }
+
   &__header {
     margin-bottom: 3rem;
 
@@ -113,6 +118,11 @@ const sendEmail = () => {
       font-size: $font-size-base-2;
       font-weight: 600;
       color: $color-primary;
+
+      @include respond-to(lg) {
+        font-size: $font-size-base-1;
+      }
+
       @include respond-to(sm) {
         font-size: $font-size-base;
       }

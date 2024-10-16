@@ -50,6 +50,10 @@ IconArrowRight;
   width: 100%;
   background: $color-white-variant-1;
 
+  @include respond-to(tsm) {
+    height: 100%;
+  }
+
   @include respond-to(sm) {
     flex-direction: column;
     height: 100%;
@@ -62,6 +66,10 @@ IconArrowRight;
     justify-content: center;
     height: 100%;
     padding: 5rem 4.8rem;
+
+    @include respond-to(lg) {
+      padding: 3rem 3rem;
+    }
 
     @include respond-to(sm) {
       padding: 0 2rem;
@@ -85,6 +93,10 @@ IconArrowRight;
     padding: 7rem 0 10rem 6rem;
     border-right: 2px solid $color-gray-light;
 
+    @include respond-to(lg) {
+      padding: 4rem 0 3rem 4rem;
+    }
+
     @include respond-to(sm) {
       padding: 4rem 0 3rem 3rem;
       border-right: none;
@@ -94,6 +106,10 @@ IconArrowRight;
 
   &__hobby {
     padding: 7rem 0 10rem 6rem;
+
+    @include respond-to(lg) {
+      padding: 4rem 0 3rem 4rem;
+    }
 
     @include respond-to(sm) {
       padding: 4rem 0 3rem 3rem;
@@ -108,6 +124,11 @@ IconArrowRight;
     font-size: $font-size-base-2;
     font-family: $font-poppins;
     line-height: 4rem;
+
+    @include respond-to(lg) {
+      font-size: $font-size-base-1;
+      line-height: 3rem;
+    }
 
     @include respond-to(sm) {
       font-size: $font-size-base;

@@ -70,6 +70,10 @@ const currentYear = date.getFullYear();
   height: 100vh;
   position: relative;
 
+  @include respond-to(lg) {
+    height: 100%;
+    padding: 1rem 2rem;
+  }
   @include respond-to(sm) {
     height: 100%;
     padding: 5rem 2rem;

@@ -116,12 +116,18 @@ onMounted(() => {
   -ms-overflow-style: none; /* Internet Explorer 10+ */
   scrollbar-width: none; /* Firefox */
 
+  @include respond-to(tlg) {
+    scroll-snap-type: none;
+  }
   @include respond-to(sm) {
     scroll-snap-type: none;
   }
 }
 
 .vertical-nav {
+  @include respond-to(tlg) {
+    display: none;
+  }
   @include respond-to(sm) {
     display: none;
   }
