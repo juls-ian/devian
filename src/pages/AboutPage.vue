@@ -30,6 +30,14 @@ import MainLayout from '@/layouts/MainLayout.vue';
   width: 100%;
   height: auto;
   padding: 10rem 5rem 0 5rem;
+
+  @include respond-to(sm) {
+    padding: 10rem 2.5rem 0 2.5rem;
+    overflow-x: hidden;
+  }
+  @include respond-to(xs) {
+    padding: 10rem 2rem 0 2rem;
+  }
 }
 
 .header {
@@ -39,6 +47,10 @@ import MainLayout from '@/layouts/MainLayout.vue';
   align-items: center;
   border-bottom: 2px solid $color-primary-dark;
 
+  @include respond-to(tlg) {
+    font-size: $font-size-base;
+  }
+
   h1 {
     font-size: $font-size-base-1;
     // color: $color-gray-dark;
@@ -46,10 +58,18 @@ import MainLayout from '@/layouts/MainLayout.vue';
     font-family: $font-oxygen;
     font-weight: 550;
 
+    @include respond-to(xs) {
+      font-size: $font-size-base;
+    }
+
     span {
       // color: $color-primary;
       color: $color-secondary;
       font-size: $font-size-base-1;
+
+      @include respond-to(xs) {
+        font-size: $font-size-base;
+      }
     }
   }
 
@@ -59,6 +79,9 @@ import MainLayout from '@/layouts/MainLayout.vue';
     font-weight: 450;
     color: $color-gray-dark;
     margin-bottom: 2rem;
+    @include respond-to(xs) {
+      font-size: $font-size-smallest;
+    }
   }
 }
 </style>

@@ -95,9 +95,14 @@ const sendEmail = () => {
   margin-top: 10rem;
   position: sticky;
 
+  @include respond-to(tsm) {
+    height: 100%;
+  }
+
   @include respond-to(sm) {
     height: 100%;
     margin-top: -3rem;
+    margin: 0 -2rem;
   }
 
   &__content {
@@ -108,6 +113,11 @@ const sendEmail = () => {
     text-align: center;
     border-top: 1px solid $color-gray;
     margin: 0 5rem;
+
+    @include respond-to(tsm) {
+      flex-direction: column;
+      gap: 1rem;
+    }
 
     @include respond-to(sm) {
       flex-direction: column;
@@ -132,6 +142,10 @@ const sendEmail = () => {
       color: $color-primary;
       line-height: 4rem;
 
+      @include respond-to(tsm) {
+        text-align: center;
+      }
+
       @include respond-to(sm) {
         font-size: $font-size-base;
         line-height: 2.5rem;
@@ -143,6 +157,10 @@ const sendEmail = () => {
       font-size: 1.3rem;
       font-weight: 300;
       text-align: start;
+
+      @include respond-to(tsm) {
+        text-align: center;
+      }
 
       @include respond-to(sm) {
         font-size: $font-size-smaller;

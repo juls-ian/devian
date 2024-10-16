@@ -205,10 +205,6 @@ const filteredProjects = computed(() => {
 
 <template>
   <section id="project">
-    <div class="header">
-      <h1><span>/</span>projects.</h1>
-      <p>Some of the projects I developed in the past.</p>
-    </div>
     <div class="nav">
       <ul>
         <li @click="setFilter('all')" :class="{ active: activeFilter === 'all' }">All</li>
@@ -252,68 +248,23 @@ section {
   position: relative;
   width: 100%;
   height: auto;
-  padding: 10rem 10rem;
+  padding: 1rem 10rem;
   // background-color: $color-white-pure;
 
   @include respond-to(tlg) {
-    padding: 10rem 7rem;
+    padding: 1rem 7rem;
   }
 
   @include respond-to(tsm) {
-    padding: 10rem 2rem;
+    padding: 1rem 2rem;
   }
 
   @include respond-to(sm) {
-    padding: 10rem 1rem;
+    padding: 1rem 1rem;
   }
 
   @include respond-to(xs) {
     overflow-x: hidden;
-  }
-}
-
-.header {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  border-bottom: 2px solid $color-primary-dark;
-
-  @include respond-to(tlg) {
-    font-size: $font-size-base;
-  }
-
-  h1 {
-    font-size: $font-size-base-1;
-    // color: $color-gray-dark;
-    color: $color-primary;
-    font-family: $font-oxygen;
-    font-weight: 550;
-
-    @include respond-to(xs) {
-      font-size: $font-size-base;
-    }
-
-    span {
-      // color: $color-primary;
-      color: $color-secondary;
-      font-size: $font-size-base-1;
-
-      @include respond-to(xs) {
-        font-size: $font-size-base;
-      }
-    }
-  }
-
-  p {
-    font-family: $font-poppins;
-    font-size: $font-size-small;
-    font-weight: 450;
-    color: $color-gray-dark;
-    margin-bottom: 2rem;
-    @include respond-to(xs) {
-      font-size: $font-size-smallest;
-    }
   }
 }
 
@@ -366,6 +317,10 @@ section {
   justify-content: start;
   align-items: start;
   margin-top: 3rem;
+
+  @include respond-to(sm) {
+    margin-bottom: 7rem;
+  }
 }
 
 .project {

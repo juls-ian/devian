@@ -77,6 +77,10 @@ const isDark = useDark();
   flex-direction: row;
   margin-top: 5rem;
 
+  @include respond-to(sm) {
+    flex-direction: column;
+  }
+
   &__details {
     h1 {
       font-size: $font-size-base-1;
@@ -85,6 +89,10 @@ const isDark = useDark();
       font-weight: 550;
       letter-spacing: 0.4rem;
       color: $color-primary;
+      @include respond-to(sm) {
+        width: 100%;
+        font-size: $font-size-base;
+      }
     }
 
     h2 {
@@ -137,6 +145,10 @@ const isDark = useDark();
     line-height: 1.5rem;
     font-weight: 400;
     color: $color-gray-dark;
+    @include respond-to(sm) {
+      width: 100%;
+    }
+
     &--first {
       margin-top: 2rem;
     }
@@ -158,6 +170,11 @@ const isDark = useDark();
       overflow: visible;
       margin-top: 0.8rem;
       box-shadow: 0 5px 10px 10px rgba(59, 130, 246, 0.2);
+
+      @include respond-to(sm) {
+        height: 25rem;
+        right: -2%;
+      }
     }
   }
 }
