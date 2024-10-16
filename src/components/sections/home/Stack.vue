@@ -47,7 +47,11 @@ import PatternsVariantRight from '@/components/shapes/PatternsVariantRight.vue';
 
   @include respond-to(sm) {
     flex-direction: column;
-    height: 100%;
+    height: auto;
+  }
+
+  @include respond-to(xs) {
+    flex-direction: column-reverse;
   }
 
   &__pattern {
@@ -64,6 +68,10 @@ import PatternsVariantRight from '@/components/shapes/PatternsVariantRight.vue';
         bottom: 1%;
         height: 10rem;
       }
+
+      @include respond-to(xs) {
+        left: 1%;
+      }
     }
 
     &--right {
@@ -74,6 +82,10 @@ import PatternsVariantRight from '@/components/shapes/PatternsVariantRight.vue';
         top: 10%;
         left: 30%;
         height: 8rem;
+      }
+
+      @include respond-to(xs) {
+        left: -1%;
       }
     }
   }
@@ -93,6 +105,10 @@ import PatternsVariantRight from '@/components/shapes/PatternsVariantRight.vue';
       flex-direction: column;
       gap: 0;
       padding: 8rem 2rem;
+    }
+
+    @include respond-to(xs) {
+      margin: 0 0;
     }
   }
 

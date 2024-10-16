@@ -208,15 +208,17 @@ import Patterns from '@/components/shapes/Patterns.vue';
       }
 
       @include respond-to(sm) {
-        padding-top: 1rem;
         margin-top: 2rem;
         height: 20rem;
+        position: relative;
+        left: 1%;
       }
 
       @include respond-to(xs) {
-        padding-top: 0.7rem;
         margin-top: 0.7rem;
         height: 15rem;
+        position: relative;
+        left: 1%;
       }
     }
   }
