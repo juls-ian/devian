@@ -2,10 +2,9 @@
   @include lines-div;
 
   .line {
-    @include lines-base;
-
     transition: all 0.3s ease;
     animation: wave 3s ease-in-out infinite;
+    @include lines-base;
 
     &:nth-child(1) {
       margin-left: 2rem;
@@ -23,8 +22,8 @@
   @include lines-div;
 
   .line {
-    @include lines-base;
     transition: all 0.3s ease;
+    @include lines-base;
 
     &:nth-child(1) {
       margin-left: 2rem;
@@ -40,6 +39,8 @@
 }
 
 .lines-grow {
+  margin: 1rem 0.1rem;
+
   @include lines-div;
 
   .line {
@@ -59,18 +60,16 @@
       background: $color-primary;
     }
   }
-  margin: 1rem 0.1rem;
 }
 
 .lines-wave-2 {
-  @include lines-div;
   margin: 1rem 0.1rem;
+  @include lines-div;
 
   .line {
-    @include lines-base;
-
     transition: all 0.3s ease;
     animation: wave 3s ease-in-out infinite;
+    @include lines-base;
 
     &:nth-child(1) {
       margin-left: 2rem;
