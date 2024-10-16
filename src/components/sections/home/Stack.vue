@@ -103,11 +103,11 @@ import PatternsVariantRight from '@/components/shapes/PatternsVariantRight.vue';
     @include respond-to(sm) {
       flex-direction: column;
       gap: 0;
-      padding: 8rem 2rem;
+      margin: 6rem 2rem;
     }
 
     @include respond-to(xs) {
-      margin: -5rem 0;
+      margin: 5rem 2rem;
     }
   }
 
