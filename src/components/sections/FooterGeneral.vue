@@ -1,39 +1,52 @@
 <template>
-  <section id="footer-general">
-    <main class="footer-general">
-      <div class="footer-general__content">
-        <div class="footer-general__main">
-          <div class="footer-general__contact">
-            <h1>Say hello</h1>
-            <a>hello@devian.com</a>
-            <a href="mailto:valdezjuliusian@gmail.com">hi@devian.com</a>
-          </div>
-          <div class="footer-general__pages">
-            <a>About</a>
-            <a>Projects</a>
-            <a>Photo Exhibit</a>
-            <a>Resume</a>
-          </div>
+  <section class="footer" id="footer">
+    <div class="footer__content">
+      <div class="footer__main">
+        <div class="footer__contact">
+          <h1>Say hello</h1>
+          <a>hello@devian.com</a>
+          <a href="mailto:valdezjuliusian@gmail.com">hi@devian.com</a>
         </div>
-        <div class="footer-general__sub">
-          <p>&copy;Julius Ian {{ currentYear }}</p>
-          <div class="footer-general__socials">
-            <IconInstagram class="icon" />
-            <IconFacebook class="icon" />
-            <IconTwitter class="icon" />
-            <IconDiscord class="icon" />
-            <IconYoutube class="icon" />
-          </div>
+
+        <div class="footer__pages">
+          <a>About</a>
+          <a>Projects</a>
+          <a>Photo Exhibit</a>
+          <a>Resume</a>
         </div>
-        <div class="footer-general__inspiration"></div>
       </div>
-    </main>
+      <div class="footer__sub">
+        <p>&copy;Julius Ian {{ currentYear }}</p>
+        <div class="footer__socials">
+          <a href="https://www.instagram.com/juls.ian/">
+            <IconInstagram class="icon" />
+          </a>
+          <a href="https://www.facebook.com/juliusianvaldez">
+            <IconFacebook class="icon" />
+          </a>
+          <a href="">
+            <IconTwitter class="icon" />
+          </a>
+          <a href="https://gitlab.com/juls-ian">
+            <IconGitlab class="icon" />
+          </a>
+          <a href="">
+            <IconYoutube class="icon" />
+          </a>
+          <a href="https://music.apple.com/profile/juls_iann">
+            <IconAppleMusic class="icon" />
+          </a>
+        </div>
+      </div>
+      <div class="footer__inspiration"></div>
+    </div>
   </section>
 </template>
 
 <script setup>
-import IconDiscord from '@/components/icons/IconDiscord.vue';
+import IconAppleMusic from '@/components/icons/IconAppleMusic.vue';
 import IconFacebook from '@/components/icons/IconFacebook.vue';
+import IconGitlab from '@/components/icons/IconGitlab.vue';
 import IconInstagram from '@/components/icons/IconInstagram.vue';
 import IconTwitter from '@/components/icons/IconTwitter.vue';
 import IconYoutube from '@/components/icons/IconYoutube.vue';
@@ -45,17 +58,23 @@ const currentYear = date.getFullYear();
 <style lang="scss" scoped>
 @import '@/assets/main.scss';
 
-.footer-general {
+.footer {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 5rem 7rem;
+  padding: 0 7rem;
   background: $color-gray-darkest;
   height: fit-content;
-  margin-top: 10rem;
+  position: relative;
+  margin-top: 7rem;
 
+  @include respond-to(lg) {
+    height: 100%;
+    padding: 1rem 2rem;
+  }
   @include respond-to(sm) {
-    padding: 5rem 3rem;
+    height: 100%;
+    padding: 5rem 2rem;
   }
 
   &__content {
@@ -63,11 +82,10 @@ const currentYear = date.getFullYear();
     flex-direction: column;
     justify-content: space-between;
     width: 100%;
-    height: auto;
-    padding: 0 0 0 4rem;
+    padding: 7rem 0 10rem 4rem;
 
     @include respond-to(sm) {
-      padding: 0 0 0 0;
+      padding: 1rem 0 1rem 1rem;
     }
   }
 
@@ -83,8 +101,8 @@ const currentYear = date.getFullYear();
     padding-bottom: 9rem;
 
     @include respond-to(sm) {
-      gap: 0 6rem;
-      padding-bottom: 4rem;
+      flex-direction: column;
+      padding-bottom: 3rem;
     }
 
     a {
@@ -132,6 +150,7 @@ const currentYear = date.getFullYear();
 
     @include respond-to(sm) {
       padding-top: 2rem;
+      flex-direction: column;
     }
 
     p {
@@ -139,6 +158,10 @@ const currentYear = date.getFullYear();
       font-family: $font-poppins;
       color: $color-secondary;
       font-weight: 400;
+
+      @include respond-to(sm) {
+        font-size: $font-size-smaller;
+      }
     }
   }
 
@@ -148,19 +171,32 @@ const currentYear = date.getFullYear();
       color: $color-primary;
       cursor: pointer;
       @include respond-to(sm) {
+        margin-top: 1rem;
         margin-right: 0.5rem;
       }
     }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
   }
 
-  .footer-general__inspiration {
+  &__inspiration {
     font-size: $font-size-smallest;
     font-family: $font-poppins;
     color: $color-secondary;
     font-weight: 300;
+  }
+
+  &__button {
+    position: absolute;
+    bottom: 5rem;
+    right: 6rem;
 
     @include respond-to(sm) {
-      font-weight: 200;
+      bottom: 1rem;
+      right: 2rem;
     }
   }
 }

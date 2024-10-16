@@ -20,4 +20,3 @@ import FooterGeneral from '@/components/sections/FooterGeneral.vue';
 <style lang="scss" scoped>
 @import '@/assets/main.scss';
 </style>
-~

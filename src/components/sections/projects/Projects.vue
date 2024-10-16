@@ -58,8 +58,8 @@ const projects = ref([
   {
     name: 'Readysilience',
     type: 'mobile',
-    urlPreview: 'readysilience.netlify.app',
-    url: 'readysilience.netlify.app',
+    urlPreview: 'readysilience.mediafire.com',
+    url: 'https://www.mediafire.com/file/byl0bvim59k67za/Readysilience.apk/file',
     logo: readyLogo,
     preview: readyPreview,
     github: 'https://github.com/juls-ian/readysilience'
@@ -254,6 +254,22 @@ section {
   height: auto;
   padding: 10rem 10rem;
   // background-color: $color-white-pure;
+
+  @include respond-to(tlg) {
+    padding: 10rem 7rem;
+  }
+
+  @include respond-to(tsm) {
+    padding: 10rem 2rem;
+  }
+
+  @include respond-to(sm) {
+    padding: 10rem 1rem;
+  }
+
+  @include respond-to(xs) {
+    overflow-x: hidden;
+  }
 }
 
 .header {
@@ -263,6 +279,10 @@ section {
   align-items: center;
   border-bottom: 2px solid $color-primary-dark;
 
+  @include respond-to(tlg) {
+    font-size: $font-size-base;
+  }
+
   h1 {
     font-size: $font-size-base-1;
     // color: $color-gray-dark;
@@ -270,10 +290,18 @@ section {
     font-family: $font-oxygen;
     font-weight: 550;
 
+    @include respond-to(xs) {
+      font-size: $font-size-base;
+    }
+
     span {
       // color: $color-primary;
       color: $color-secondary;
       font-size: $font-size-base-1;
+
+      @include respond-to(xs) {
+        font-size: $font-size-base;
+      }
     }
   }
 
@@ -283,6 +311,9 @@ section {
     font-weight: 450;
     color: $color-gray-dark;
     margin-bottom: 2rem;
+    @include respond-to(xs) {
+      font-size: $font-size-smallest;
+    }
   }
 }
 
@@ -300,6 +331,11 @@ section {
     cursor: pointer;
     position: relative;
     color: $color-gray-dark;
+
+    @include respond-to(xs) {
+      font-size: $font-size-smaller;
+      margin-right: 1rem;
+    }
 
     &:hover,
     &.active {
@@ -346,6 +382,15 @@ section {
   box-shadow: 0 9px 9px rgba(107, 114, 128, 0.2);
   cursor: pointer;
   transition: margin 0.2s ease-in-out;
+
+  @include respond-to(tsm) {
+    width: 20rem;
+  }
+
+  @include respond-to(xs) {
+    width: 15rem;
+    height: 15rem;
+  }
 
   &.is-hidden {
     display: none !important;
@@ -405,17 +450,20 @@ section {
     padding-top: 1.5rem;
     padding-left: 2rem;
     padding-bottom: 1rem;
+    @include respond-to(xs) {
+      padding-left: 1rem;
+      padding-top: 0.3rem;
+    }
 
     h5 {
       color: $color-gray-dark;
       font-family: $font-poppins;
       font-weight: 560;
-    }
+      font-size: $font-size-base;
 
-    h6 {
-      color: $color-primary-dark;
-      font-family: $font-poppins;
-      font-weight: 350;
+      @include respond-to(xs) {
+        font-size: $font-size-small;
+      }
     }
   }
 
@@ -432,6 +480,10 @@ section {
       text-decoration: none;
       font-family: $font-poppins;
       font-size: $font-size-smaller;
+
+      @include respond-to(xs) {
+        font-size: $font-size-smallest;
+      }
     }
 
     .icon {

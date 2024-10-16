@@ -96,8 +96,8 @@ const sendEmail = () => {
   position: sticky;
 
   @include respond-to(sm) {
-    flex-direction: column;
     height: 100%;
+    margin-top: -3rem;
   }
 
   &__content {
@@ -108,20 +108,33 @@ const sendEmail = () => {
     text-align: center;
     border-top: 1px solid $color-gray;
     margin: 0 5rem;
+
+    @include respond-to(sm) {
+      flex-direction: column;
+      margin: 0 1rem;
+      gap: 3rem;
+    }
   }
 
   &__header {
     margin-bottom: 3rem;
 
+    @include respond-to(sm) {
+      margin-bottom: 0;
+    }
+
     h1 {
+      width: 100%;
       font-family: $font-poppins;
       font-size: $font-size-base-2;
       font-weight: 600;
       text-align: start;
       color: $color-primary;
       line-height: 4rem;
+
       @include respond-to(sm) {
         font-size: $font-size-base;
+        line-height: 2.5rem;
       }
     }
 
@@ -153,12 +166,6 @@ const sendEmail = () => {
 
     @include respond-to(sm) {
       flex-direction: column;
-    }
-
-    &--1 {
-    }
-
-    &--2 {
     }
   }
 
