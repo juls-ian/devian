@@ -103,7 +103,7 @@ import PatternsVariantRight from '@/components/shapes/PatternsVariantRight.vue';
     @include respond-to(sm) {
       flex-direction: column;
       gap: 0;
-      margin: 6rem 2rem;
+      margin: 4rem 2rem;
     }
 
     @include respond-to(xs) {
@@ -119,6 +119,7 @@ import PatternsVariantRight from '@/components/shapes/PatternsVariantRight.vue';
     }
     @include respond-to(sm) {
       margin-bottom: 1rem;
+      margin-top: 2rem;
     }
   }
 
