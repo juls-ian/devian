@@ -140,7 +140,7 @@ const isDay = timeFrame > 6 && timeFrame < 18;
       font-size: $font-size-small;
     }
     @include respond-to(sm) {
-      padding: 5rem 0 2rem 0;
+      padding: 5rem 0 4rem 0;
     }
   }
 
@@ -153,22 +153,23 @@ const isDay = timeFrame > 6 && timeFrame < 18;
     padding-left: 1rem;
     width: 100%;
 
-    span {
-      margin-bottom: 0;
-      line-height: 1;
-    }
-
     @include respond-to(td) {
       font-size: $font-size-base-1;
     }
 
     @include respond-to(sm) {
       font-size: $font-size-large;
+      line-height: 3rem;
     }
 
     @include respond-to(xs) {
       margin-top: -1rem;
       font-size: $font-size-base-1;
+    }
+
+    span {
+      margin-bottom: 0;
+      line-height: 1;
     }
   }
 
