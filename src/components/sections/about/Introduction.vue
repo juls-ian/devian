@@ -77,6 +77,10 @@ const isDark = useDark();
   flex-direction: row;
   margin-top: 5rem;
 
+  @include respond-to(tsm) {
+    flex-direction: column;
+  }
+
   @include respond-to(sm) {
     flex-direction: column;
     height: 100%;
@@ -172,10 +176,29 @@ const isDark = useDark();
   &__image {
     width: 100%;
     height: 100%;
+    margin-left: 4rem;
+
+    @include respond-to(td) {
+      margin-left: 0;
+    }
+
+    @include respond-to(tsm) {
+      margin-left: 0;
+    }
+
+    @include respond-to(sm) {
+      margin-left: 0;
+    }
+
+    @include respond-to(xs) {
+      margin-left: 0;
+    }
 
     img {
-      height: 45rem;
+      height: 43rem;
+
       object-fit: cover;
+
       // pixelated fix
       overflow-clip-margin: unset;
       overflow: visible;
