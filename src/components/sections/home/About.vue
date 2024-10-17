@@ -2,6 +2,11 @@
 import IconArrowRight from '@/components/icons/IconArrowRight.vue';
 import GeometricShapes from '@/components/shapes/GeometricShapes.vue';
 import Patterns from '@/components/shapes/Patterns.vue';
+
+const timeFrame = new Date().getHours();
+
+//                     6am             6pm
+const isDay = timeFrame > 6 && timeFrame < 18;
 </script>
 
 <template>
@@ -10,7 +15,7 @@ import Patterns from '@/components/shapes/Patterns.vue';
     <Patterns class="about__bg-shapes about__bg-shapes--2" />
     <div class="about__content about__content--left">
       <div class="about__details">
-        <p class="about__greetings">Good day!</p>
+        <p class="about__greetings" v-text="isDay ? 'Good day!' : 'Good evening!'"></p>
         <h1 class="about__text">
           <span>About Me </span>
         </h1>
