@@ -8,6 +8,10 @@
   transition: all 0.3s;
   text-decoration: none;
 
+  @include respond-to(tsm) {
+    padding: 7px 18px;
+  }
+
   @include respond-to(sm) {
     padding: 8px 20px;
     vertical-align: middle;
@@ -23,6 +27,10 @@
     font-size: $font-size-smaller;
     padding: -50px 5px;
     text-decoration: none;
+
+    @include respond-to(tsm) {
+      font-size: $font-size-smallest;
+    }
 
     @include respond-to(sm) {
       font-size: $font-size-smallest;

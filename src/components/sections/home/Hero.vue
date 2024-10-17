@@ -75,15 +75,23 @@ import pdf from '@/assets/pdf/DevianResume.pdf';
     &--left {
       height: inherit;
       width: 100%;
-      flex-basis: 60%;
+      flex-basis: 60%; // mainly for the wave partition & image placement only
       background-color: $color-primary;
+
+      // @include respond-to(tsm) {
+      //   flex-basis: 70%;
+      // }
     }
 
     &--right {
       height: inherit;
-      flex-basis: 40%;
+      flex-basis: 40%; // mainly for the wave partition & image placement only
       width: 100%;
       background-color: $color-secondary;
+
+      // @include respond-to(tsm) {
+      //   flex-basis: 30%;
+      // }
       @include respond-to(sm) {
         height: 10%;
       }
@@ -93,6 +101,10 @@ import pdf from '@/assets/pdf/DevianResume.pdf';
   &__details {
     padding: 8rem 6rem;
 
+    @include respond-to(tsm) {
+      padding: 6rem 3rem;
+    }
+
     @include respond-to(sm) {
       padding: 8rem 2rem;
     }
@@ -100,8 +112,9 @@ import pdf from '@/assets/pdf/DevianResume.pdf';
 
   &__greetings {
     font-family: $font-poppins;
-    font-size: $font-size-base;
+    font-size: $font-size-base-1;
     font-weight: 600;
+    color: $color-secondary;
 
     @include respond-to(tlg) {
       font-size: $font-size-base;
@@ -146,6 +159,12 @@ import pdf from '@/assets/pdf/DevianResume.pdf';
     color: $color-gray-darker !important;
     font-family: $font-oxygen;
     font-size: $font-size-base;
+    color: $color-gray-lighter !important;
+
+    @include respond-to(tsm) {
+      font-size: $font-size-small;
+      width: 100%;
+    }
 
     .html-sign {
       color: $color-secondary;

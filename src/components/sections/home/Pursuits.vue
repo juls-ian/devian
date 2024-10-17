@@ -71,6 +71,10 @@ IconArrowRight;
       padding: 3rem 3rem;
     }
 
+    @include respond-to(tlg) {
+      padding: 5rem 4.8rem;
+    }
+
     @include respond-to(sm) {
       padding: 0 2rem;
     }
@@ -97,6 +101,10 @@ IconArrowRight;
       padding: 4rem 0 3rem 4rem;
     }
 
+    @include respond-to(tlg) {
+      padding: 7rem 0 1rem 5rem;
+    }
+
     @include respond-to(sm) {
       padding: 4rem 0 3rem 3rem;
       border-right: none;
@@ -109,6 +117,10 @@ IconArrowRight;
 
     @include respond-to(lg) {
       padding: 4rem 0 3rem 4rem;
+    }
+
+    @include respond-to(tlg) {
+      padding: 7rem 0 1rem 5rem;
     }
 
     @include respond-to(sm) {
