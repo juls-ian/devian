@@ -9,7 +9,7 @@
         :enter="{ opacity: 1, y: 0, scale: 1 }"
         :variants="{ custom: { scale: 2 } }"
         :delay="100"
-        :duration="1200"
+        :duration="1000"
         >About</RouterLink
       >
       <RouterLink
@@ -18,9 +18,8 @@
         v-motion
         :initial="{ opacity: 0, y: 100 }"
         :enter="{ opacity: 1, y: 0, scale: 1 }"
-        :variants="{ custom: { scale: 2 } }"
         :delay="200"
-        :duration="1200"
+        :duration="1000"
         >Projects</RouterLink
       >
       <RouterLink
@@ -29,9 +28,8 @@
         v-motion
         :initial="{ opacity: 0, y: 100 }"
         :enter="{ opacity: 1, y: 0, scale: 1 }"
-        :variants="{ custom: { scale: 2 } }"
         :delay="300"
-        :duration="1200"
+        :duration="1000"
         >Photo Exhibit</RouterLink
       >
       <RouterLink
@@ -40,22 +38,45 @@
         v-motion
         :initial="{ opacity: 0, y: 100 }"
         :enter="{ opacity: 1, y: 0, scale: 1 }"
-        :variants="{ custom: { scale: 2 } }"
         :delay="400"
-        :duration="1200"
+        :duration="1000"
         >Resume</RouterLink
       >
     </ul>
+
+    <div
+      class="menu__socials"
+      v-motion
+      :initial="{ opacity: 0, y: 100 }"
+      :enter="{ opacity: 1, y: 0, scale: 1 }"
+      :delay="500"
+      :duration="1000"
+    >
+      <div class="menu__social-icon">
+        <a href="https://github.com/juls-ian">
+          <IconGitHub class="navbar__icon" />
+        </a>
+      </div>
+      <div class="menu__social-icon">
+        <a href="https://www.linkedin.com/in/julius-ian-valdez/">
+          <IconLinkedin class="navbar__icon" />
+        </a>
+      </div>
+    </div>
   </div>
 </template>
 
-<script setup></script>
+<script setup>
+import IconGitHub from '../icons/IconGitHub.vue';
+import IconLinkedin from '../icons/IconLinkedin.vue';
+</script>
 
 <style lang="scss" scoped>
 @import '@/assets/main';
 
 .menu {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   // background-image: linear-gradient(to right bottom, #1f2937, #1a293f, #172846, #15274e, #172554);
@@ -80,6 +101,25 @@
     font-weight: 400;
     font-family: $font-poppins;
     color: $color-white;
+  }
+
+  &__socials {
+    display: flex;
+    gap: 2rem;
+    display: none;
+
+    @include respond-to(sm) {
+      display: flex;
+      align-items: start;
+      justify-content: space-between;
+      font-size: 2rem;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+      height: 4rem;
+    }
   }
 }
 </style>

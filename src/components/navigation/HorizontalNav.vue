@@ -6,12 +6,12 @@
         <ColorModeSwitcher class="navbar__icon" :class="{ hidden: isHidden }" />
       </div>
       <pre :class="{ hidden: isHidden }">|</pre>
-      <div class="navbar__item">
+      <div class="navbar__item navbar__item--icon">
         <a href="https://github.com/juls-ian">
           <IconGithub class="navbar__icon" :class="{ hidden: isHidden }" />
         </a>
       </div>
-      <div class="navbar__item">
+      <div class="navbar__item navbar__item--icon">
         <a href="https://www.linkedin.com/in/julius-ian-valdez/">
           <IconLinkedin class="navbar__icon" :class="{ hidden: isHidden }" />
         </a>
@@ -71,6 +71,12 @@ const toggleIconsVisibility = () => {
     a {
       text-decoration: none;
       color: inherit;
+    }
+
+    &--icon {
+      @include respond-to(sm) {
+        display: none;
+      }
     }
   }
 
