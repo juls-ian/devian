@@ -31,12 +31,18 @@ import MainLayout from '@/layouts/MainLayout.vue';
   height: auto;
   padding: 10rem 5rem 0 5rem;
 
-  @include respond-to(sm) {
-    padding: 10rem 2.5rem 0 2.5rem;
+  @include respond-to(tlg) {
+    padding: 10rem 3rem 0 3rem;
     overflow-x: hidden;
   }
+
+  @include respond-to(sm) {
+    padding: 10rem 2.1rem 0 2rem;
+    overflow-x: hidden;
+  }
+
   @include respond-to(xs) {
-    padding: 10rem 2rem 0 2rem;
+    padding: 10rem 1.4rem 0 1.4rem;
   }
 }
 

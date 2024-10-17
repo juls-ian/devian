@@ -2,6 +2,17 @@
 import 'vue3-carousel/dist/carousel.css';
 import { Carousel, Slide, Pagination, Navigation } from 'vue3-carousel';
 
+import laudeMob from '@/assets/images/awards/transparent/1.webp';
+import plMob from '@/assets/images/awards/transparent/2.webp';
+import comMob from '@/assets/images/awards/transparent/3.webp';
+import devMob from '@/assets/images/awards/transparent/4.webp';
+import katagaMob from '@/assets/images/awards/transparent/5.webp';
+import comsocMob from '@/assets/images/awards/transparent/6.webp';
+import kataga2Mob from '@/assets/images/awards/transparent/7.webp';
+import gdscMob from '@/assets/images/awards/transparent/8.webp';
+import psychMob from '@/assets/images/awards/transparent/9.webp';
+import searcherMob from '@/assets/images/awards/transparent/10.webp';
+
 import laudeDesk from '@/assets/images/awards/bg/1.webp';
 import plDesk from '@/assets/images/awards/bg/2.webp';
 import comDesk from '@/assets/images/awards/bg/3.webp';
@@ -18,52 +29,62 @@ const awards = [
   {
     name: 'President Lister',
     giver: 'Polytechnic University of the Philippines',
-    imageDesk: plDesk
+    imageDesk: plDesk,
+    imageMob: plMob
   },
   {
     name: 'Cum Laude',
     giver: 'Polytechnic University of the Philippines',
-    imageDesk: laudeDesk
+    imageDesk: laudeDesk,
+    imageMob: laudeMob
   },
   {
     name: 'Graduation Service',
     giver: 'PUP STC - Graduating Class Committee',
-    imageDesk: comDesk
+    imageDesk: comDesk,
+    imageMob: comMob
   },
   {
     name: 'Participation',
     giver: 'deVexpress',
-    imageDesk: devDesk
+    imageDesk: devDesk,
+    imageMob: devMob
   },
   {
     name: 'Internal Relations',
     giver: 'Google Student Developer Club',
-    imageDesk: gdscDesk
+    imageDesk: gdscDesk,
+    imageMob: gdscMob
   },
   {
     name: 'Facilitator',
     giver: 'Kapatiran ng Talino at Galing',
-    imageDesk: katagaDesk
+    imageDesk: katagaDesk,
+    imageMob: katagaMob
   },
   {
     name: 'Auditor',
     giver: 'Computer Society',
-    imageDesk: comsocDesk
+    imageDesk: comsocDesk,
+    imageMob: comsocMob
   },
   {
     name: 'Senior Photojournalist',
     giver: 'The Searcher',
-    imageDesk: searcherDesk
+    imageDesk: searcherDesk,
+    imageMob: searcherMob
   },
   {
     name: 'Auditor',
     giver: 'Kapatiran ng Talino at Galing',
-    imageDesk: kataga2Desk
+    imageDesk: kataga2Desk,
+    imageMob: kataga2Mob
   },
   {
     name: 'Judge',
     giver: 'Psychology Society',
-    imageDesk: psychDesk
+    imageDesk: psychDesk,
+    imageMob: psychMob
   }
 ];
 
@@ -80,16 +101,11 @@ const breakpoints = ref({
 
   // 700px+
   700: {
-    itemsToShow: 1,
+    itemsToShow: 3.5,
     snapAlign: 'center'
   },
-
+  // 1024+
   1024: {
-    itemsToShow: 2,
-    snapAlign: 'center'
-  },
-  // 1280+
-  1280: {
     itemsToShow: 3,
     snapAlign: 'start'
   }
@@ -115,7 +131,8 @@ const breakpoints = ref({
           <Slide class="awards__slider" v-for="award in awards" :key="award.name">
             <div class="awards__container">
               <figure class="awards__image-container">
-                <img :src="award.imageDesk" alt="" class="awards__image" />
+                <img :src="award.imageDesk" alt="" class="awards__image awards__image--desktop" />
+                <!-- <img :src="award.imageMob" alt="" class="awards__image awards__image--mobile" /> -->
               </figure>
               <article class="awards__details">
                 <h2>{{ award.name }}</h2>
@@ -150,10 +167,6 @@ const breakpoints = ref({
     letter-spacing: 0.4rem;
     color: $color-primary;
 
-    @include respond-to(tsm) {
-      text-align: center;
-    }
-
     @include respond-to(sm) {
       font-size: $font-size-base;
       text-align: center;
@@ -175,9 +188,6 @@ const breakpoints = ref({
     border-right: 1.5px solid $color-gray-dark;
     padding-bottom: 1rem;
 
-    @include respond-to(tlg) {
-      border-left: 1.5px solid $color-gray-dark;
-    }
     @include respond-to(sm) {
       border-left: 1.5px solid $color-gray-dark;
     }
@@ -243,6 +253,13 @@ const breakpoints = ref({
 
     @include respond-to(xs) {
       max-height: 22rem;
+    }
+
+    &--desktop {
+    }
+
+    &--mobile {
+      display: none;
     }
   }
   &__pagination {

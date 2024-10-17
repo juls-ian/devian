@@ -114,6 +114,9 @@ const sendEmail = () => {
     border-top: 1px solid $color-gray;
     margin: 0 5rem;
 
+    @include respond-to(tlg) {
+      margin: 0 -9rem;
+    }
     @include respond-to(tsm) {
       flex-direction: column;
       gap: 1rem;

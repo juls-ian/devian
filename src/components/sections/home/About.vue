@@ -173,7 +173,7 @@ import Patterns from '@/components/shapes/Patterns.vue';
   &__description {
     margin: 2rem 0;
     // color: $color-gray-lighter;
-    font-family: $font-fredoka;
+    font-family: $font-oxygen;
     font-style: normal;
     font-weight: 500;
     font-size: $font-size-base;

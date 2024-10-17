@@ -8,10 +8,11 @@ $breakpoint-xs: 20em; //320(max)-480px
 $breakpoint-sm: 37.5em; //600px
 // TABLETS
 $breakpoint-tablet-sm: 48em; //768px
-$breakpoint-tablet-lg: 64em; //1024px
-// SM DESK (1025-1280)
-$breakpoint-md: 80em;
 /*-----------------------------*/
+// L TABLET - S DESK
+$breakpoint-tablet-lg: 64em; //1024px
+// MD DESK (1025-1280)
+$breakpoint-md: 80em;
 // L DESK (1281-1440)
 $breakpoint-lg: 90em;
 // XL SCREENS (1441+)

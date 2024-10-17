@@ -79,6 +79,7 @@ const isDark = useDark();
 
   @include respond-to(sm) {
     flex-direction: column;
+    height: 100%;
   }
 
   &__details {
@@ -89,9 +90,11 @@ const isDark = useDark();
       font-weight: 550;
       letter-spacing: 0.4rem;
       color: $color-primary;
+
       @include respond-to(sm) {
         width: 100%;
         font-size: $font-size-base;
+        text-align: center;
       }
     }
 
@@ -101,6 +104,10 @@ const isDark = useDark();
       font-family: $font-poppins;
       font-weight: 450;
       color: $color-primary;
+
+      @include respond-to(sm) {
+        text-align: center;
+      }
     }
   }
 
@@ -145,6 +152,11 @@ const isDark = useDark();
     line-height: 1.5rem;
     font-weight: 400;
     color: $color-gray-dark;
+
+    @include respond-to(tlg) {
+      width: 70%;
+    }
+
     @include respond-to(sm) {
       width: 100%;
     }
@@ -171,8 +183,24 @@ const isDark = useDark();
       margin-top: 0.8rem;
       box-shadow: 0 5px 10px 10px rgba(59, 130, 246, 0.2);
 
+      @include respond-to(tlg) {
+        height: 35rem;
+        left: 52%;
+      }
+
+      @include respond-to(tsm) {
+        height: 25rem;
+        top: 15%;
+        left: 55%;
+      }
+
       @include respond-to(sm) {
         height: 25rem;
+        right: -2%;
+      }
+
+      @include respond-to(xs) {
+        height: 20rem;
         right: -2%;
       }
     }

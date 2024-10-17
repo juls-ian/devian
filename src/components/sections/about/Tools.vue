@@ -186,6 +186,10 @@ const isDark = useDark();
     font-weight: 550;
     letter-spacing: 0.4rem;
     color: $color-primary;
+
+    @include respond-to(sm) {
+      text-align: center;
+    }
   }
 }
 
@@ -194,23 +198,14 @@ const isDark = useDark();
   display: flex;
   flex-direction: column;
 
-  &__grid {
-    display: grid;
-    justify-items: center;
-    align-items: center;
-    grid-template-columns: 10rem 10rem 10rem 10rem 1fr;
-    grid-template-rows: 1fr 1fr;
-    column-gap: 1rem;
-    row-gap: 1rem;
-    width: 100%;
-    height: 100%;
-    padding-left: 2rem;
-  }
-
   &__upper {
     display: flex;
     flex-direction: row;
     margin-top: 2rem;
+
+    @include respond-to(sm) {
+      flex-direction: column;
+    }
 
     p {
       font-size: $font-size-small;
@@ -223,6 +218,34 @@ const isDark = useDark();
 
   &__intro {
     width: 60%;
+
+    @include respond-to(sm) {
+      width: 100%;
+    }
+  }
+
+  &__grid {
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    grid-template-columns: 10rem 10rem 10rem 10rem 1fr;
+    grid-template-rows: 1fr 1fr;
+    column-gap: 1rem;
+    row-gap: 1rem;
+    width: 100%;
+    height: 100%;
+    padding-left: 2rem;
+
+    @include respond-to(tlg) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    @include respond-to(sm) {
+      justify-content: center;
+      padding-left: 0;
+      grid-template-columns: 1fr 1fr;
+      margin-top: 3rem;
+    }
   }
 
   &__grid-item {
@@ -232,6 +255,14 @@ const isDark = useDark();
 
     &:nth-child(1) {
       grid-row: 1/3;
+
+      @include respond-to(tlg) {
+        grid-row: 1;
+      }
+
+      @include respond-to(sm) {
+        grid-column: 1/3;
+      }
     }
 
     &:hover {

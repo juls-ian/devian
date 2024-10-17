@@ -83,6 +83,15 @@
 #passion {
   margin-top: 10rem;
   width: 100%;
+  height: max-content;
+
+  @include respond-to(tlg) {
+    margin-top: 5rem;
+  }
+
+  @include respond-to(sm) {
+    margin-top: 30rem;
+  }
 
   h1 {
     font-size: $font-size-base-1;
@@ -91,6 +100,10 @@
     font-weight: 550;
     letter-spacing: 0.5rem;
     color: $color-primary;
+
+    @include respond-to(sm) {
+      text-align: center;
+    }
   }
 }
 
@@ -100,10 +113,18 @@
   justify-content: center;
   align-items: center;
   width: 100%;
+  position: relative;
 
   &__wrapper {
     display: flex;
     gap: 2rem;
+
+    @include respond-to(tsm) {
+      flex-direction: column;
+    }
+    @include respond-to(sm) {
+      flex-direction: column;
+    }
   }
 
   &__card {
@@ -118,6 +139,21 @@
     margin-top: 2rem;
     box-shadow: 1px 5px 6px 6px rgba(59, 130, 246, 0.2);
     transition: transform 0.3s ease-in-out;
+
+    @include respond-to(tlg) {
+      width: 19rem;
+      height: 35rem;
+    }
+
+    @include respond-to(tsm) {
+      width: 25rem;
+      height: 41rem;
+    }
+
+    @include respond-to(sm) {
+      width: 20rem;
+      height: 40rem;
+    }
 
     &--design {
       background: $color-primary-darkest;
@@ -217,6 +253,14 @@
     span {
       display: none;
       color: $color-gray-lighter !important;
+
+      @include respond-to(tsm) {
+        display: block;
+      }
+
+      @include respond-to(sm) {
+        display: block;
+      }
     }
 
     strong {
