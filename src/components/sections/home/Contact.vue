@@ -14,7 +14,7 @@
             <label for="name">Your name</label>
             <input
               type="text"
-              class="name"
+              class="name reset"
               id="name"
               name="name"
               placeholder="Enter your name"
@@ -26,7 +26,7 @@
             <label for="email">Email Address</label>
             <input
               type="email"
-              class="email"
+              class="email reset"
               id="email"
               name="email"
               placeholder="Enter your email"
@@ -39,7 +39,7 @@
           <div class="contact__input-group contact__input-group--message">
             <label for="message">Your message</label>
             <textarea
-              class="message"
+              class="message reset"
               id="message"
               name="message"
               placeholder="Enter your message"
@@ -65,7 +65,6 @@ import { toast } from 'vue3-toastify';
 import 'vue3-toastify/dist/index.css';
 
 const form = ref(null);
-const inputFieldReset = ref(null);
 
 const sendEmail = () => {
   emailjs
@@ -86,10 +85,21 @@ const sendEmail = () => {
             width: '20rem'
           }
         });
-        inputFieldReset.value = '';
+        form.value.reset();
       },
       (error) => {
-        alert('Email not sent', error.text);
+        toast('Email not sent', error.text, {
+          autoClose: 2000,
+          hideProgressBar: false,
+          type: 'success',
+          position: toast.POSITION.BOTTOM_LEFT,
+          transition: 'slide',
+          toastStyle: {
+            fontSize: '.9rem',
+            fontFamily: 'Poppins',
+            width: '20rem'
+          }
+        });
       }
     );
 };
