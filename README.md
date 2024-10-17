@@ -1,7 +1,7 @@
 # devian
 
 ## Hi! 
-This is my professional porfolio Devian, coming from the word 'developer' and my name 'Ian'
+This is my current porfolio 'Devian', coming from the word 'developer' and my name 'Ian'
 
 ## Beta Phase
 Currently, the website is still underdevelopment so you might face bugs in there. Please send me a message if you found one.
