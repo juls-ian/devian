@@ -240,6 +240,10 @@ const isDark = useDark();
       grid-template-columns: repeat(3, 1fr);
     }
 
+    @include respond-to(tsm) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
     @include respond-to(sm) {
       justify-content: center;
       padding-left: 0;
@@ -258,6 +262,10 @@ const isDark = useDark();
 
       @include respond-to(td) {
         grid-row: 1;
+      }
+
+      @include respond-to(tsm) {
+        grid-column: 1/3;
       }
 
       @include respond-to(sm) {
