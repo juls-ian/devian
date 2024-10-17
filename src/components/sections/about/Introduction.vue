@@ -175,7 +175,6 @@ const isDark = useDark();
 
     img {
       height: 45rem;
-      position: absolute;
       object-fit: cover;
       // pixelated fix
       overflow-clip-margin: unset;
@@ -196,7 +195,6 @@ const isDark = useDark();
 
       @include respond-to(sm) {
         height: 25rem;
-        right: -2%;
       }
 
       @include respond-to(xs) {

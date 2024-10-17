@@ -90,7 +90,7 @@
   }
 
   @include respond-to(sm) {
-    margin-top: 30rem;
+    margin-top: 5rem;
   }
 
   h1 {
