@@ -10,7 +10,7 @@ $breakpoint-sm: 37.5em; //600px
 $breakpoint-tablet-sm: 48em; //768px
 /*-----------------------------*/
 // L TABLET - S DESK
-$breakpoint-tablet-lg: 64em; //1024px
+$breakpoint-td: 64em; //1024px
 // MD DESK (1025-1280)
 $breakpoint-md: 80em;
 // L DESK (1281-1440)
@@ -23,7 +23,7 @@ $breakpoints: (
   xs: $breakpoint-xs,
   sm: $breakpoint-sm,
   tsm: $breakpoint-tablet-sm,
-  tlg: $breakpoint-tablet-lg,
+  td: $breakpoint-td,
   md: $breakpoint-md,
   lg: $breakpoint-lg,
   xl: $breakpoint-xl

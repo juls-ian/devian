@@ -31,7 +31,7 @@ import MainLayout from '@/layouts/MainLayout.vue';
   height: auto;
   padding: 10rem 5rem 0 5rem;
 
-  @include respond-to(tlg) {
+  @include respond-to(td) {
     padding: 10rem 3rem 0 3rem;
     overflow-x: hidden;
   }
@@ -53,7 +53,7 @@ import MainLayout from '@/layouts/MainLayout.vue';
   align-items: center;
   border-bottom: 2px solid $color-primary-dark;
 
-  @include respond-to(tlg) {
+  @include respond-to(td) {
     font-size: $font-size-base;
   }
 

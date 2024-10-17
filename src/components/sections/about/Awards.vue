@@ -175,7 +175,7 @@ const breakpoints = ref({
     border-right: 1.5px solid $color-gray-dark;
     padding-bottom: 1rem;
 
-    @include respond-to(tlg) {
+    @include respond-to(td) {
       border-left: 1.5px solid $color-gray-dark;
     }
     @include respond-to(sm) {

@@ -236,7 +236,7 @@ const isDark = useDark();
     height: 100%;
     padding-left: 2rem;
 
-    @include respond-to(tlg) {
+    @include respond-to(td) {
       grid-template-columns: repeat(3, 1fr);
     }
 
@@ -256,7 +256,7 @@ const isDark = useDark();
     &:nth-child(1) {
       grid-row: 1/3;
 
-      @include respond-to(tlg) {
+      @include respond-to(td) {
         grid-row: 1;
       }
 

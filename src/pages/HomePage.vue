@@ -116,7 +116,7 @@ onMounted(() => {
   -ms-overflow-style: none; /* Internet Explorer 10+ */
   scrollbar-width: none; /* Firefox */
 
-  @include respond-to(tlg) {
+  @include respond-to(td) {
     scroll-snap-type: none;
   }
   @include respond-to(sm) {
@@ -125,7 +125,7 @@ onMounted(() => {
 }
 
 .vertical-nav {
-  @include respond-to(tlg) {
+  @include respond-to(td) {
     display: none;
   }
   @include respond-to(sm) {

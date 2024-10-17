@@ -114,7 +114,7 @@ const sendEmail = () => {
     border-top: 1px solid $color-gray;
     margin: 0 5rem;
 
-    @include respond-to(tlg) {
+    @include respond-to(td) {
       margin: 0 -9rem;
     }
     @include respond-to(tsm) {

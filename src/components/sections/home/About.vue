@@ -92,7 +92,7 @@ import Patterns from '@/components/shapes/Patterns.vue';
     padding: 8rem 6rem;
     width: 100%;
 
-    @include respond-to(tlg) {
+    @include respond-to(td) {
       padding: 5rem 5rem;
     }
     @include respond-to(sm) {
@@ -105,7 +105,7 @@ import Patterns from '@/components/shapes/Patterns.vue';
       width: 100%;
       flex-basis: 70%;
 
-      @include respond-to(tlg) {
+      @include respond-to(td) {
         display: flex;
         flex-direction: row-reverse;
         flex-basis: 100%;
@@ -153,7 +153,7 @@ import Patterns from '@/components/shapes/Patterns.vue';
       line-height: 1;
     }
 
-    @include respond-to(tlg) {
+    @include respond-to(td) {
       font-size: $font-size-base-1;
     }
 
@@ -178,7 +178,7 @@ import Patterns from '@/components/shapes/Patterns.vue';
     font-weight: 500;
     font-size: $font-size-base;
 
-    @include respond-to(tlg) {
+    @include respond-to(td) {
       font-size: $font-size-small;
       width: 90%;
       margin: 1rem 0;
@@ -193,7 +193,7 @@ import Patterns from '@/components/shapes/Patterns.vue';
     img {
       height: 30rem;
 
-      @include respond-to(tlg) {
+      @include respond-to(td) {
         margin-top: 9rem;
         margin-left: 3rem;
         height: 20rem;

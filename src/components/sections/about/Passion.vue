@@ -85,7 +85,7 @@
   width: 100%;
   height: max-content;
 
-  @include respond-to(tlg) {
+  @include respond-to(td) {
     margin-top: 5rem;
   }
 
@@ -140,7 +140,7 @@
     box-shadow: 1px 5px 6px 6px rgba(59, 130, 246, 0.2);
     transition: transform 0.3s ease-in-out;
 
-    @include respond-to(tlg) {
+    @include respond-to(td) {
       width: 19rem;
       height: 35rem;
     }

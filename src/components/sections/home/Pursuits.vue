@@ -71,7 +71,7 @@ IconArrowRight;
       padding: 3rem 3rem;
     }
 
-    @include respond-to(tlg) {
+    @include respond-to(td) {
       padding: 5rem 4.8rem;
     }
 
@@ -101,7 +101,7 @@ IconArrowRight;
       padding: 4rem 0 3rem 4rem;
     }
 
-    @include respond-to(tlg) {
+    @include respond-to(td) {
       padding: 7rem 0 1rem 5rem;
     }
 
@@ -119,7 +119,7 @@ IconArrowRight;
       padding: 4rem 0 3rem 4rem;
     }
 
-    @include respond-to(tlg) {
+    @include respond-to(td) {
       padding: 7rem 0 1rem 5rem;
     }
 

@@ -116,7 +116,7 @@ import pdf from '@/assets/pdf/DevianResume.pdf';
     font-weight: 600;
     color: $color-secondary;
 
-    @include respond-to(tlg) {
+    @include respond-to(td) {
       font-size: $font-size-base;
     }
 
@@ -133,7 +133,7 @@ import pdf from '@/assets/pdf/DevianResume.pdf';
     font-size: $font-size-largest;
     letter-spacing: 0.8rem;
 
-    @include respond-to(tlg) {
+    @include respond-to(td) {
       font-size: $font-size-base-2;
     }
 

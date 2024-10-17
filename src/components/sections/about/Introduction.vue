@@ -153,7 +153,7 @@ const isDark = useDark();
     font-weight: 400;
     color: $color-gray-dark;
 
-    @include respond-to(tlg) {
+    @include respond-to(td) {
       width: 70%;
     }
 
@@ -183,7 +183,7 @@ const isDark = useDark();
       margin-top: 0.8rem;
       box-shadow: 0 5px 10px 10px rgba(59, 130, 246, 0.2);
 
-      @include respond-to(tlg) {
+      @include respond-to(td) {
         height: 35rem;
         left: 52%;
       }

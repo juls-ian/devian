@@ -251,7 +251,7 @@ section {
   padding: 1rem 10rem;
   // background-color: $color-white-pure;
 
-  @include respond-to(tlg) {
+  @include respond-to(td) {
     padding: 1rem 7rem;
   }
 

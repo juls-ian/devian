@@ -96,7 +96,7 @@ import PatternsVariantRight from '@/components/shapes/PatternsVariantRight.vue';
     gap: 9rem;
     margin: 8rem 10rem;
 
-    @include respond-to(tlg) {
+    @include respond-to(td) {
       margin: 8rem 4rem;
     }
 
@@ -137,7 +137,7 @@ import PatternsVariantRight from '@/components/shapes/PatternsVariantRight.vue';
     font-size: $font-size-larger;
     font-family: $font-poppins;
 
-    @include respond-to(tlg) {
+    @include respond-to(td) {
       font-size: $font-size-base-2;
     }
 
@@ -161,7 +161,7 @@ import PatternsVariantRight from '@/components/shapes/PatternsVariantRight.vue';
     font-size: $font-size-small;
     color: $color-white !important;
 
-    @include respond-to(tlg) {
+    @include respond-to(td) {
       font-size: $font-size-smaller;
       text-align: start;
     }
