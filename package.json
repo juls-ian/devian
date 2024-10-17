@@ -12,16 +12,15 @@
   },
   "dependencies": {
     "@emailjs/browser": "^4.4.1",
-    "@primevue/themes": "^4.1.0",
     "@tsparticles/vue3": "^3.0.1",
     "@vueuse/core": "^11.1.0",
     "@vueuse/motion": "^2.2.5",
-    "primevue": "^4.1.0",
     "tsparticles": "^3.5.0",
     "vue": "^3.4.29",
     "vue-router": "^4.4.5",
     "vue-scroll-snap": "^0.1.11",
-    "vue3-carousel": "^0.3.4"
+    "vue3-carousel": "^0.3.4",
+    "vue3-toastify": "^0.2.3"
   },
   "devDependencies": {
     "@rushstack/eslint-patch": "^1.8.0",

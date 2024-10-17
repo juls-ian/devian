@@ -2,6 +2,7 @@ import AboutPage from '@/pages/AboutPage.vue';
 import HomePage from '@/pages/HomePage.vue';
 import PhotoExhibitPage from '@/pages/PhotoExhibitPage.vue';
 import ProjectsPage from '@/pages/ProjectsPage.vue';
+import ResumePage from '@/pages/ResumePage.vue';
 import { createWebHistory, createRouter } from 'vue-router';
 
 const router = createRouter({
@@ -29,6 +30,12 @@ const router = createRouter({
       component: PhotoExhibitPage,
       name: 'photo-exhibit',
       meta: { title: 'Photo Exhibit | Julius Ian' }
+    },
+    {
+      path: '/resume',
+      component: ResumePage,
+      name: 'resume',
+      meta: { title: 'Resume | Julius Ian' }
     }
   ]
 });

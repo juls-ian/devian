@@ -61,6 +61,8 @@
 import IconArrowRight from '@/components/icons/IconArrowRight.vue';
 import emailjs from '@emailjs/browser';
 import { ref } from 'vue';
+import { toast } from 'vue3-toastify';
+import 'vue3-toastify/dist/index.css';
 
 const form = ref(null);
 const inputFieldReset = ref(null);
@@ -72,7 +74,18 @@ const sendEmail = () => {
     })
     .then(
       () => {
-        alert('Email sent successfully!');
+        toast('Email sent, will respond soon 📬', {
+          autoClose: 2000,
+          hideProgressBar: false,
+          type: 'success',
+          position: toast.POSITION.BOTTOM_LEFT,
+          transition: 'slide',
+          toastStyle: {
+            fontSize: '.9rem',
+            fontFamily: 'Poppins',
+            width: '20rem'
+          }
+        });
         inputFieldReset.value = '';
       },
       (error) => {

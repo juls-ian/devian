@@ -35,7 +35,7 @@
         >Photo Exhibit</RouterLink
       >
       <RouterLink
-        to="photo-exhibit"
+        to="resume"
         class="menu__link"
         v-motion
         :initial="{ opacity: 0, y: 100 }"
