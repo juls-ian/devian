@@ -94,7 +94,7 @@ IconArrowRight;
   }
 
   &__career {
-    padding: 7rem 0 10rem 6rem;
+    padding: 7rem 3rem 10rem 6rem;
     border-right: 2px solid $color-gray-light;
 
     @include respond-to(lg) {
@@ -146,10 +146,6 @@ IconArrowRight;
     line-height: 4rem;
     margin-bottom: 1rem;
 
-    @include respond-to(lg) {
-      font-size: $font-size-base-1;
-      line-height: 3rem;
-    }
     @include respond-to(tsm) {
       font-size: $font-size-base;
       line-height: 2rem;
@@ -183,7 +179,7 @@ IconArrowRight;
   }
 
   &__description {
-    font-size: $font-size-small;
+    font-size: $font-size-base;
     font-family: $font-oxygen;
     font-weight: 500;
     color: $color-gray-darkest !important;
@@ -195,7 +191,7 @@ IconArrowRight;
     }
 
     &--career {
-      width: 50%;
+      width: 60%;
 
       @include respond-to(tsm) {
         width: 70%;
@@ -203,7 +199,7 @@ IconArrowRight;
     }
 
     &--hobby {
-      width: 40%;
+      width: 60%;
 
       @include respond-to(tsm) {
         width: 70%;
@@ -215,7 +211,7 @@ IconArrowRight;
   }
 
   &__button {
-    margin-top: 3rem;
+    margin-top: 2rem;
 
     @include respond-to(tsm) {
       margin-top: 1rem;
