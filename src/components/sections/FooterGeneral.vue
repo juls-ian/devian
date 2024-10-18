@@ -3,16 +3,17 @@
     <div class="footer__content">
       <div class="footer__main">
         <div class="footer__contact">
-          <h1>Say hello</h1>
-          <a>hello@devian.com</a>
-          <a href="mailto:valdezjuliusian@gmail.com">hi@devian.com</a>
+          <h1>Swing by</h1>
+          <a href="mailto:valdezjuliusian@gmail.com">devian@pro.mail</a>
+          <a href="mailto:devian.scriptx@gmail.com">devian@dev.mail</a>
+          <a href="https://telegram.me/julsiann">swing@telegram.devian</a>
         </div>
 
         <div class="footer__pages">
-          <a>About</a>
-          <a>Projects</a>
-          <a>Photo Exhibit</a>
-          <a>Resume</a>
+          <RouterLink to="about">About</RouterLink>
+          <RouterLink to="projects">Projects</RouterLink>
+          <RouterLink to="photo-exhibit">Photo Exhibit</RouterLink>
+          <RouterLink to="resume">Resume</RouterLink>
         </div>
       </div>
       <div class="footer__sub">

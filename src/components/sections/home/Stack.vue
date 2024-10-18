@@ -1,14 +1,11 @@
 <script setup lang="ts">
 import GeometricShapesLeft from '@/components/shapes/GeometricShapesLeft.vue';
 import GeometricShapesRight from '@/components/shapes/GeometricShapesRight.vue';
-import PatternsVariantLeft from '@/components/shapes/PatternsVariantLeft.vue';
-import PatternsVariantRight from '@/components/shapes/PatternsVariantRight.vue';
 </script>
 
 <template>
   <section class="stack" id="stack">
     <GeometricShapesLeft class="stack__pattern stack__pattern--left" />
-    <PatternsVariantRight class="stack__pattern stack__pattern--left" />
     <div class="stack__content">
       <div class="stack__left">
         <h1 class="stack__text stack__text--frontend">Frontend</h1>
@@ -27,7 +24,6 @@ import PatternsVariantRight from '@/components/shapes/PatternsVariantRight.vue';
         </p>
       </div>
       <GeometricShapesRight class="stack__pattern stack__pattern--right" />
-      <PatternsVariantLeft class="stack__pattern stack__pattern--right" />
     </div>
   </section>
 </template>
@@ -58,14 +54,14 @@ import PatternsVariantRight from '@/components/shapes/PatternsVariantRight.vue';
     z-index: -1;
 
     &--left {
-      bottom: 4rem;
+      top: 20rem;
       right: 50%;
       z-index: -1;
 
       @include respond-to(sm) {
-        left: 5%;
-        bottom: 1%;
-        height: 10rem;
+        right: 1%;
+        top: 45%;
+        height: 15rem;
       }
 
       @include respond-to(xs) {
@@ -74,13 +70,13 @@ import PatternsVariantRight from '@/components/shapes/PatternsVariantRight.vue';
     }
 
     &--right {
-      left: 60rem;
+      left: 50rem;
       z-index: -1;
 
       @include respond-to(sm) {
         top: 10%;
-        left: 30%;
-        height: 8rem;
+        left: -10%;
+        height: 10rem;
       }
 
       @include respond-to(xs) {
@@ -113,6 +109,7 @@ import PatternsVariantRight from '@/components/shapes/PatternsVariantRight.vue';
 
   &__left {
     margin-bottom: 12rem;
+    left: 50%;
 
     @include respond-to(tsm) {
       margin-top: 5rem;

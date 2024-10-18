@@ -49,7 +49,7 @@
         </div>
 
         <button class="contact__button btn-primary btn-primary--sweep-variant-1" type="submit">
-          <span class="text">Shoot</span>
+          <span class="text">Hit up</span>
           <span class="icon"><IconArrowRight /></span>
         </button>
       </form>

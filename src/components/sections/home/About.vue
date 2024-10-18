@@ -1,7 +1,6 @@
 <script setup>
 import IconArrowRight from '@/components/icons/IconArrowRight.vue';
 import GeometricShapes from '@/components/shapes/GeometricShapes.vue';
-import Patterns from '@/components/shapes/Patterns.vue';
 
 const timeFrame = new Date().getHours();
 
@@ -12,7 +11,6 @@ const isDay = timeFrame > 6 && timeFrame < 18;
 <template>
   <section class="about" id="about">
     <GeometricShapes class="about__bg-shapes about__bg-shapes--1" />
-    <Patterns class="about__bg-shapes about__bg-shapes--2" />
     <div class="about__content about__content--left">
       <div class="about__details">
         <p class="about__greetings" v-text="isDay ? 'Good day!' : 'Good evening!'"></p>
@@ -24,8 +22,8 @@ const isDay = timeFrame > 6 && timeFrame < 18;
           <div class="line"></div>
         </div>
         <h5 class="about__description">
-          Crafting web solutions with a strong emphasis on seamless user experience, security, and
-          adherence to best practices with front-end and back-end prowess.
+          Developing web solutions with a strong emphasis on seamless user experience, security, and
+          adherence to best practices utilizing front-end and back-end tech stacks
         </h5>
         <RouterLink to="about" class="about__button btn-primary btn-primary--sweep">
           <span class="text">Get to know me</span>
@@ -79,14 +77,9 @@ const isDay = timeFrame > 6 && timeFrame < 18;
 
     &--1 {
       @include respond-to(sm) {
-        top: 60%;
+        top: 61%;
         left: 5%;
-      }
-    }
-
-    &--2 {
-      @include respond-to(sm) {
-        top: 70%;
+        height: auto;
       }
     }
   }
