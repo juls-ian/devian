@@ -43,24 +43,10 @@ const isHidden = ref(false);
 const toggleIconsVisibility = () => {
   isHidden.value = !isHidden.value;
 };
-
-const navbar = document.querySelector('.navbar');
-window.onscroll = () => {
-  if (document.body.scrollTop >= 200) {
-    navbar.classList.add('scrolled');
-  } else {
-    navbar.classList.remove('scrolled');
-  }
-};
 </script>
 
 <style lang="scss" scoped>
 @import '@/assets/main.scss';
-
-.scrolled {
-  background-color: blue;
-  box-shadow: 5px -1px 12px -5px grey;
-}
 
 .navbar {
   width: 100vw;

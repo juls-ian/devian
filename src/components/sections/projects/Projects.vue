@@ -318,13 +318,8 @@ section {
   align-items: start;
   margin-top: 3rem;
 
-  @include respond-to(tsm) {
-    .project {
-      flex-basis: 45%;
-      max-width: 100%;
-    }
-  }
   @include respond-to(sm) {
+    flex-basis: auto;
     margin-bottom: 7rem;
   }
 }
@@ -345,7 +340,11 @@ section {
   transition: margin 0.2s ease-in-out;
 
   @include respond-to(tsm) {
-    width: 20rem;
+    flex-basis: 45%;
+    max-width: 100%;
+  }
+  @include respond-to(sm) {
+    flex-basis: 100%;
   }
 
   @include respond-to(xs) {
