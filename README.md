@@ -14,7 +14,7 @@ Building from scratch I mainly used Vue and Sass together to make the developmen
 </p>
 
 ## Design 
-The design of this portfolio is primarily inspired by <a href="https://olaolu.dev/">Olaolu Olawuyi</a> and blended some of my own ideas with it. 
+I took inspirations from several web designs and blended some of my own ideas with it. 
 
 ## Future 
 I will be adding more features in this porfolio sooner 
