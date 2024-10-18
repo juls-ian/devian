@@ -1,6 +1,6 @@
 # devian 
 
-## Hi! 👋: 
+## Hi! 👋
 This is my current porfolio 'Devian', coming from the word 'developer' and my name 'Ian'
 
 ## Beta Phase 🥚
