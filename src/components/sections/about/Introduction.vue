@@ -35,8 +35,7 @@
           <span class="about__span about__span--tailwind">Tailwind</span>
           <br />
         </p>
-        <br />
-        <h2>Core Competencies</h2>
+        <h2 class="about__competencies">Core Competencies</h2>
         <p :class="isDark ? 'dark' : ''" class="about__paragraph about__paragraph--second">
           &bullet;Extensive knowledge of web development frameworks, technologies, and conventions
           <br />
@@ -47,6 +46,8 @@
           &bullet;Strong communication and effective collaboration with teams
           <br />
           &bullet;Proven leadership record
+          <br />
+          &bullet;Willingness to learn
         </p>
       </div>
       <div class="about__image">
@@ -163,6 +164,7 @@ const isDark = useDark();
 
     @include respond-to(sm) {
       width: 100%;
+      text-align: justify;
     }
 
     &--first {
@@ -171,6 +173,10 @@ const isDark = useDark();
     &--second {
       margin-top: 1rem;
     }
+  }
+
+  &__competencies {
+    margin-top: 1rem;
   }
 
   &__image {

@@ -102,7 +102,11 @@ IconArrowRight;
     }
 
     @include respond-to(td) {
-      padding: 7rem 0 1rem 5rem;
+      padding: 5rem 0 1rem 3rem;
+    }
+
+    @include respond-to(tsm) {
+      padding: 5rem 0 5rem 3rem;
     }
 
     @include respond-to(sm) {
@@ -120,7 +124,11 @@ IconArrowRight;
     }
 
     @include respond-to(td) {
-      padding: 7rem 0 1rem 5rem;
+      padding: 5rem 0 1rem 3rem;
+    }
+
+    @include respond-to(tsm) {
+      padding: 5rem 0 5rem 3rem;
     }
 
     @include respond-to(sm) {
@@ -136,10 +144,15 @@ IconArrowRight;
     font-size: $font-size-base-2;
     font-family: $font-poppins;
     line-height: 4rem;
+    margin-bottom: 1rem;
 
     @include respond-to(lg) {
       font-size: $font-size-base-1;
       line-height: 3rem;
+    }
+    @include respond-to(tsm) {
+      font-size: $font-size-base;
+      line-height: 2rem;
     }
 
     @include respond-to(sm) {
@@ -175,6 +188,7 @@ IconArrowRight;
     font-weight: 500;
     color: $color-gray-darkest !important;
     // margin: 0 20rem 0 0;
+
     @include respond-to(sm) {
       font-size: $font-size-smaller;
       line-height: 1.5rem;
@@ -182,10 +196,18 @@ IconArrowRight;
 
     &--career {
       width: 50%;
+
+      @include respond-to(tsm) {
+        width: 70%;
+      }
     }
 
     &--hobby {
       width: 40%;
+
+      @include respond-to(tsm) {
+        width: 70%;
+      }
       @include respond-to(sm) {
         width: 45%;
       }
@@ -194,6 +216,10 @@ IconArrowRight;
 
   &__button {
     margin-top: 3rem;
+
+    @include respond-to(tsm) {
+      margin-top: 1rem;
+    }
   }
 }
 </style>

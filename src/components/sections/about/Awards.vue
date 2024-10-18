@@ -31,7 +31,7 @@ const awards = [
     imageDesk: comDesk
   },
   {
-    name: 'Participation',
+    name: 'Laravel Webinar',
     giver: 'deVexpress',
     imageDesk: devDesk
   },
@@ -61,7 +61,7 @@ const awards = [
     imageDesk: kataga2Desk
   },
   {
-    name: 'Judge',
+    name: 'Contest Judge',
     giver: 'Psychology Society',
     imageDesk: psychDesk
   }

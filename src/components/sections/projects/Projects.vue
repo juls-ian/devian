@@ -318,6 +318,12 @@ section {
   align-items: start;
   margin-top: 3rem;
 
+  @include respond-to(tsm) {
+    .project {
+      flex-basis: 45%;
+      max-width: 100%;
+    }
+  }
   @include respond-to(sm) {
     margin-bottom: 7rem;
   }

@@ -93,6 +93,8 @@ import IconLinkedin from '../icons/IconLinkedin.vue';
     flex-direction: column;
     justify-content: center;
     align-items: start;
+    flex-wrap: wrap;
+    text-wrap: stable;
   }
 
   &__link {
@@ -101,6 +103,10 @@ import IconLinkedin from '../icons/IconLinkedin.vue';
     font-weight: 400;
     font-family: $font-poppins;
     color: $color-white;
+
+    @include respond-to(sm) {
+      overflow: hidden;
+    }
   }
 
   &__socials {
@@ -113,6 +119,8 @@ import IconLinkedin from '../icons/IconLinkedin.vue';
       align-items: start;
       justify-content: space-between;
       font-size: 2rem;
+      position: absolute;
+      bottom: 20%;
     }
 
     a {
