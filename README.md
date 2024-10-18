@@ -1,22 +1,22 @@
-# devian
+# devian 
 
-## Hi! 
+## Hi! 👋: 
 This is my current porfolio 'Devian', coming from the word 'developer' and my name 'Ian'
 
-## Beta Phase
+## Beta Phase 🥚
 Currently, the website is still underdevelopment so you might face bugs in there. Please send me a message if you found one.
 
-## Development
+## Development 🧪
 Building from scratch I mainly used Vue and Sass together to make the development much efficient. I also used some third party libraries.
 <p align="center">
 <a href="https://vuejs.org/"><img src="https://github.com/vuejs/art/blob/master/logo.png" alt="Vue Logo"></a>
 <a href="https://sass-lang.com/"><img src="https://sass-lang.com/assets/img/styleguide/color.png" alt="Total Downloads"></a>
 </p>
 
-## Design 
+## Design ⌨️
 I took inspirations from several web designs and blended some of my own ideas with it. 
 
-## Future 
+## Future 🌕
 I will be adding more features in this porfolio sooner 
 
 
