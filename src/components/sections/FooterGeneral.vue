@@ -7,6 +7,7 @@
           <a href="mailto:valdezjuliusian@gmail.com">devian@pro.mail</a>
           <a href="mailto:devian.scriptx@gmail.com">devian@dev.mail</a>
           <a href="https://telegram.me/julsiann">swing@telegram.devian</a>
+          <a href="viber://chat/chat?number=+6393023637">swing@viber.devian</a>
         </div>
 
         <div class="footer__pages">
