@@ -17,7 +17,7 @@
               class="name"
               id="name"
               name="name"
-              placeholder="Enter your name"
+              placeholder="Steve Rogers"
               required
             />
           </div>
@@ -29,7 +29,7 @@
               class="email"
               id="email"
               name="email"
-              placeholder="Enter your email"
+              placeholder="steve@avengers.com"
               required
             />
           </div>
@@ -42,7 +42,7 @@
               class="message"
               id="message"
               name="message"
-              placeholder="Enter your message"
+              placeholder="Greetings! There's something we discuss asap. You can contact me using this email address"
               required
             ></textarea>
           </div>

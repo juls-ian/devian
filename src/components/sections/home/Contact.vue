@@ -17,7 +17,7 @@
               class="name reset"
               id="name"
               name="name"
-              placeholder="Enter your name"
+              placeholder="Jean Grey"
               required
             />
           </div>
@@ -29,7 +29,7 @@
               class="email reset"
               id="email"
               name="email"
-              placeholder="Enter your email"
+              placeholder="jeangrey@xmen.com"
               required
             />
           </div>
@@ -42,7 +42,7 @@
               class="message reset"
               id="message"
               name="message"
-              placeholder="Enter your message"
+              placeholder="Hi Ian! I'm quite amazed by your works. I was hoping we could arrange a meeting to discuss the creation of X-Men website. Charles think it's a good idea to finally digitalize our services"
               required
             ></textarea>
           </div>

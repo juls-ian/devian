@@ -9,11 +9,12 @@
         <About />
       </div>
       <div>
-        <Stack />
-      </div>
-      <div>
         <Pursuits />
       </div>
+      <div>
+        <Stack />
+      </div>
+
       <div>
         <Contact />
       </div>
