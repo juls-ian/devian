@@ -59,8 +59,8 @@ import GeometricShapesRight from '@/components/shapes/GeometricShapesRight.vue';
       z-index: -1;
 
       @include respond-to(sm) {
-        right: 1%;
-        top: 45%;
+        right: -10%;
+        top: 42%;
         height: 15rem;
       }
 
