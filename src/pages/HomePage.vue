@@ -9,10 +9,10 @@
         <About />
       </div>
       <div>
-        <Pursuits />
+        <Stack />
       </div>
       <div>
-        <Stack />
+        <Pursuits />
       </div>
 
       <div>

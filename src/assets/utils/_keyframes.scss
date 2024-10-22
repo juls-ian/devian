@@ -128,6 +128,7 @@
   }
 }
 
+// INFINITE SLIDER
 @keyframes autoRunLeft {
   from {
     left: 100%;
@@ -143,5 +144,26 @@
   }
   to {
     right: calc(100% * -1);
+  }
+}
+
+// PRELOADER
+
+@keyframes left {
+  0% {
+    transform: translateX(0) scale(1) translateZ(0);
+  }
+
+  100% {
+    transform: translateX(6rem) scale(1.1) translateZ(5rem);
+  }
+}
+@keyframes right {
+  0% {
+    transform: translateX(0) scale(1.1) translateZ(0);
+  }
+
+  100% {
+    transform: translateX(-6rem) scale(1);
   }
 }
