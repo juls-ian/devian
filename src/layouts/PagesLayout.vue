@@ -1,5 +1,5 @@
 <template>
-  <header>
+  <header class="header">
     <HorizontalNav @toggle="toggleMenu" />
     <HamburgerMenu v-if="isMenuVisible" />
   </header>
@@ -22,7 +22,7 @@ const toggleMenu = () => {
 <style lang="scss" scoped>
 @import '@/assets/main.scss';
 
-header {
+.header {
   width: 100%;
   max-width: 100vw;
   top: 0;

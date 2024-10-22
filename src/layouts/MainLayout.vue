@@ -1,10 +1,10 @@
 <template>
-  <header>
+  <header class="header">
     <HorizontalNav @toggle="toggleMenu" />
     <HamburgerMenu v-if="isMenuVisible" />
   </header>
   <!--  avoid scrolling when hamburgermenu is visible -->
-  <main :class="{ hidden: isMenuVisible }">
+  <main :class="{ hidden: isMenuVisible }" class="content">
     <slot />
   </main>
 </template>
@@ -22,7 +22,7 @@ const toggleMenu = () => {
 <style lang="scss" scoped>
 @import '@/assets/main.scss';
 
-header {
+.header {
   width: 100%;
   max-width: 100vw;
   top: 0;
@@ -30,7 +30,7 @@ header {
   z-index: 99;
 }
 
-main {
+.content {
   ::-webkit-scrollbar {
     display: none;
   }
