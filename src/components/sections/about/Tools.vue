@@ -20,8 +20,25 @@
           </p>
         </div>
 
-        <div class="tools__grid">
-          <div class="tools__grid-item">
+        <div class="tools__grid grid-1">
+          <div
+            class="tools__grid-item"
+            v-motion
+            :initial="{
+              opacity: 0
+            }"
+            :visible="{
+              opacity: 1,
+              transition: {
+                type: 'spring',
+                stiffness: 250,
+                damping: 25,
+                mass: 0.5,
+                delay: 300
+              }
+            }"
+            :duration="1200"
+          >
             <a href="https://code.visualstudio.com"
               ><img
                 src="@/assets/images/tools/gen-1.webp"
@@ -29,44 +46,181 @@
                 loading="lazy"
             /></a>
           </div>
-          <div class="tools__grid-item">
+
+          <div
+            class="tools__grid-item"
+            v-motion
+            :initial="{
+              opacity: 0
+            }"
+            :visible="{
+              opacity: 1,
+              transition: {
+                type: 'spring',
+                stiffness: 250,
+                damping: 25,
+                mass: 0.5,
+                delay: 400
+              }
+            }"
+            :duration="1200"
+          >
             <a href="https://www.figma.com"
               ><img src="@/assets/images/tools/gen-2.webp" alt="Figma logo" loading="lazy"
             /></a>
           </div>
-          <div class="tools__grid-item">
+          <div
+            class="tools__grid-item"
+            v-motion
+            :initial="{
+              opacity: 0
+            }"
+            :visible="{
+              opacity: 1,
+              transition: {
+                type: 'spring',
+                stiffness: 250,
+                damping: 25,
+                mass: 0.5,
+                delay: 500
+              }
+            }"
+            :duration="1200"
+          >
             <a
               href="https://www.google.com/intl/en_uk/chrome/dr/download/?brand=FHFK&gad_source=1&gclid=CjwKCAjw3624BhBAEiwAkxgTOl06wMyCfloA4ABvNMlgyHT5izvELw4bdrw4SQi9dKfyqGA-OxCn2hoC7PoQAvD_BwE&gclsrc=aw.ds"
               ><img src="@/assets/images/tools/gen-9.webp" alt="Google Chrome logo" loading="lazy"
             /></a>
           </div>
 
-          <div class="tools__grid-item">
+          <div
+            class="tools__grid-item"
+            v-motion
+            :initial="{
+              opacity: 0
+            }"
+            :visible="{
+              opacity: 1,
+              transition: {
+                type: 'spring',
+                stiffness: 250,
+                damping: 25,
+                mass: 0.5,
+                delay: 600
+              }
+            }"
+            :duration="1200"
+          >
             <a href="https://git-scm.com/"
               ><img src="@/assets/images/tools/gen-3.webp" alt="GIT logo" loading="lazy"
             /></a>
           </div>
-          <div class="tools__grid-item">
+          <div
+            class="tools__grid-item"
+            v-motion
+            :initial="{
+              opacity: 0
+            }"
+            :visible="{
+              opacity: 1,
+              transition: {
+                type: 'spring',
+                stiffness: 250,
+                damping: 25,
+                mass: 0.5,
+                delay: 700
+              }
+            }"
+            :duration="1200"
+          >
             <a href="https://www.ibm.com/topics/rest-apis"
               ><img src="@/assets/images/tools/gen-4.webp" alt="REST API logo" loading="lazy"
             /></a>
           </div>
-          <div class="tools__grid-item">
+          <div
+            class="tools__grid-item"
+            v-motion
+            :initial="{
+              opacity: 0
+            }"
+            :visible="{
+              opacity: 1,
+              transition: {
+                type: 'spring',
+                stiffness: 250,
+                damping: 25,
+                mass: 0.5,
+                delay: 800
+              }
+            }"
+            :duration="1200"
+          >
             <a href="https://www.canva.com"
               ><img src="@/assets/images/tools/gen-5.webp" alt="Canva logo" loading="lazy"
             /></a>
           </div>
-          <div class="tools__grid-item">
+          <div
+            class="tools__grid-item"
+            v-motion
+            :initial="{
+              opacity: 0
+            }"
+            :visible="{
+              opacity: 1,
+              transition: {
+                type: 'spring',
+                stiffness: 250,
+                damping: 25,
+                mass: 0.5,
+                delay: 900
+              }
+            }"
+            :duration="1200"
+          >
             <a href="https://www.npmjs.com/"
               ><img src="@/assets/images/tools/gen-6.webp" alt="NPM logo" loading="lazy"
             /></a>
           </div>
-          <div class="tools__grid-item">
+          <div
+            class="tools__grid-item"
+            v-motion
+            :initial="{
+              opacity: 0
+            }"
+            :visible="{
+              opacity: 1,
+              transition: {
+                type: 'spring',
+                stiffness: 250,
+                damping: 25,
+                mass: 0.5,
+                delay: 1000
+              }
+            }"
+            :duration="1200"
+          >
             <a href="https://www.postman.com/"
               ><img src="@/assets/images/tools/gen-7.webp" alt="Postman logo" loading="lazy"
             /></a>
           </div>
-          <div class="tools__grid-item">
+          <div
+            class="tools__grid-item"
+            v-motion
+            :initial="{
+              opacity: 0
+            }"
+            :visible="{
+              opacity: 1,
+              transition: {
+                type: 'spring',
+                stiffness: 250,
+                damping: 25,
+                mass: 0.5,
+                delay: 1100
+              }
+            }"
+            :duration="1200"
+          >
             <a href="https://www.mozilla.org/en-US/firefox/developer/"
               ><img
                 src="@/assets/images/tools/gen-8.webp"
@@ -78,86 +232,90 @@
       </div>
 
       <div class="tools__lower">
-        <div class="tools__slider tools__slider--front" style="--quantity: 10">
-          <div class="tools__list">
-            <div class="tools__slider-item tools__slider-item--front" style="--position: 1">
-              <img src="@/assets/images/tools/front-1.webp" alt="" loading="lazy" />
-              <p class="tools__name tools__name--css">CSS</p>
-            </div>
-            <div class="tools__slider-item tools__slider-item--front" style="--position: 2">
-              <img src="@/assets/images/tools/front-2.webp" alt="" loading="lazy" />
-              <p class="tools__name tools__name--html">HTML</p>
-            </div>
-            <div class="tools__slider-item tools__slider-item--front" style="--position: 3">
-              <img src="@/assets/images/tools/front-3.webp" alt="" loading="lazy" />
-              <p class="tools__name tools__name--sass">Sass</p>
-            </div>
-            <div class="tools__slider-item tools__slider-item--front" style="--position: 4">
-              <img src="@/assets/images/tools/front-4.webp" alt="" loading="lazy" />
-              <p class="tools__name tools__name--js">JavaScript</p>
-            </div>
-            <div class="tools__slider-item tools__slider-item--front" style="--position: 5">
-              <img src="@/assets/images/tools/front-5.webp" alt="" loading="lazy" />
-              <p class="tools__name tools__name--vue">Vue</p>
-            </div>
-            <div class="tools__slider-item tools__slider-item--front" style="--position: 6">
-              <img src="@/assets/images/tools/front-6.webp" alt="" loading="lazy" />
-              <p class="tools__name tools__name--tw">Tailwind</p>
-            </div>
-            <div class="tools__slider-item tools__slider-item--front" style="--position: 7">
-              <img src="@/assets/images/tools/front-7.webp" alt="" loading="lazy" />
-              <p class="tools__name tools__name--nuxt">Nuxt</p>
-            </div>
-            <div class="tools__slider-item tools__slider-item--front" style="--position: 8">
-              <img src="@/assets/images/tools/front-8.webp" alt="" loading="lazy" />
-              <p class="tools__name tools__name--bs">Bootstrap</p>
-            </div>
-            <div class="tools__slider-item tools__slider-item--front" style="--position: 9">
-              <img src="@/assets/images/tools/front-9.webp" alt="" loading="lazy" />
-              <p class="tools__name tools__name--vite">Vite</p>
-            </div>
-            <div class="tools__slider-item tools__slider-item--front" style="--position: 10">
-              <img src="@/assets/images/tools/front-10.webp" alt="" loading="lazy" />
-              <p class="tools__name tools__name--vue">VueUse</p>
-            </div>
-          </div>
-        </div>
-        <div class="tools__slider tools__slider--back" style="--quantity: 8">
-          <div class="tools__list">
-            <div class="tools__slider-item tools__slider-item--back" style="--position: 1">
-              <img src="@/assets/images/tools/back-1.webp" alt="" loading="lazy" />
-              <p class="tools__name tools__name--php">PHP</p>
-            </div>
-            <div class="tools__slider-item tools__slider-item--back" style="--position: 2">
-              <img src="@/assets/images/tools/back-2.webp" alt="" loading="lazy" />
-              <p class="tools__name tools__name--sql">MySQL</p>
-            </div>
-            <div class="tools__slider-item tools__slider-item--back" style="--position: 3">
-              <img src="@/assets/images/tools/back-3.webp" alt="" loading="lazy" />
-              <p class="tools__name tools__name--laravel">Laravel</p>
-            </div>
-            <div class="tools__slider-item tools__slider-item--back" style="--position: 4">
-              <img src="@/assets/images/tools/back-4.webp" alt="" loading="lazy" />
-              <p class="tools__name tools__name--firebase">Firebase</p>
-            </div>
-            <div class="tools__slider-item tools__slider-item--back" style="--position: 5">
-              <img src="@/assets/images/tools/back-5.webp" alt="" loading="lazy" />
-              <p class="tools__name tools__name--inertia">Inertia</p>
-            </div>
-            <div class="tools__slider-item tools__slider-item--back" style="--position: 6">
-              <img src="@/assets/images/tools/back-6.webp" alt="" loading="lazy" />
-              <p class="tools__name tools__name--node">Node.js</p>
-            </div>
-            <div class="tools__slider-item tools__slider-item--back" style="--position: 7">
-              <img src="@/assets/images/tools/back-7.webp" alt="" loading="lazy" />
-              <p class="tools__name tools__name--supabase">Supabase</p>
-            </div>
-            <div class="tools__slider-item tools__slider-item--back" style="--position: 8">
-              <img src="@/assets/images/tools/back-8.webp" alt="" loading="lazy" />
-              <p class="tools__name tools__name--java">Java</p>
+        <MotionGroup preset="slideVisibleRight" :duration="800">
+          <div class="tools__slider tools__slider--front" style="--quantity: 10">
+            <div class="tools__list">
+              <div class="tools__slider-item tools__slider-item--front" style="--position: 1">
+                <img src="@/assets/images/tools/front-1.webp" alt="" loading="lazy" />
+                <p class="tools__name tools__name--css">CSS</p>
+              </div>
+              <div class="tools__slider-item tools__slider-item--front" style="--position: 2">
+                <img src="@/assets/images/tools/front-2.webp" alt="" loading="lazy" />
+                <p class="tools__name tools__name--html">HTML</p>
+              </div>
+              <div class="tools__slider-item tools__slider-item--front" style="--position: 3">
+                <img src="@/assets/images/tools/front-3.webp" alt="" loading="lazy" />
+                <p class="tools__name tools__name--sass">Sass</p>
+              </div>
+              <div class="tools__slider-item tools__slider-item--front" style="--position: 4">
+                <img src="@/assets/images/tools/front-4.webp" alt="" loading="lazy" />
+                <p class="tools__name tools__name--js">JavaScript</p>
+              </div>
+              <div class="tools__slider-item tools__slider-item--front" style="--position: 5">
+                <img src="@/assets/images/tools/front-5.webp" alt="" loading="lazy" />
+                <p class="tools__name tools__name--vue">Vue</p>
+              </div>
+              <div class="tools__slider-item tools__slider-item--front" style="--position: 6">
+                <img src="@/assets/images/tools/front-6.webp" alt="" loading="lazy" />
+                <p class="tools__name tools__name--tw">Tailwind</p>
+              </div>
+              <div class="tools__slider-item tools__slider-item--front" style="--position: 7">
+                <img src="@/assets/images/tools/front-7.webp" alt="" loading="lazy" />
+                <p class="tools__name tools__name--nuxt">Nuxt</p>
+              </div>
+              <div class="tools__slider-item tools__slider-item--front" style="--position: 8">
+                <img src="@/assets/images/tools/front-8.webp" alt="" loading="lazy" />
+                <p class="tools__name tools__name--bs">Bootstrap</p>
+              </div>
+              <div class="tools__slider-item tools__slider-item--front" style="--position: 9">
+                <img src="@/assets/images/tools/front-9.webp" alt="" loading="lazy" />
+                <p class="tools__name tools__name--vite">Vite</p>
+              </div>
+              <div class="tools__slider-item tools__slider-item--front" style="--position: 10">
+                <img src="@/assets/images/tools/front-10.webp" alt="" loading="lazy" />
+                <p class="tools__name tools__name--vue">VueUse</p>
+              </div>
             </div>
           </div>
-        </div>
+        </MotionGroup>
+        <MotionGroup preset="slideVisibleLeft" :duration="800">
+          <div class="tools__slider tools__slider--back" style="--quantity: 8">
+            <div class="tools__list">
+              <div class="tools__slider-item tools__slider-item--back" style="--position: 1">
+                <img src="@/assets/images/tools/back-1.webp" alt="" loading="lazy" />
+                <p class="tools__name tools__name--php">PHP</p>
+              </div>
+              <div class="tools__slider-item tools__slider-item--back" style="--position: 2">
+                <img src="@/assets/images/tools/back-2.webp" alt="" loading="lazy" />
+                <p class="tools__name tools__name--sql">MySQL</p>
+              </div>
+              <div class="tools__slider-item tools__slider-item--back" style="--position: 3">
+                <img src="@/assets/images/tools/back-3.webp" alt="" loading="lazy" />
+                <p class="tools__name tools__name--laravel">Laravel</p>
+              </div>
+              <div class="tools__slider-item tools__slider-item--back" style="--position: 4">
+                <img src="@/assets/images/tools/back-4.webp" alt="" loading="lazy" />
+                <p class="tools__name tools__name--firebase">Firebase</p>
+              </div>
+              <div class="tools__slider-item tools__slider-item--back" style="--position: 5">
+                <img src="@/assets/images/tools/back-5.webp" alt="" loading="lazy" />
+                <p class="tools__name tools__name--inertia">Inertia</p>
+              </div>
+              <div class="tools__slider-item tools__slider-item--back" style="--position: 6">
+                <img src="@/assets/images/tools/back-6.webp" alt="" loading="lazy" />
+                <p class="tools__name tools__name--node">Node.js</p>
+              </div>
+              <div class="tools__slider-item tools__slider-item--back" style="--position: 7">
+                <img src="@/assets/images/tools/back-7.webp" alt="" loading="lazy" />
+                <p class="tools__name tools__name--supabase">Supabase</p>
+              </div>
+              <div class="tools__slider-item tools__slider-item--back" style="--position: 8">
+                <img src="@/assets/images/tools/back-8.webp" alt="" loading="lazy" />
+                <p class="tools__name tools__name--java">Java</p>
+              </div>
+            </div>
+          </div>
+        </MotionGroup>
       </div>
     </main>
   </section>
@@ -225,16 +383,8 @@ const isDark = useDark();
   }
 
   &__grid {
-    display: grid;
-    justify-items: center;
-    align-items: center;
-    grid-template-columns: 10rem 10rem 10rem 10rem 1fr;
-    grid-template-rows: 1fr 1fr;
-    column-gap: 1rem;
-    row-gap: 1rem;
     width: 100%;
     height: 100%;
-    padding-left: 2rem;
 
     @include respond-to(td) {
       grid-template-columns: repeat(3, 1fr);

@@ -5,9 +5,10 @@
       <div class="line"></div>
       <div class="line"></div>
     </div>
+
     <main class="passion">
       <div class="passion__wrapper">
-        <div class="passion__card passion__card--frontend">
+        <div class="passion__card passion__card--frontend" v-motion-pop-visible-once>
           <figure class="passion__img passion__img--frontend">
             <img src="@/assets/images/passions/frontend.jpg" alt="" />
             <strong>01</strong>
@@ -28,7 +29,7 @@
           </div>
         </div>
 
-        <div class="passion__card passion__card--design">
+        <div class="passion__card passion__card--design" v-motion-pop-visible-once>
           <figure class="passion__img passion__img--design">
             <img src="@/assets/images/passions/design.jpg" alt="" />
             <strong>02</strong>
@@ -50,7 +51,7 @@
           </div>
         </div>
 
-        <div class="passion__card passion__card--backend">
+        <div class="passion__card passion__card--backend" v-motion-pop-visible-once>
           <figure class="passion__img passion__img--backend">
             <img src="@/assets/images/passions/backend.jpg" alt="" />
             <strong>03</strong>
