@@ -29,6 +29,7 @@
             }"
             :visible="{
               opacity: 1,
+              scale: 1,
               transition: {
                 type: 'spring',
                 stiffness: 250,
@@ -37,6 +38,7 @@
                 delay: 300
               }
             }"
+            :hovered="{ scale: 1.05 }"
             :duration="1200"
           >
             <a href="https://code.visualstudio.com"
@@ -55,6 +57,7 @@
             }"
             :visible="{
               opacity: 1,
+              scale: 1,
               transition: {
                 type: 'spring',
                 stiffness: 250,
@@ -63,6 +66,7 @@
                 delay: 400
               }
             }"
+            :hovered="{ scale: 1.05 }"
             :duration="1200"
           >
             <a href="https://www.figma.com"
@@ -77,6 +81,7 @@
             }"
             :visible="{
               opacity: 1,
+              scale: 1,
               transition: {
                 type: 'spring',
                 stiffness: 250,
@@ -85,6 +90,7 @@
                 delay: 500
               }
             }"
+            :hovered="{ scale: 1.05 }"
             :duration="1200"
           >
             <a
@@ -101,6 +107,7 @@
             }"
             :visible="{
               opacity: 1,
+              scale: 1,
               transition: {
                 type: 'spring',
                 stiffness: 250,
@@ -109,9 +116,10 @@
                 delay: 600
               }
             }"
+            :hovered="{ scale: 1.05 }"
             :duration="1200"
           >
-            <a href="https://git-scm.com/"
+            <a href="https://git-scm.com"
               ><img src="@/assets/images/tools/gen-3.webp" alt="GIT logo" loading="lazy"
             /></a>
           </div>
@@ -123,6 +131,7 @@
             }"
             :visible="{
               opacity: 1,
+              scale: 1,
               transition: {
                 type: 'spring',
                 stiffness: 250,
@@ -131,6 +140,7 @@
                 delay: 700
               }
             }"
+            :hovered="{ scale: 1.05 }"
             :duration="1200"
           >
             <a href="https://www.ibm.com/topics/rest-apis"
@@ -145,6 +155,7 @@
             }"
             :visible="{
               opacity: 1,
+              scale: 1,
               transition: {
                 type: 'spring',
                 stiffness: 250,
@@ -153,6 +164,7 @@
                 delay: 800
               }
             }"
+            :hovered="{ scale: 1.05 }"
             :duration="1200"
           >
             <a href="https://www.canva.com"
@@ -167,6 +179,7 @@
             }"
             :visible="{
               opacity: 1,
+              scale: 1,
               transition: {
                 type: 'spring',
                 stiffness: 250,
@@ -175,6 +188,7 @@
                 delay: 900
               }
             }"
+            :hovered="{ scale: 1.05 }"
             :duration="1200"
           >
             <a href="https://www.npmjs.com/"
@@ -189,6 +203,7 @@
             }"
             :visible="{
               opacity: 1,
+              scale: 1,
               transition: {
                 type: 'spring',
                 stiffness: 250,
@@ -197,9 +212,10 @@
                 delay: 1000
               }
             }"
+            :hovered="{ scale: 1.05 }"
             :duration="1200"
           >
-            <a href="https://www.postman.com/"
+            <a href="https://www.postman.com"
               ><img src="@/assets/images/tools/gen-7.webp" alt="Postman logo" loading="lazy"
             /></a>
           </div>
@@ -211,6 +227,7 @@
             }"
             :visible="{
               opacity: 1,
+              scale: 1,
               transition: {
                 type: 'spring',
                 stiffness: 250,
@@ -219,13 +236,39 @@
                 delay: 1100
               }
             }"
+            :hovered="{ scale: 1.05 }"
             :duration="1200"
           >
-            <a href="https://www.mozilla.org/en-US/firefox/developer/"
+            <a href="https://www.mozilla.org/en-US/firefox/developer"
               ><img
                 src="@/assets/images/tools/gen-8.webp"
                 alt="Firefox Developer Edition logo"
                 loading="lazy"
+            /></a>
+          </div>
+
+          <div
+            class="tools__grid-item"
+            v-motion
+            :initial="{
+              opacity: 0
+            }"
+            :visible="{
+              opacity: 1,
+              scale: 1,
+              transition: {
+                type: 'spring',
+                stiffness: 250,
+                damping: 25,
+                mass: 0.5,
+                delay: 1200
+              }
+            }"
+            :hovered="{ scale: 1.05 }"
+            :duration="1200"
+          >
+            <a href="https://www.docker.com"
+              ><img src="@/assets/images/tools/gen-10.webp" alt="Docker" loading="lazy"
             /></a>
           </div>
         </div>
@@ -233,7 +276,7 @@
 
       <div class="tools__lower">
         <MotionGroup preset="slideVisibleRight" :duration="800">
-          <div class="tools__slider tools__slider--front" style="--quantity: 10">
+          <div class="tools__slider tools__slider--front" style="--quantity: 11">
             <div class="tools__list">
               <div class="tools__slider-item tools__slider-item--front" style="--position: 1">
                 <img src="@/assets/images/tools/front-1.webp" alt="" loading="lazy" />
@@ -275,11 +318,15 @@
                 <img src="@/assets/images/tools/front-10.webp" alt="" loading="lazy" />
                 <p class="tools__name tools__name--vue">VueUse</p>
               </div>
+              <div class="tools__slider-item tools__slider-item--front" style="--position: 11">
+                <img src="@/assets/images/tools/front-11.webp" alt="" loading="lazy" />
+                <p class="tools__name tools__name--gsap">GSAP</p>
+              </div>
             </div>
           </div>
         </MotionGroup>
         <MotionGroup preset="slideVisibleLeft" :duration="800">
-          <div class="tools__slider tools__slider--back" style="--quantity: 8">
+          <div class="tools__slider tools__slider--back" style="--quantity: 9">
             <div class="tools__list">
               <div class="tools__slider-item tools__slider-item--back" style="--position: 1">
                 <img src="@/assets/images/tools/back-1.webp" alt="" loading="lazy" />
@@ -312,6 +359,10 @@
               <div class="tools__slider-item tools__slider-item--back" style="--position: 8">
                 <img src="@/assets/images/tools/back-8.webp" alt="" loading="lazy" />
                 <p class="tools__name tools__name--java">Java</p>
+              </div>
+              <div class="tools__slider-item tools__slider-item--back" style="--position: 9">
+                <img src="@/assets/images/tools/back-9.webp" alt="" loading="lazy" />
+                <p class="tools__name tools__name--dbeaver">Dbeaver</p>
               </div>
             </div>
           </div>
@@ -407,25 +458,21 @@ const isDark = useDark();
     cursor: pointer;
     transition: transform 0.3s ease-in-out;
 
-    &:nth-child(1) {
-      grid-row: 1/3;
+    // &:nth-child(1) {
+    //   grid-row: 1/2;
 
-      @include respond-to(td) {
-        grid-row: 1;
-      }
+    //   @include respond-to(td) {
+    //     grid-row: 1;
+    //   }
 
-      @include respond-to(tsm) {
-        grid-column: 1/3;
-      }
+    //   @include respond-to(tsm) {
+    //     grid-column: 1/3;
+    //   }
 
-      @include respond-to(sm) {
-        grid-column: 1/3;
-      }
-    }
-
-    &:hover {
-      transform: scale(1.05);
-    }
+    //   @include respond-to(sm) {
+    //     grid-column: 1/3;
+    //   }
+    // }
 
     img {
       max-width: 8rem;
@@ -567,6 +614,12 @@ const isDark = useDark();
     }
     &--java {
       color: $java-color;
+    }
+    &--gsap {
+      color: $gsap-color;
+    }
+    &--dbeaver {
+      color: $dbeaver-color;
     }
   }
 }
