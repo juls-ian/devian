@@ -4,7 +4,7 @@
       <h1 class="heading__title">Capturing</h1>
       <h1 class="heading__title">Fleeting Moments</h1>
       <h1 class="heading__title">of Everyday Life</h1>
-      <h1 class="heading__title">Weaving Timeless Stories Through</h1>
+      <h1 class="heading__title">Weaving Timeless Stories with</h1>
       <h1 class="heading__title">Lens and Narrative</h1>
     </section>
 
