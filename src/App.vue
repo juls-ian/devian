@@ -20,7 +20,7 @@ router.afterEach(() => {
 
 <template>
   <div>
-    <PreLoader :is-loaded="!isLoading" />
+    <!-- <PreLoader :is-loaded="!isLoading" /> -->
     <RouterView />
   </div>
 </template>
