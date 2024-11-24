@@ -12,9 +12,10 @@
 @import 'components/lines';
 @import 'components/preloader';
 @import 'layout/grid-layout';
+@import 'pages/sections/photo-exhibit';
+@import 'vendors/lenis';
 
 #app {
-  // max-width: $breakpoint-xl;
   margin: 0 auto;
   // padding: 2rem;
   font-weight: 500;
