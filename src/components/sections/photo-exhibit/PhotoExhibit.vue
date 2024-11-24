@@ -1,324 +1,418 @@
 <template>
-  <h1>Photo Exhibit</h1>
+  <main class="content">
+    <section class="heading">
+      <h1 class="heading__title">Capturing</h1>
+      <h1 class="heading__title">Fleeting Moments</h1>
+      <h1 class="heading__title">of Everyday Life</h1>
+      <h1 class="heading__title">Weaving Timeless Stories Through</h1>
+      <h1 class="heading__title">Lens and Narrative</h1>
+    </section>
 
-  <main class="exhibit">
-    <div class="exhibit__wheel">
-      <figure class="exhibit__wheel-card exhibit__wheel-card--1" style="--position: 1">
-        <img
-          src="@/assets/images/exhibit/l-1.webp"
-          class="exhibit__grid-image exhibit__grid-image--1"
-          alt=""
-        />
-        <div class="exhibit__wheel-card-detail">
-          <p>Elem Days</p>
+    <section class="exhibit">
+      <!-- Exhibit 01 -->
+      <div class="exhibit__container">
+        <div class="exhibit__heading">
+          <h2 class="exhibit__heading-title">Raw</h2>
+          <div class="exhibit__heading-terms">
+            <span>Shutter |&nbsp;</span>
+            <span>Aperture |&nbsp;</span>
+            <span>ISO &nbsp;</span>
+          </div>
+          <div class="exhibit__heading-subtitle">
+            <span>core components</span>
+          </div>
         </div>
-      </figure>
 
-      <figure class="exhibit__wheel-card exhibit__wheel-card--2" style="--position: 2">
-        <img
-          src="@/assets/images/exhibit/p-1.webp"
-          class="exhibit__grid-image exhibit__grid-image--2"
-          alt=""
-        />
-        <div class="exhibit__wheel-card-detail">
-          <p>Mini Venice</p>
+        <div class="exhibit__thumbnail">
+          <img src="@/assets/images/exhibit/t1.webp" alt="" />
+          <img src="@/assets/images/exhibit/t2.webp" alt="" />
+          <img src="@/assets/images/exhibit/t3.webp" alt="" />
+          <img src="@/assets/images/exhibit/t4.webp" alt="" />
+          <img src="@/assets/images/exhibit/t5.webp" alt="" />
         </div>
-      </figure>
 
-      <figure class="exhibit__wheel-card exhibit__wheel-card--3" style="--position: 3">
-        <img
-          src="@/assets/images/exhibit/l-2.webp"
-          class="exhibit__grid-image exhibit__grid-image--3"
-          alt=""
-        />
-        <div class="exhibit__wheel-card-detail">
-          <p>Water Bender</p>
+        <div class="exhibit__highlight">
+          <figure>
+            <img src="@/assets/images/exhibit/h-1.webp" />
+          </figure>
         </div>
-      </figure>
+      </div>
+      <!-- Exhibit 02 -->
+      <div class="exhibit__container">
+        <div class="exhibit__heading">
+          <h2 class="exhibit__heading-title">Creative</h2>
+          <div class="exhibit__heading-terms">
+            <span>Rule of thirds | &nbsp;</span>
+            <span>Depth of field |&nbsp;</span>
+            <span>Composition |&nbsp;</span>
+            <span>Exposure</span>
+          </div>
+          <div class="exhibit__heading-subtitle">
+            <span>refining techniques</span>
+          </div>
+        </div>
 
-      <figure class="exhibit__wheel-card exhibit__wheel-card--4" style="--position: 4">
-        <img
-          src="@/assets/images/exhibit/p-2.webp"
-          class="exhibit__grid-image exhibit__grid-image--4"
-          alt=""
-        />
-        <div class="exhibit__wheel-card-detail">
-          <p>Vast Sea</p>
+        <div class="exhibit__thumbnail">
+          <img src="@/assets/images/exhibit/t6.webp" alt="" />
+          <img src="@/assets/images/exhibit/t7.webp" alt="" />
+          <img src="@/assets/images/exhibit/t8.webp" alt="" />
+          <img src="@/assets/images/exhibit/t9.webp" alt="" />
+          <img src="@/assets/images/exhibit/t10.webp" alt="" />
         </div>
-      </figure>
+        <div class="exhibit__highlight">
+          <figure>
+            <img src="@/assets/images/exhibit/h-2.webp" />
+          </figure>
+        </div>
+      </div>
+      <!-- Exhibit 03 -->
+      <div class="exhibit__container">
+        <div class="exhibit__heading">
+          <h2 class="exhibit__heading-title">Eye-opening</h2>
+          <div class="exhibit__heading-terms">
+            <span>Perspective |&nbsp;</span>
+            <span>Symmetry |&nbsp;</span>
+            <span>Contrast |&nbsp;</span>
+            <span>Framing &nbsp;</span>
+          </div>
+          <div class="exhibit__heading-subtitle">
+            <span>applying elements</span>
+          </div>
+        </div>
 
-      <figure class="exhibit__wheel-card exhibit__wheel-card--5" style="--position: 5">
-        <img
-          src="@/assets/images/exhibit/l-6.webp"
-          class="exhibit__grid-image exhibit__grid-image--5"
-          alt=""
-        />
-        <div class="exhibit__wheel-card-detail">
-          <p>Food Riders</p>
+        <div class="exhibit__thumbnail">
+          <img src="@/assets/images/exhibit/t11.webp" alt="" />
+          <img src="@/assets/images/exhibit/t12.webp" alt="" />
+          <img src="@/assets/images/exhibit/t13.webp" alt="" />
+          <img src="@/assets/images/exhibit/t14.webp" alt="" />
+          <img src="@/assets/images/exhibit/t15.webp" alt="" />
         </div>
-      </figure>
 
-      <figure class="exhibit__wheel-card exhibit__wheel-card--6">
-        <img
-          src="@/assets/images/exhibit/p-6.webp"
-          class="exhibit__grid-image exhibit__grid-image--6"
-          alt=""
-        />
-        <div class="exhibit__wheel-card-detail">
-          <p>Grand Bell</p>
+        <div class="exhibit__highlight">
+          <figure>
+            <img src="@/assets/images/exhibit/h-3.webp" />
+          </figure>
         </div>
-      </figure>
+      </div>
+      <!-- Exhibit 04 -->
+      <div class="exhibit__container">
+        <div class="exhibit__heading">
+          <h2 class="exhibit__heading-title">Stories</h2>
+          <div class="exhibit__heading-terms">
+            <span>Portrait |&nbsp;</span>
+            <span>Landscape &nbsp;</span>
+          </div>
+          <div class="exhibit__heading-subtitle">
+            <span>in style</span>
+          </div>
+        </div>
 
-      <figure class="exhibit__wheel-card exhibit__wheel-card--7">
-        <img
-          src="@/assets/images/exhibit/l-4.webp"
-          class="exhibit__grid-image exhibit__grid-image--7"
-          alt=""
-        />
-        <div class="exhibit__wheel-card-detail">
-          <p>Our Freedom</p>
+        <div class="exhibit__thumbnail">
+          <img src="@/assets/images/exhibit/t16.webp" alt="" />
+          <img src="@/assets/images/exhibit/t17.webp" alt="" />
+          <img src="@/assets/images/exhibit/t18.webp" alt="" />
+          <img src="@/assets/images/exhibit/t19.webp" alt="" />
+          <img src="@/assets/images/exhibit/t20.webp" alt="" />
         </div>
-      </figure>
 
-      <figure class="exhibit__wheel-card exhibit__wheel-card--8">
-        <img
-          src="@/assets/images/exhibit/l-5.webp"
-          class="exhibit__grid-image exhibit__grid-image--8"
-          alt=""
-        />
-        <div class="exhibit__wheel-card-detail">
-          <p>Filipino Street Foods</p>
+        <div class="exhibit__highlight">
+          <figure>
+            <img src="@/assets/images/exhibit/h-4.webp" />
+          </figure>
         </div>
-      </figure>
+      </div>
 
-      <figure class="exhibit__wheel-card exhibit__wheel-card--9">
-        <img
-          src="@/assets/images/exhibit/p-4.webp"
-          class="exhibit__grid-image exhibit__grid-image--9"
-          alt=""
-        />
-        <div class="exhibit__wheel-card-detail">
-          <p>Neon Lights</p>
+      <!-- Exhibit Ending -->
+      <div class="exhibit__ending">
+        <div class="exhibit__ending-title">
+          <h1>Informative</h1>
         </div>
-      </figure>
-
-      <figure class="exhibit__wheel-card exhibit__wheel-card--10">
-        <img
-          src="@/assets/images/exhibit/l-3.webp"
-          class="exhibit__grid-image exhibit__grid-image--10"
-          alt=""
-        />
-        <div class="exhibit__wheel-card-detail">
-          <p>Paint the Town White</p>
+        <div class="exhibit__ending-title">
+          <h1>Captivating</h1>
         </div>
-      </figure>
-
-      <figure class="exhibit__wheel-card exhibit__wheel-card--11">
-        <img
-          src="@/assets/images/exhibit/l-7.webp"
-          class="exhibit__grid-image exhibit__grid-image--11"
-          alt=""
-        />
-        <div class="exhibit__wheel-card-detail">
-          <p>X-Mas Season</p>
+        <div class="exhibit__ending-title">
+          <h1>Timely</h1>
         </div>
-      </figure>
-
-      <figure class="exhibit__wheel-card exhibit__wheel-card--12">
-        <img
-          src="@/assets/images/exhibit/p-3.webp"
-          class="exhibit__grid-image exhibit__grid-image--12"
-          alt=""
-        />
-        <div class="exhibit__wheel-card-detail">
-          <p>My Bestfriend</p>
+        <div class="exhibit__ending-title">
+          <h1>Authentic</h1>
         </div>
-      </figure>
-
-      <figure class="exhibit__wheel-card exhibit__wheel-card--13">
-        <img
-          src="@/assets/images/exhibit/p-5.webp"
-          class="exhibit__grid-image exhibit__grid-image--13"
-          alt=""
-        />
-        <div class="exhibit__wheel-card-detail">
-          <p>Follow the Star</p>
-        </div>
-      </figure>
-
-      <figure class="exhibit__wheel-card exhibit__wheel-card--14">
-        <img
-          src="@/assets/images/exhibit/l-8.webp"
-          class="exhibit__grid-image exhibit__grid-image--14"
-          alt=""
-        />
-        <div class="exhibit__wheel-card-detail">
-          <p>Perya</p>
-        </div>
-      </figure>
-
-      <figure class="exhibit__wheel-card exhibit__wheel-card--15">
-        <img
-          src="@/assets/images/exhibit/l-9.webp"
-          class="exhibit__grid-image exhibit__grid-image--15"
-          alt=""
-        />
-        <div class="exhibit__wheel-card-detail">
-          <p>Shall We Play</p>
-        </div>
-      </figure>
-
-      <figure class="exhibit__wheel-card exhibit__wheel-card--16">
-        <img
-          src="@/assets/images/exhibit/l-10.webp"
-          class="exhibit__grid-image exhibit__grid-image--16"
-          alt=""
-        />
-        <div class="exhibit__wheel-card-detail">
-          <p>Lock Love</p>
-        </div>
-      </figure>
-
-      <figure class="exhibit__wheel-card exhibit__wheel-card--17">
-        <img
-          src="@/assets/images/exhibit/l-11.webp"
-          class="exhibit__grid-image exhibit__grid-image--17"
-          alt=""
-        />
-        <div class="exhibit__wheel-card-detail">
-          <p>The Sampaguitta</p>
-        </div>
-      </figure>
-
-      <figure class="exhibit__wheel-card exhibit__wheel-card--18">
-        <img
-          src="@/assets/images/exhibit/l-12.webp"
-          class="exhibit__grid-image exhibit__grid-image--18"
-          alt=""
-        />
-        <div class="exhibit__wheel-card-detail">
-          <p>Young scavengers</p>
-        </div>
-      </figure>
-
-      <figure class="exhibit__wheel-card exhibit__wheel-card--19">
-        <img
-          src="@/assets/images/exhibit/l-13.webp"
-          class="exhibit__grid-image exhibit__grid-image--19"
-          alt=""
-        />
-        <div class="exhibit__wheel-card-detail">
-          <p>Flawless beam</p>
-        </div>
-      </figure>
-
-      <figure class="exhibit__wheel-card exhibit__wheel-card--20">
-        <img
-          src="@/assets/images/exhibit/l-19.webp"
-          class="exhibit__grid-image exhibit__grid-image--20"
-          alt=""
-        />
-        <div class="exhibit__wheel-card-detail">
-          <p>Pommelhorse future star</p>
-        </div>
-      </figure>
-
-      <figure class="exhibit__wheel-card exhibit__wheel-card--21">
-        <img
-          src="@/assets/images/exhibit/l-15.webp"
-          class="exhibit__grid-image exhibit__grid-image--21"
-          alt=""
-        />
-        <div class="exhibit__wheel-card-detail">
-          <p>Morning gossip</p>
-        </div>
-      </figure>
-
-      <figure class="exhibit__wheel-card exhibit__wheel-card--22">
-        <img
-          src="@/assets/images/exhibit/l-16.webp"
-          class="exhibit__grid-image exhibit__grid-image--22"
-          alt=""
-        />
-        <div class="exhibit__wheel-card-detail">
-          <p>Passing by</p>
-        </div>
-      </figure>
-
-      <figure class="exhibit__wheel-card exhibit__wheel-card--23">
-        <img
-          src="@/assets/images/exhibit/l-17.webp"
-          class="exhibit__grid-image exhibit__grid-image--23"
-          alt=""
-        />
-        <div class="exhibit__wheel-card-detail">
-          <p>Grill it</p>
-        </div>
-      </figure>
-
-      <figure class="exhibit__wheel-card exhibit__wheel-card--24">
-        <img
-          src="@/assets/images/exhibit/l-18.webp"
-          class="exhibit__grid-image exhibit__grid-image--24"
-          alt=""
-        />
-        <div class="exhibit__wheel-card-detail">
-          <p>Laundrove</p>
-        </div>
-      </figure>
-
-      <figure class="exhibit__wheel-card exhibit__wheel-card--25">
-        <img
-          src="@/assets/images/exhibit/p-7.webp"
-          class="exhibit__grid-image exhibit__grid-image--25"
-          alt=""
-        />
-        <div class="exhibit__wheel-card-detail">
-          <p>Merry merry</p>
-        </div>
-      </figure>
-
-      <figure class="exhibit__wheel-card exhibit__wheel-card--26">
-        <img
-          src="@/assets/images/exhibit/l-14.webp"
-          class="exhibit__grid-image exhibit__grid-image--26"
-          alt=""
-        />
-        <div class="exhibit__wheel-card-detail">
-          <p>Young star</p>
-        </div>
-      </figure>
-
-      <figure class="exhibit__wheel-card exhibit__wheel-card--27">
-        <img
-          src="@/assets/images/exhibit/l-20.webp"
-          class="exhibit__grid-image exhibit__grid-image--27"
-          alt=""
-        />
-        <div class="exhibit__wheel-card-detail">
-          <p>By the thread</p>
-        </div>
-      </figure>
-    </div>
+      </div>
+    </section>
   </main>
-
-  <div class="scroll-down">Scroll down</div>
-  <div class="scroll-down-icon">
-    <p>&DownArrow;</p>
-  </div>
 </template>
 
-<script setup></script>
+<script setup>
+  import { gsap } from 'gsap';
+  import { ScrollTrigger } from 'gsap/ScrollTrigger';
+  import Lenis from 'lenis';
+  import { onMounted } from 'vue';
+
+  gsap.registerPlugin(ScrollTrigger);
+
+  onMounted(() => {
+    const settings = {
+      trigger: document.querySelector('.exhibit'),
+      containers: document.querySelectorAll('.exhibit__container'),
+      lerp: 0.05
+    };
+
+    const exhibitEnding = document.querySelectorAll('.exhibit__ending-title > h1');
+
+    const tlMain = gsap.timeline({
+      scrollTrigger: {
+        trigger: settings.trigger,
+        start: 'top top',
+        end: '+=8000 bottom',
+        scrub: 1,
+        pin: true
+      }
+    });
+
+    const init = () => {
+      initLenis();
+      animateHighlight();
+    };
+
+    const initLenis = () => {
+      const lenis = new Lenis({
+        lerp: settings.lerp,
+        smoothWheel: true
+      });
+
+      lenis.on('scroll', ScrollTrigger.update);
+
+      gsap.ticker.add((time) => lenis.raf(time * 1000));
+      gsap.ticker.lagSmoothing(0);
+    };
+
+    const animateHighlight = () => {
+      gsap.set(exhibitEnding, { yPercent: 100 });
+
+      settings.containers.forEach((element) => {
+        const thumbnails = element.querySelectorAll('.exhibit__thumbnail'),
+          highlights = element.querySelectorAll('.exhibit__highlight');
+
+        const heading = {
+          title: element.querySelectorAll('.exhibit__heading-title'),
+          terms: element.querySelectorAll('.exhibit__heading-terms > span'),
+          subtitle: element.querySelectorAll('.exhibit__heading-subtitle > span')
+        };
+
+        gsap.set(thumbnails, { yPercent: 100 });
+        gsap.set(highlights, { clipPath: 'inset(0 0 0 0)' });
+        gsap.set([heading.title, heading.terms, heading.subtitle], { yPercent: 0 });
+
+        tlMain
+          .to(thumbnails, {
+            duration: 2,
+            yPercent: -150
+          })
+          .to(
+            highlights,
+            {
+              duration: 2,
+              scale: 1.2
+            },
+            '<-0.5'
+          )
+          .to(
+            highlights,
+            {
+              clipPath: 'inset(0 0 100% 0)'
+            },
+            '>-0.2'
+          )
+          .to([heading.title, heading.terms, heading.subtitle], { yPercent: -150 }, '>-0.7');
+      });
+      tlMain.to(exhibitEnding, {
+        yPercent: 0
+      });
+    };
+
+    init();
+  });
+</script>
 
 <style lang="scss" scoped>
-@import '@/assets/main.scss';
+  @import '@/assets/main.scss';
 
-h1 {
-  text-align: center;
-  text-transform: uppercase;
-  font-family: $font-poppins;
-  font-size: $font-size-large;
-}
+  h1 {
+    font-size: $font-size-base-2;
+    font-family: $font-poppins;
+  }
+
+  h2 {
+    font-size: $font-size-large;
+    font-family: $font-poppins;
+  }
+
+  span {
+    font-size: $font-size-base-1;
+    font-family: $font-poppins;
+    display: inline-block;
+    line-height: 1.3;
+    color: white;
+  }
+
+  // HEADING
+  .heading {
+    position: relative;
+    height: 80vh;
+    padding: 0 4rem;
+    display: flex;
+    text-transform: uppercase;
+    flex-direction: column;
+    justify-content: center;
+
+    &__title {
+      &:nth-child(1) {
+        padding-left: 32rem;
+      }
+      &:nth-child(4) {
+        padding-left: 48rem;
+      }
+      &:nth-child(5) {
+        padding-left: 12rem;
+      }
+    }
+  }
+  // EXHIBIT
+  .exhibit {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+
+    &__container {
+      width: 100%;
+      height: inherit;
+      position: absolute;
+      left: 0;
+      top: 0;
+      z-index: 20;
+
+      &:nth-child(1) {
+        z-index: 4;
+      }
+      &:nth-child(2) {
+        z-index: 3;
+      }
+      &:nth-child(3) {
+        z-index: 2;
+      }
+      &:nth-child(4) {
+        z-index: 1;
+      }
+
+      &:nth-child(4) {
+        .exhibit__heading-title,
+        .exhibit__heading-terms,
+        .exhibit__heading-subtitle {
+          mix-blend-mode: difference;
+          color: white;
+        }
+      }
+    }
+
+    &__heading {
+      position: absolute;
+      left: 2rem;
+      top: 4rem;
+      z-index: 10;
+      overflow: hidden;
+    }
+
+    &__heading-title,
+    &__heading-terms,
+    &__heading-subtitle {
+      overflow: hidden;
+      margin-bottom: 0.1rem;
+    }
+
+    &__heading-title {
+      overflow: hidden;
+      text-transform: uppercase;
+      color: $color-primary !important;
+    }
+
+    &__heading-terms {
+      margin-top: -1.5rem;
+    }
+
+    &__heading-subtitle {
+      margin-top: -1rem;
+    }
+
+    &__heading-terms > span,
+    &__heading-subtitle > span {
+      overflow: hidden;
+      text-transform: lowercase;
+    }
+
+    &__heading-terms > span {
+      font-size: $font-size-base;
+      color: white;
+    }
+    &__heading-subtitle > span {
+      font-size: $font-size-small;
+      color: $color-secondary !important;
+    }
+
+    // EXHIBIT BG
+    &__highlight {
+      position: absolute;
+      width: 100%;
+      height: 100vh;
+
+      figure {
+        position: relative;
+        width: inherit;
+        height: inherit;
+        overflow: hidden;
+      }
+
+      img {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+
+    // EXHIBIT THUMBNAILS
+
+    &__thumbnail {
+      position: absolute;
+      top: 0;
+      right: 4rem;
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+      z-index: 10;
+
+      img {
+        position: relative;
+        width: 20rem;
+        height: 20rem;
+        object-fit: cover;
+      }
+    }
+
+    // EXHIBIT ENDING
+
+    &__ending {
+      position: relative;
+      width: 100%;
+      height: 100vh;
+      text-transform: uppercase;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
+    &__ending-title {
+      overflow: hidden;
+    }
+  }
 </style>
-
-<script setup></script>

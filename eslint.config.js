@@ -9,7 +9,12 @@ export default [
   ...pluginVue.configs['flat/essential'],
   {
     rules: {
-      'vue/multi-word-component-names': 'error'
+      'vue/multi-word-component-names': [
+        'error',
+        {
+          ignores: ['Particles', 'Hamburger', 'Awards', 'Introduction', 'Passion', 'Tools']
+        }
+      ]
     }
   }
 ];
