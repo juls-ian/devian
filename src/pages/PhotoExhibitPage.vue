@@ -17,6 +17,6 @@
   .content {
     width: 100%;
     height: 100vh;
-    padding: 10rem 0 0 0;
+    padding: 1rem 0 0 0;
   }
 </style>
