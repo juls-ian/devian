@@ -20,7 +20,8 @@
 
 <template>
   <div>
-    <!-- <PreLoader :is-loaded="!isLoading" /> -->
+    <!-- Preloader -->
+    <PreLoader :is-loaded="!isLoading" />
     <RouterView />
   </div>
 </template>
