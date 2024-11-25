@@ -63,7 +63,7 @@
 <style lang="scss" scoped>
   @import '@/assets/main.scss';
 
-  #footer {
+  .footer {
     display: flex;
     align-items: center;
     justify-content: center;
