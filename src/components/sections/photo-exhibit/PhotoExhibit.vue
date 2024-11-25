@@ -258,42 +258,51 @@
   .intro {
     position: relative;
     height: 100vh;
-    padding: 0 4rem;
+    margin: 0 4rem;
     display: flex;
     text-transform: uppercase;
     flex-direction: column;
     justify-content: center;
     align-items: start;
 
+    @include respond-to(sm) {
+      margin-top: 15rem;
+    }
+
     &__title {
       &:nth-child(1) {
-        padding-left: 30rem;
+        margin-left: 30rem;
+
         @include respond-to(sm) {
-          padding-left: 0;
+          margin-left: 0;
         }
       }
       &:nth-child(2) {
-        padding-left: 25rem;
+        margin-left: 25rem;
+
         @include respond-to(sm) {
-          padding-left: 0;
+          margin-left: 0;
         }
       }
       &:nth-child(3) {
-        padding-left: 20rem;
+        margin-left: 20rem;
+
         @include respond-to(sm) {
-          padding-left: 0;
+          margin-left: 0;
         }
       }
       &:nth-child(4) {
-        padding-left: 15rem;
+        margin-left: 15rem;
+
         @include respond-to(sm) {
-          padding-left: 0;
+          margin-left: 0;
         }
       }
       &:nth-child(5) {
-        padding-left: 10rem;
+        margin-left: 10rem;
+
         @include respond-to(sm) {
-          padding-left: 0;
+          margin-left: 0;
         }
       }
     }
