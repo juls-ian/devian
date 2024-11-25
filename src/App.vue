@@ -21,7 +21,7 @@
 <template>
   <div>
     <!-- Preloader -->
-    <!-- <PreLoader :is-loaded="!isLoading" /> -->
+    <PreLoader :is-loaded="!isLoading" />
     <RouterView />
   </div>
 </template>
