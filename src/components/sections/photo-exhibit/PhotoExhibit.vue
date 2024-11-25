@@ -1,11 +1,11 @@
 <template>
   <main class="content">
-    <section class="heading">
-      <h1 class="heading__title">Capturing</h1>
-      <h1 class="heading__title">Fleeting Moments</h1>
-      <h1 class="heading__title">of Everyday Life</h1>
-      <h1 class="heading__title">Weaving Timeless Stories with</h1>
-      <h1 class="heading__title">Lens and Narrative</h1>
+    <section class="intro">
+      <h1 class="intro__title">Capturing</h1>
+      <h1 class="intro__title">Fleeting Moments</h1>
+      <h1 class="intro__title">of Everyday Life</h1>
+      <h1 class="intro__title">Weaving Timeless Stories with</h1>
+      <h1 class="intro__title">Lens and Narrative</h1>
     </section>
 
     <section class="exhibit">
@@ -13,14 +13,14 @@
       <div class="exhibit__container">
         <div class="exhibit__heading">
           <h2 class="exhibit__heading-title">Raw</h2>
-          <div class="exhibit__heading-terms">
+          <p class="exhibit__heading-terms">
             <span>Shutter |&nbsp;</span>
             <span>Aperture |&nbsp;</span>
             <span>ISO &nbsp;</span>
-          </div>
-          <div class="exhibit__heading-subtitle">
-            <span>core components</span>
-          </div>
+          </p>
+          <p class="exhibit__heading-subtitle">
+            <span>refining techniques</span>
+          </p>
         </div>
 
         <div class="exhibit__thumbnail">
@@ -41,15 +41,14 @@
       <div class="exhibit__container">
         <div class="exhibit__heading">
           <h2 class="exhibit__heading-title">Creative</h2>
-          <div class="exhibit__heading-terms">
+          <p class="exhibit__heading-terms">
             <span>Rule of thirds | &nbsp;</span>
             <span>Depth of field |&nbsp;</span>
-            <span>Composition |&nbsp;</span>
-            <span>Exposure</span>
-          </div>
-          <div class="exhibit__heading-subtitle">
-            <span>refining techniques</span>
-          </div>
+            <span>Composition</span>
+          </p>
+          <p class="exhibit__heading-subtitle">
+            <span>profound storytelling</span>
+          </p>
         </div>
 
         <div class="exhibit__thumbnail">
@@ -69,15 +68,15 @@
       <div class="exhibit__container">
         <div class="exhibit__heading">
           <h2 class="exhibit__heading-title">Eye-opening</h2>
-          <div class="exhibit__heading-terms">
+          <p class="exhibit__heading-terms">
             <span>Perspective |&nbsp;</span>
             <span>Symmetry |&nbsp;</span>
             <span>Contrast |&nbsp;</span>
             <span>Framing &nbsp;</span>
-          </div>
-          <div class="exhibit__heading-subtitle">
-            <span>applying elements</span>
-          </div>
+          </p>
+          <p class="exhibit__heading-subtitle">
+            <span>bending elements</span>
+          </p>
         </div>
 
         <div class="exhibit__thumbnail">
@@ -98,13 +97,13 @@
       <div class="exhibit__container">
         <div class="exhibit__heading">
           <h2 class="exhibit__heading-title">Stories</h2>
-          <div class="exhibit__heading-terms">
+          <p class="exhibit__heading-terms">
             <span>Portrait |&nbsp;</span>
             <span>Landscape &nbsp;</span>
-          </div>
-          <div class="exhibit__heading-subtitle">
-            <span>in style</span>
-          </div>
+          </p>
+          <p class="exhibit__heading-subtitle">
+            <span>redefining styles</span>
+          </p>
         </div>
 
         <div class="exhibit__thumbnail">
@@ -240,23 +239,23 @@
   h1 {
     font-size: $font-size-base-2;
     font-family: $font-poppins;
+
+    @include respond-to(sm) {
+      font-size: $font-size-base-1;
+    }
   }
 
   h2 {
-    font-size: $font-size-large;
     font-family: $font-poppins;
   }
 
   span {
-    font-size: $font-size-base-1;
-    font-family: $font-poppins;
     display: inline-block;
     line-height: 1.3;
-    color: white;
   }
 
   // HEADING
-  .heading {
+  .intro {
     position: relative;
     height: 100vh;
     padding: 0 4rem;
@@ -269,18 +268,33 @@
     &__title {
       &:nth-child(1) {
         padding-left: 30rem;
+        @include respond-to(sm) {
+          padding-left: 0;
+        }
       }
       &:nth-child(2) {
         padding-left: 25rem;
+        @include respond-to(sm) {
+          padding-left: 0;
+        }
       }
       &:nth-child(3) {
         padding-left: 20rem;
+        @include respond-to(sm) {
+          padding-left: 0;
+        }
       }
       &:nth-child(4) {
         padding-left: 15rem;
+        @include respond-to(sm) {
+          padding-left: 0;
+        }
       }
       &:nth-child(5) {
         padding-left: 10rem;
+        @include respond-to(sm) {
+          padding-left: 0;
+        }
       }
     }
   }
@@ -328,6 +342,10 @@
       top: 4rem;
       z-index: 10;
       overflow: hidden;
+
+      @include respond-to(sm) {
+        left: 1rem;
+      }
     }
 
     &__heading-title,
@@ -338,32 +356,55 @@
     }
 
     &__heading-title {
+      font-size: $font-size-large;
       overflow: hidden;
       text-transform: uppercase;
       color: $color-primary !important;
+
+      @include respond-to(tsm) {
+        font-size: $font-size-base-2;
+      }
+      @include respond-to(sm) {
+        font-size: $font-size-base-1;
+      }
     }
 
     &__heading-terms {
-      margin-top: -1.5rem;
+      margin-top: -2rem;
+      font-size: $font-size-base;
+      color: white;
+
+      @include respond-to(tsm) {
+        margin-top: -2rem;
+        font-size: $font-size-small;
+      }
+      @include respond-to(sm) {
+        margin-top: -1.5rem;
+        font-size: $font-size-smaller;
+      }
     }
 
     &__heading-subtitle {
-      margin-top: -1rem;
+      margin-top: -1.3rem;
+      font-size: $font-size-base-1;
+      color: $color-secondary !important;
+      font-family: $font-oxygen;
+
+      @include respond-to(tsm) {
+        margin-top: -1rem;
+        font-size: $font-size-base;
+      }
+
+      @include respond-to(sm) {
+        margin-top: -0.8rem;
+        font-size: $font-size-small;
+      }
     }
 
-    &__heading-terms > span,
-    &__heading-subtitle > span {
+    &__heading-terms,
+    &__heading-subtitle {
       overflow: hidden;
       text-transform: lowercase;
-    }
-
-    &__heading-terms > span {
-      font-size: $font-size-base;
-      color: white;
-    }
-    &__heading-subtitle > span {
-      font-size: $font-size-small;
-      color: $color-secondary !important;
     }
 
     // EXHIBIT BG
@@ -417,6 +458,10 @@
       flex-direction: column;
       align-items: center;
       justify-content: center;
+
+      @include respond-to(sm) {
+        margin-top: -5rem;
+      }
     }
 
     &__ending-title {
