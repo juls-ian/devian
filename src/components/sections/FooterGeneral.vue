@@ -46,160 +46,25 @@
 </template>
 
 <script setup>
-import IconAppleMusic from '@/components/icons/IconAppleMusic.vue';
-import IconFacebook from '@/components/icons/IconFacebook.vue';
-import IconGitlab from '@/components/icons/IconGitlab.vue';
-import IconInstagram from '@/components/icons/IconInstagram.vue';
-import IconTwitter from '@/components/icons/IconTwitter.vue';
-import IconYoutube from '@/components/icons/IconYoutube.vue';
+  import IconAppleMusic from '@/components/icons/IconAppleMusic.vue';
+  import IconFacebook from '@/components/icons/IconFacebook.vue';
+  import IconGitlab from '@/components/icons/IconGitlab.vue';
+  import IconInstagram from '@/components/icons/IconInstagram.vue';
+  import IconTwitter from '@/components/icons/IconTwitter.vue';
+  import IconYoutube from '@/components/icons/IconYoutube.vue';
 
-const date = new Date();
-const currentYear = date.getFullYear();
+  const date = new Date();
+  const currentYear = date.getFullYear();
 </script>
 
 <style lang="scss" scoped>
-@import '@/assets/main.scss';
+  @import '@/assets/main.scss';
 
-.footer {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 0 7rem;
-  background: $color-gray-darkest;
-  height: fit-content;
-  position: relative;
-  margin-top: 7rem;
-
-  @include respond-to(lg) {
-    height: 100%;
-    padding: 1rem 2rem;
-  }
-  @include respond-to(sm) {
-    height: 100%;
-    padding: 5rem 2rem;
-  }
-
-  &__content {
+  .footer {
     display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    width: 100%;
-    padding: 7rem 0 10rem 4rem;
-
-    @include respond-to(sm) {
-      padding: 1rem 0 1rem 1rem;
-    }
+    align-items: center;
+    justify-content: center;
+    padding: 0 7rem;
+    margin-top: 7rem;
   }
-
-  &__main {
-    display: flex;
-    flex-direction: row;
-    justify-content: start;
-    align-items: start;
-    width: 100%;
-    height: 100%;
-    gap: 0 15rem;
-    border-bottom: 1px solid $color-primary;
-    padding-bottom: 9rem;
-
-    @include respond-to(sm) {
-      flex-direction: column;
-      padding-bottom: 3rem;
-    }
-
-    a {
-      display: block;
-      text-decoration: none;
-      color: $color-primary;
-      font-family: $font-poppins;
-      font-size: $font-size-small;
-      font-weight: 400;
-      cursor: pointer;
-      line-height: 3rem;
-      cursor: pointer;
-
-      @include respond-to(sm) {
-        font-size: $font-size-smaller;
-      }
-    }
-  }
-
-  &__contact {
-    flex-wrap: wrap;
-
-    h1 {
-      font-size: $font-size-small;
-      font-family: $font-poppins;
-      font-weight: 400;
-      text-transform: uppercase;
-      letter-spacing: 0.4rem;
-      color: $color-secondary;
-    }
-  }
-
-  &__pages {
-    @include respond-to(sm) {
-      margin-top: 2rem;
-    }
-  }
-
-  &__sub {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    padding-top: 4rem;
-    flex-direction: row;
-
-    @include respond-to(sm) {
-      padding-top: 2rem;
-      flex-direction: column;
-    }
-
-    p {
-      font-size: $font-size-small;
-      font-family: $font-poppins;
-      color: $color-secondary;
-      font-weight: 400;
-
-      @include respond-to(sm) {
-        font-size: $font-size-smaller;
-      }
-    }
-  }
-
-  &__socials {
-    .icon {
-      margin-right: 2rem;
-      color: $color-primary;
-      cursor: pointer;
-      @include respond-to(sm) {
-        margin-top: 1rem;
-        margin-right: 0.5rem;
-      }
-    }
-
-    a {
-      text-decoration: none;
-      color: inherit;
-    }
-  }
-
-  &__inspiration {
-    font-size: $font-size-smallest;
-    font-family: $font-poppins;
-    color: $color-secondary;
-    font-weight: 300;
-  }
-
-  &__button {
-    position: absolute;
-    bottom: 5rem;
-    right: 6rem;
-
-    @include respond-to(sm) {
-      bottom: 1rem;
-      right: 2rem;
-    }
-  }
-}
 </style>
