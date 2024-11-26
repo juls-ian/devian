@@ -67,9 +67,18 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 5rem 7rem;
-    background: $color-gray-darkest;
-    height: 100vh;
+    padding: 0 7rem;
     position: relative;
+    margin-top: 7rem;
+
+    &__button {
+      position: absolute;
+      bottom: 5rem;
+      right: 6rem;
+      @include respond-to(sm) {
+        bottom: 1rem;
+        right: 2rem;
+      }
+    }
   }
 </style>
