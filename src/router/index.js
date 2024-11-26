@@ -3,6 +3,8 @@ import HomePage from '@/pages/HomePage.vue';
 import PhotoExhibitPage from '@/pages/PhotoExhibitPage.vue';
 import ProjectsPage from '@/pages/ProjectsPage.vue';
 import ResumePage from '@/pages/ResumePage.vue';
+import { usePreloadStore } from '@/stores/preload';
+import { nextTick } from 'vue';
 import { createWebHistory, createRouter } from 'vue-router';
 
 const router = createRouter({
@@ -37,22 +39,27 @@ const router = createRouter({
       name: 'resume',
       meta: { title: 'Resume | Julius Ian' }
     }
-  ]
+  ],
+  scrollBehavior(to, from, savedPosition) {
+    if (savedPosition) {
+      return savedPosition;
+    } else {
+      return { top: 0 };
+    }
+  }
 });
 
 router.beforeEach((to, from, next) => {
+  const preload = usePreloadStore();
+  preload.show();
   document.title = to.meta.title || 'Julius Ian - Full Stack Developer';
   next();
 });
 
-export default router;
+router.afterEach(async () => {
+  const preload = usePreloadStore();
+  await new Promise((resolve) => setTimeout(resolve, 300));
+  preload.hide();
+});
 
-// scrollBehavior(to, from, savedPosition) {
-//   if (savedPosition) {
-//     return savedPosition;
-//   } else if (to.name === 'home') {
-//     return { x: 0, y: 0 }; // No smooth scroll for homepage
-//   } else {
-//     return { x: 0, y: 0, behavior: 'smooth' }; // Smooth scroll for other pages
-//   }
-// }
+export default router;

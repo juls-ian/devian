@@ -19,6 +19,24 @@ onMounted(() => {
     }
   };
 });
+
+ /*
+  const isLoaded = ref(false);
+  onMounted(() => {
+    document.onreadystatechange = () => {
+      if (document.readyState == 'complete') {
+        isLoaded.value = true;
+      }
+    };
+  });
+
+  defineProps({
+    isVisible: {
+      type: Boolean,
+      required: true
+    }
+  });
+  */
 </script>
 
 <style lang="scss" scoped>

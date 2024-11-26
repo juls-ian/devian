@@ -1,30 +1,26 @@
-<script setup>
-  import { ref } from 'vue';
-  import { useRouter } from 'vue-router';
-  import PreLoader from './components/preloader/PreLoader.vue';
-
-  const isLoading = ref(false);
-  const router = useRouter();
-
-  router.beforeEach((to, from, next) => {
-    isLoading.value = true;
-    next();
-  });
-
-  router.afterEach(() => {
-    setTimeout(() => {
-      isLoading.value = false;
-    }, 2000);
-  });
-</script>
-
 <template>
   <div>
-    <!-- Preloader -->
-    <PreLoader :is-loaded="!isLoading" />
+    <PreLoader :is-visible="preload.isLoading" />
     <RouterView />
   </div>
 </template>
+
+<script setup>
+  import PreLoader from '@/components/preloader/PreLoader.vue';
+  import { usePreloadStore } from '@/stores/preload';
+
+  const preload = usePreloadStore();
+
+  window.addEventListener('DOMContentLoaded', () => {
+    document.onreadystatechange = () => {
+      if (document.readyState === 'complete') {
+        preload.hide();
+      } else {
+        preload.show();
+      }
+    };
+  });
+</script>
 
 <style lang="scss">
   @import '@/assets/main.scss';

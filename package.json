@@ -17,6 +17,7 @@
     "@vueuse/motion": "^2.2.5",
     "gsap": "^3.12.5",
     "lenis": "^1.1.16",
+    "pinia": "^2.2.6",
     "tsparticles": "^3.5.0",
     "vue": "^3.4.29",
     "vue-preloader": "^1.1.4",
