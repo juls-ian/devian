@@ -34,44 +34,56 @@
   import Contact from '@/components/sections/home/Contact.vue';
   import Footer from '@/components/sections/home/Footer.vue';
   import VerticalNav from '@/components/navigation/VerticalNav.vue';
-  import { onBeforeUnmount, onMounted, ref } from 'vue';
+  import { onBeforeUnmount, onMounted } from 'vue';
 
   onMounted(() => {
     const sections = document.getElementById('sections');
-    const isTrackPad = ref(false);
+    const SCROLL_POSITION_KEY = 'scroll-position';
+    let isTrackpad = false;
+    let clearScrollTimeout;
 
-    // Scroll Device Detector
-    const detectScrollDevice = (e) => {
-      if (Math.abs(e.deltaY) < 100) {
-        isTrackPad.value = true;
-      } else {
-        isTrackPad.value = false;
+    // SAVE SCROLL POSITION TO LOCAL STORAGE
+    const handleScroll = () => {
+      localStorage.setItem(SCROLL_POSITION_KEY, sections.scrollTop.toString());
+
+      // CLEAR PREVIOUS TIMEOUT
+      if (clearScrollTimeout) {
+        clearTimeout(clearScrollTimeout);
       }
+
+      // CLEAR SCROLL POSITION AFTER 1 MINUTE
+      clearScrollTimeout = setTimeout(() => {
+        localStorage.removeItem(SCROLL_POSITION_KEY);
+      }, 10000);
     };
 
-    // Scroll Position Restoration
-    const savedScrollPosition = sessionStorage.getItem('scrollPosition');
+    // RESTORE POSITION
+    const savedScrollPosition = localStorage.getItem(SCROLL_POSITION_KEY);
     if (savedScrollPosition) {
       requestAnimationFrame(() => {
         sections.scrollTo({
           top: parseInt(savedScrollPosition, 10),
-          behavior: 'instant'
+          behavior: 'auto'
         });
       });
     }
 
-    // Session storage
-    const saveScrollPosition = () => {
-      sessionStorage.setItem('scrollPosition', sections.scrollTop);
+    // SCROLL DEVICE DETECTOR
+    const detectScrollDevice = (e) => {
+      if (Math.abs(e.deltaY) < 100) {
+        isTrackpad = true;
+      } else {
+        isTrackpad = false;
+      }
     };
 
-    // Slow Mouse Wheel (FOR LARGE SCREENS ONLY)
+    // SLOWING MOUSE WHEEL SCROLL (FOR LARGE SCREENS ONLY)
     const customScroll = (e) => {
       const screenWidth = window.innerWidth;
-      if (screenWidth >= 1280 && !isTrackPad.value) {
+      if (screenWidth >= 1280 && !isTrackpad) {
         // Apply only on larger screens
         e.preventDefault();
-        const scrollSpeed = 100; // Slowing the scroll
+        const scrollSpeed = 100; // Adjust for slower scroll
         sections.scrollBy({
           top: e.deltaY > 0 ? scrollSpeed : -scrollSpeed,
           behavior: 'smooth'
@@ -81,18 +93,18 @@
 
     sections.addEventListener('wheel', detectScrollDevice, { passive: true });
     sections.addEventListener('wheel', customScroll, { passive: false });
-    sections.addEventListener('scroll', saveScrollPosition);
+    sections.addEventListener('scroll', handleScroll);
 
     onBeforeUnmount(() => {
       sections.removeEventListener('wheel', detectScrollDevice);
       sections.removeEventListener('wheel', customScroll);
+      sections.removeEventListener('scroll', handleScroll);
     });
   });
 </script>
 
 <style lang="scss" scoped>
   @import '@/assets/main.scss';
-
   .sections {
     scroll-snap-type: y mandatory;
     scroll-behavior: smooth;
@@ -100,7 +112,7 @@
     overflow-y: scroll;
     overflow-x: hidden; // BUG FIX
 
-    // Hide Scrollbar
+    // HIDE SCROLLBAR
     &::-webkit-scrollbar {
       display: none;
     }
