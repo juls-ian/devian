@@ -273,12 +273,18 @@
       &:nth-child(1) {
         margin-left: 30rem;
 
+        @include respond-to(td) {
+          margin-left: 25rem;
+        }
         @include respond-to(sm) {
           margin-left: 0;
         }
       }
       &:nth-child(2) {
         margin-left: 25rem;
+        @include respond-to(td) {
+          margin-left: 20rem;
+        }
 
         @include respond-to(sm) {
           margin-left: 0;
@@ -287,6 +293,10 @@
       &:nth-child(3) {
         margin-left: 20rem;
 
+        @include respond-to(td) {
+          margin-left: 15rem;
+        }
+
         @include respond-to(sm) {
           margin-left: 0;
         }
@@ -294,12 +304,20 @@
       &:nth-child(4) {
         margin-left: 15rem;
 
+        @include respond-to(td) {
+          margin-left: 10rem;
+        }
+
         @include respond-to(sm) {
           margin-left: 0;
         }
       }
       &:nth-child(5) {
         margin-left: 10rem;
+
+        @include respond-to(td) {
+          margin-left: 5rem;
+        }
 
         @include respond-to(sm) {
           margin-left: 0;
@@ -381,7 +399,10 @@
     &__heading-terms {
       margin-top: -2rem;
       font-size: $font-size-base;
-      color: white;
+
+      span {
+        color: white !important;
+      }
 
       @include respond-to(tsm) {
         margin-top: -2rem;
@@ -396,8 +417,11 @@
     &__heading-subtitle {
       margin-top: -1.3rem;
       font-size: $font-size-base-1;
-      color: $color-secondary !important;
       font-family: $font-oxygen;
+
+      span {
+        color: $color-secondary !important;
+      }
 
       @include respond-to(tsm) {
         margin-top: -1rem;
@@ -447,6 +471,10 @@
       flex-direction: column;
       gap: 2rem;
       z-index: 10;
+
+      @include respond-to(sm) {
+        right: 1rem;
+      }
 
       img {
         position: relative;
