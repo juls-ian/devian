@@ -18,10 +18,10 @@
       </div>
 
       <div class="navbar__item">
-        <!-- RE-EMITTING EVENT FROM HAMBURGER TO MainLayout -->
-        <Hamburger
+        <!-- Re-emit event from Burger to MainLayout-->
+        <Burger
           class="navbar__burger"
-          @toggle="$emit('toggle', $event)"
+          @toggle-burger="$emit('toggle', $event)"
           @click="toggleIconsVisibility"
         />
       </div>
@@ -30,87 +30,89 @@
 </template>
 
 <script setup>
-import IconGithub from '@/components/icons/IconGitHub.vue';
-import IconLinkedin from '@/components/icons/IconLinkedin.vue';
-import Hamburger from '@/components/navigation/Hamburger.vue';
-import ColorModeSwitcher from '@/components/navigation/ColorModeSwitcher.vue';
-import { ref } from 'vue';
+  import IconGithub from '@/components/icons/IconGitHub.vue';
+  import IconLinkedin from '@/components/icons/IconLinkedin.vue';
+  import Burger from '@/components/navigation/Burger.vue';
+  import ColorModeSwitcher from '@/components/navigation/ColorModeSwitcher.vue';
+  import { ref } from 'vue';
 
-const emit = defineEmits(['toggle']);
+  const emit = defineEmits(['toggle']);
 
-const isHidden = ref(false);
+  const isHidden = ref(false);
 
-const toggleIconsVisibility = () => {
-  isHidden.value = !isHidden.value;
-};
+  const toggleIconsVisibility = () => {
+    isHidden.value = !isHidden.value;
+  };
 </script>
 
 <style lang="scss" scoped>
-@import '@/assets/main.scss';
+  @import '@/assets/main.scss';
 
-.navbar {
-  width: 100vw;
-  display: flex;
-  flex-direction: row;
-  position: absolute; /**scroll up white space issue fix */
-  justify-content: space-between;
-  justify-items: center;
-  align-items: center;
-  padding: 2rem 5rem 1rem 5rem;
-  background-color: transparent;
+  .navbar {
+    width: 100vw;
+    display: flex;
+    flex-direction: row;
+    position: absolute; /**scroll up white space issue fix */
+    justify-content: space-between;
+    justify-items: center;
+    align-items: center;
+    padding: 2rem 5rem 1rem 5rem;
+    background-color: transparent;
 
-  @include respond-to(sm) {
-    padding: 2rem 1rem 0 2rem;
-  }
-
-  .hidden {
-    visibility: hidden;
-  }
-
-  &__item {
-    a {
-      text-decoration: none;
-      color: inherit;
+    @include respond-to(sm) {
+      padding: 2rem 1rem 0 2rem;
     }
 
-    &--icon {
+    .hidden {
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.3s ease;
+    }
+
+    &__item {
+      a {
+        text-decoration: none;
+        color: inherit;
+      }
+
+      &--icon {
+        @include respond-to(sm) {
+          display: none;
+        }
+      }
+    }
+
+    pre {
+      margin: 0.1rem 0;
+    }
+
+    &__logo {
+      display: block;
+      justify-content: center;
+      justify-items: center;
+      align-items: center;
+      text-decoration: none;
+      font-family: $font-fredoka;
+      color: $color-secondary;
+    }
+
+    &__list {
+      display: flex;
+      justify-content: center;
+      justify-items: center;
+      align-items: center;
+      flex-direction: row;
+      gap: 2rem;
+
       @include respond-to(sm) {
-        display: none;
+        gap: 1rem;
+      }
+    }
+
+    &__burger {
+      @include respond-to(sm) {
+        padding-left: 0.1rem;
       }
     }
   }
-
-  pre {
-    margin: 0.1rem 0;
-  }
-
-  &__logo {
-    display: block;
-    justify-content: center;
-    justify-items: center;
-    align-items: center;
-    text-decoration: none;
-    font-family: $font-fredoka;
-    color: $color-secondary;
-  }
-
-  &__list {
-    display: flex;
-    justify-content: center;
-    justify-items: center;
-    align-items: center;
-    flex-direction: row;
-    gap: 2rem;
-
-    @include respond-to(sm) {
-      gap: 1rem;
-    }
-  }
-
-  &__burger {
-    @include respond-to(sm) {
-      padding-left: 0.1rem;
-    }
-  }
-}
 </style>

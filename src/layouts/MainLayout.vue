@@ -1,22 +1,18 @@
 <template>
   <header class="header">
     <HorizontalNav @toggle="toggleMenu" />
-    <HamburgerMenu v-if="isMenuVisible" />
+    <BurgerMenu :is-visible="isMenuVisible" />
   </header>
-  <div></div>
-  <!--  avoid scrolling when hamburgermenu is visible -->
-  <main :class="{ hidden: isMenuVisible }" class="content">
+  <!-- MAIN SCREEN -->
+  <main class="content">
     <slot />
   </main>
 </template>
 
 <script setup>
-  import HamburgerMenu from '@/components/navigation/HamburgerMenu.vue';
   import { ref } from 'vue';
+  import BurgerMenu from '@/components/navigation/BurgerMenu.vue';
   import HorizontalNav from '@/components/navigation/HorizontalNav.vue';
-
-  const timer = ref(0);
-  setInterval(() => timer.value++, 1000);
 
   const isMenuVisible = ref(false);
   const toggleMenu = () => {
@@ -40,11 +36,5 @@
     }
     -ms-overflow-style: none; /* IE and Edge */
     scrollbar-width: none; /* Firefox */
-  }
-
-  .hidden {
-    visibility: hidden;
-    pointer-events: none;
-    position: fixed;
   }
 </style>

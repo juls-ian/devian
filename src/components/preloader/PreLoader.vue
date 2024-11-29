@@ -1,10 +1,10 @@
 <template>
-  <transition name="slide-up">
+  <Transition name="slide-up">
     <div class="page-loader" v-if="isVisible">
       <div class="circle"></div>
       <div class="circle"></div>
     </div>
-  </transition>
+  </Transition>
 </template>
 
 <script setup>
