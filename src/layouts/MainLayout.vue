@@ -47,6 +47,6 @@
   }
 
   .hidden {
-    overflow: hidden;
+    overflow-y: hidden;
   }
 </style>

@@ -52,6 +52,7 @@ router.beforeEach((to, from, next) => {
   const preload = usePreloadStore();
   preload.show();
   document.title = to.meta.title || 'Julius Ian - Full Stack Developer';
+  document.body.classList.remove('hidden');
   next();
 });
 
@@ -59,7 +60,6 @@ router.afterEach(async () => {
   const preload = usePreloadStore();
   await new Promise((resolve) => setTimeout(resolve, 300));
   preload.hide();
-
   // Fully remove class for the disable burger menu scrolling
   document.body.classList.remove('hidden');
 });

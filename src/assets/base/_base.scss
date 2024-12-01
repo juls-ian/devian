@@ -78,3 +78,9 @@ body {
     font-size: 100%; // 16px
   }
 }
+
+@include respond-to(sm) {
+  body {
+    overflow-x: hidden;
+  }
+}
