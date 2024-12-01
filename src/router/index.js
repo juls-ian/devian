@@ -4,7 +4,6 @@ import PhotoExhibitPage from '@/pages/PhotoExhibitPage.vue';
 import ProjectsPage from '@/pages/ProjectsPage.vue';
 import ResumePage from '@/pages/ResumePage.vue';
 import { usePreloadStore } from '@/stores/preload';
-import { nextTick } from 'vue';
 import { createWebHistory, createRouter } from 'vue-router';
 
 const router = createRouter({
@@ -60,6 +59,9 @@ router.afterEach(async () => {
   const preload = usePreloadStore();
   await new Promise((resolve) => setTimeout(resolve, 300));
   preload.hide();
+
+  // Fully remove class for the disable burger menu scrolling
+  document.body.classList.remove('hidden');
 });
 
 export default router;

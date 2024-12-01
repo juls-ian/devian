@@ -1,7 +1,7 @@
 <template>
   <Transition name="slide">
     <div class="menu" v-if="isVisible">
-      <ul class="menu__links">
+      <div class="menu__links">
         <RouterLink
           to="about"
           class="menu__link"
@@ -42,7 +42,7 @@
           :duration="1000"
           >Resume</RouterLink
         >
-      </ul>
+      </div>
       <div
         class="menu__socials"
         v-motion

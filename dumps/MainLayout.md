@@ -1,7 +1,7 @@
 <template>
   <header class="main-nav">
     <HorizontalNav @toggle="toggleMenu" />
-    <BurgerMenu :is-visible="isMenuVisible" />
+    <BurgerMenu :is-visible="burger.isVisible" />
   </header>
   <!-- MAIN SCREEN -->
   <main class="content">
@@ -10,19 +10,21 @@
 </template>
 
 <script setup>
-  import { ref } from 'vue';
   import BurgerMenu from '@/components/navigation/BurgerMenu.vue';
   import HorizontalNav from '@/components/navigation/HorizontalNav.vue';
+  import { useBurgerStore } from '@/stores/burger';
 
-  const isMenuVisible = ref(false);
+  const burger = useBurgerStore();
+  // const isMenuVisible = ref(false);
+  
   const toggleMenu = () => {
-    isMenuVisible.value = !isMenuVisible.value;
-
-    // Also handled in the router
-    if (isMenuVisible.value) {
+    burger.isVisible = !burger.isVisible;
+    if (burger.isVisible) {
       document.body.classList.add('hidden');
+      burger.show();
     } else {
       document.body.classList.remove('hidden');
+      burger.dispose();
     }
   };
 </script>
