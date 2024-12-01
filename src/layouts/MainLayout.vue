@@ -1,5 +1,5 @@
 <template>
-  <header class="header">
+  <header class="main-nav">
     <HorizontalNav @toggle="toggleMenu" />
     <BurgerMenu :is-visible="isMenuVisible" />
   </header>
@@ -17,12 +17,17 @@
   const isMenuVisible = ref(false);
   const toggleMenu = () => {
     isMenuVisible.value = !isMenuVisible.value;
+    if (isMenuVisible.value) {
+      document.documentElement.classList.add('hidden');
+    } else {
+      document.documentElement.classList.remove('hidden');
+    }
   };
 </script>
-<style lang="scss" scoped>
+<style lang="scss">
   @import '@/assets/main.scss';
 
-  .header {
+  .main-nav {
     width: 100%;
     max-width: 100vw;
     top: 0;
@@ -36,5 +41,9 @@
     }
     -ms-overflow-style: none; /* IE and Edge */
     scrollbar-width: none; /* Firefox */
+  }
+
+  html.hidden {
+    overflow: hidden;
   }
 </style>
