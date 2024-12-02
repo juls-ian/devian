@@ -89,7 +89,7 @@
     background-image: linear-gradient(to left bottom, #3b82f6, #3175ef, #2868e8, #215be0, #1d4ed8);
     width: 100vw;
     height: 100vh;
-    position: fixed; // overlays the main slot content
+    position: absolute; // overlays the main slot content
 
     &__links {
       display: flex;

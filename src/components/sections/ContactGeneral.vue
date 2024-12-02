@@ -108,9 +108,9 @@
     }
 
     @include respond-to(sm) {
-      height: 100%;
+      flex-direction: column;
       margin-top: -3rem;
-      margin: 0 -2rem;
+      margin-bottom: -5rem;
     }
 
     &__content {
