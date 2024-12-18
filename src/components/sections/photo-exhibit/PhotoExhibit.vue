@@ -144,9 +144,11 @@
   import { gsap } from 'gsap';
   import { ScrollTrigger } from 'gsap/ScrollTrigger';
   import Lenis from 'lenis';
-  import { onMounted } from 'vue';
+  import { onMounted, onUnmounted } from 'vue';
 
   gsap.registerPlugin(ScrollTrigger);
+
+  let lenis;
 
   onMounted(() => {
     const settings = {
@@ -173,7 +175,7 @@
     };
 
     const initLenis = () => {
-      const lenis = new Lenis({
+      lenis = new Lenis({
         lerp: settings.lerp,
         smoothWheel: true
       });
@@ -229,6 +231,13 @@
     };
 
     init();
+  });
+
+  onUnmounted(() => {
+    // Destroy Lenis
+    if (lenis) {
+      lenis.destroy();
+    }
   });
 </script>
 
