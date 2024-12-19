@@ -58,179 +58,171 @@
 </template>
 
 <script setup>
-import { useDark } from '@vueuse/core';
-const isDark = useDark();
+  import { useDark } from '@vueuse/core';
+  const isDark = useDark();
 </script>
 
 <style lang="scss" scoped>
-@import '@/assets/main.scss';
+  @import '@/assets/main.scss';
 
-.dark {
-  color: $color-gray !important;
-}
-
-#about {
-  position: relative;
-}
-
-.about {
-  display: flex;
-  flex-direction: row;
-  margin-top: 5rem;
-
-  @include respond-to(tsm) {
-    flex-direction: column;
+  .dark {
+    color: $color-gray !important;
   }
 
-  @include respond-to(sm) {
-    flex-direction: column;
-    height: 100%;
+  #about {
+    position: relative;
   }
 
-  &__details {
-    h1 {
-      font-size: $font-size-base-1;
-      text-transform: uppercase;
+  .about {
+    display: flex;
+    flex-direction: row;
+    margin-top: 5rem;
+    // gap: 15rem;
+    justify-content: center;
+    align-items: center;
+
+    @include respond-to(tsm) {
+      flex-direction: column;
+    }
+
+    @include respond-to(sm) {
+      flex-direction: column;
+      height: 100%;
+    }
+
+    &__details {
+      h1 {
+        font-size: $font-size-base-1;
+        text-transform: uppercase;
+        font-family: $font-poppins;
+        font-weight: 550;
+        letter-spacing: 0.4rem;
+        color: $color-primary;
+
+        @include respond-to(tsm) {
+          justify-content: center;
+          align-items: center;
+        }
+
+        @include respond-to(sm) {
+          width: 100%;
+          font-size: $font-size-base;
+          text-align: center;
+        }
+      }
+
+      h2 {
+        font-size: $font-size-small;
+        text-transform: uppercase;
+        font-family: $font-poppins;
+        font-weight: 450;
+        color: $color-primary;
+
+        @include respond-to(sm) {
+          text-align: center;
+        }
+      }
+    }
+
+    &__span {
       font-family: $font-poppins;
-      font-weight: 550;
-      letter-spacing: 0.4rem;
-      color: $color-primary;
+      &--grad {
+        color: $color-secondary !important;
+      }
+
+      &--vue {
+        color: $vue-color !important;
+      }
+
+      &--nuxt {
+        color: $nuxt-color !important;
+      }
+
+      &--laravel {
+        color: $laravel-color !important;
+      }
+
+      &--inertia {
+        color: $inertia-color !important;
+      }
+
+      &--sass {
+        color: $sass-color !important;
+      }
+
+      &--tailwind {
+        color: $tailwind-color !important;
+      }
+
+      &--bootstrap {
+        color: $bootstrap-color !important;
+      }
+    }
+
+    &__paragraph {
+      font-family: $font-poppins;
+      font-size: $font-size-smaller;
+      line-height: 1.5rem;
+      font-weight: 400;
+      color: $color-gray-dark;
+
+      @include respond-to(td) {
+        width: 70%;
+      }
 
       @include respond-to(sm) {
         width: 100%;
-        font-size: $font-size-base;
-        text-align: center;
+        text-align: justify;
+      }
+
+      &--first {
+        margin-top: 2rem;
+      }
+      &--second {
+        margin-top: 1rem;
       }
     }
 
-    h2 {
-      font-size: $font-size-small;
-      text-transform: uppercase;
-      font-family: $font-poppins;
-      font-weight: 450;
-      color: $color-primary;
-
-      @include respond-to(sm) {
-        text-align: center;
-      }
-    }
-  }
-
-  &__span {
-    font-family: $font-poppins;
-    &--grad {
-      color: $color-secondary !important;
-    }
-
-    &--vue {
-      color: $vue-color !important;
-    }
-
-    &--nuxt {
-      color: $nuxt-color !important;
-    }
-
-    &--laravel {
-      color: $laravel-color !important;
-    }
-
-    &--inertia {
-      color: $inertia-color !important;
-    }
-
-    &--sass {
-      color: $sass-color !important;
-    }
-
-    &--tailwind {
-      color: $tailwind-color !important;
-    }
-
-    &--bootstrap {
-      color: $bootstrap-color !important;
-    }
-  }
-
-  &__paragraph {
-    font-family: $font-poppins;
-    font-size: $font-size-smaller;
-    line-height: 1.5rem;
-    font-weight: 400;
-    color: $color-gray-dark;
-
-    @include respond-to(td) {
-      width: 70%;
-    }
-
-    @include respond-to(sm) {
-      width: 100%;
-      text-align: justify;
-    }
-
-    &--first {
-      margin-top: 2rem;
-    }
-    &--second {
+    &__competencies {
       margin-top: 1rem;
     }
-  }
 
-  &__competencies {
-    margin-top: 1rem;
-  }
+    &__image {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
 
-  &__image {
-    width: 100%;
-    height: 100%;
-    margin-left: 4rem;
+      img {
+        height: 43rem;
+        object-fit: cover;
+        // pixelated fix
+        overflow-clip-margin: unset;
+        overflow: visible;
+        margin-top: 0.8rem;
+        box-shadow: 0 5px 10px 10px rgba(59, 130, 246, 0.2);
 
-    @include respond-to(td) {
-      margin-left: 0;
-    }
+        @include respond-to(td) {
+          height: 30rem;
+          left: 52%;
+        }
 
-    @include respond-to(tsm) {
-      margin-left: 0;
-    }
+        @include respond-to(tsm) {
+          height: 25rem;
+          top: 15%;
+          left: 55%;
+        }
 
-    @include respond-to(sm) {
-      margin-left: 0;
-    }
+        @include respond-to(sm) {
+          height: 25rem;
+        }
 
-    @include respond-to(xs) {
-      margin-left: 0;
-    }
-
-    img {
-      height: 43rem;
-
-      object-fit: cover;
-
-      // pixelated fix
-      overflow-clip-margin: unset;
-      overflow: visible;
-      margin-top: 0.8rem;
-      box-shadow: 0 5px 10px 10px rgba(59, 130, 246, 0.2);
-
-      @include respond-to(td) {
-        height: 35rem;
-        left: 52%;
-      }
-
-      @include respond-to(tsm) {
-        height: 25rem;
-        top: 15%;
-        left: 55%;
-      }
-
-      @include respond-to(sm) {
-        height: 25rem;
-      }
-
-      @include respond-to(xs) {
-        height: 20rem;
-        right: -2%;
+        @include respond-to(xs) {
+          height: 20rem;
+          right: -2%;
+        }
       }
     }
   }
-}
 </style>

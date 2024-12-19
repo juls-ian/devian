@@ -249,6 +249,10 @@
     font-size: $font-size-base-2;
     font-family: $font-poppins;
 
+    @include respond-to(tsm) {
+      font-size: $font-size-base-1;
+    }
+
     @include respond-to(sm) {
       font-size: $font-size-base-1;
     }
