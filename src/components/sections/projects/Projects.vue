@@ -248,7 +248,7 @@
     position: relative;
     width: 100%;
     height: auto;
-    padding: 1rem 10rem;
+    padding: 1rem 9rem;
     // background-color: $color-white-pure;
 
     @include respond-to(md) {
