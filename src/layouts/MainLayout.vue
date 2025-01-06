@@ -48,5 +48,6 @@
 
   .hidden {
     overflow-y: hidden;
+    padding-right: 1px; // horizontal reflow fix
   }
 </style>

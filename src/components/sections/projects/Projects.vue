@@ -19,6 +19,7 @@
   import cmLogo from '@/assets/images/projects/cm/cm-logo.webp';
   import cmApiLogo from '@/assets/images/projects/cm-api/cm-api-logo.webp';
   import pmLogo from '@/assets/images/projects/pm/pm-logo.webp';
+  import ggLogo from '@/assets/images/projects/gg/gg-logo.webp';
   // previews
   import julPreview from '@/assets/images/projects/jul/jul-preview.webp';
   import jvPreview from '@/assets/images/projects/jv/jv-preview.webp';
@@ -36,6 +37,8 @@
   import cmPreview from '@/assets/images/projects/cm/cm-preview.webp';
   import cmApiPreview from '@/assets/images/projects/cm-api/cm-api-preview.webp';
   import pmPreview from '@/assets/images/projects/pm/pm-preview.webp';
+  import ggPreview from '@/assets/images/projects/gg/gg-preview.webp';
+  import eePreview from '@/assets/images/projects/ee/ee-preview.webp';
 
   // ACTIVE filter | default = all
   const activeFilter = ref('all');
@@ -72,6 +75,49 @@
       logo: natoursLogo,
       preview: natoursPreview,
       github: 'https://github.com/juls-ian/natours'
+    },
+    {
+      name: 'Game Grove',
+      type: 'web',
+      urlPreview: 'game-grove.com',
+      url: 'https://game-grove-ff91d.web.app/',
+      logo: ggLogo,
+      preview: ggPreview,
+      github: 'https://github.com/juls-ian/game-grove'
+    },
+    {
+      name: 'Estate Exchange',
+      type: 'web',
+      logo: pmLogo,
+      preview: eePreview,
+      github: 'https://github.com/juls-ian/estate-exchange'
+    },
+    {
+      name: 'CheckMate API',
+      type: 'web',
+      urlPreview: '',
+      url: '',
+      logo: cmApiLogo,
+      preview: cmApiPreview,
+      github: 'https://github.com/juls-ian/checkmate-api'
+    },
+    {
+      name: 'Product Manager',
+      type: 'web',
+      urlPreview: 'encryptify.vercel.app',
+      url: '',
+      logo: pmLogo,
+      preview: pmPreview,
+      github: 'https://github.com/juls-ian/product-manager'
+    },
+    {
+      name: 'CheckMate',
+      type: 'web',
+      urlPreview: 'encryptify.vercel.app',
+      url: '',
+      logo: cmLogo,
+      preview: cmPreview,
+      github: 'https://github.com/juls-ian/checkmate'
     },
     {
       name: 'Caelum Movie Hub',
@@ -154,16 +200,6 @@
       logo: uniLogo,
       preview: uniPreview
     },
-
-    {
-      name: 'CheckMate',
-      type: 'web',
-      urlPreview: 'encryptify.vercel.app',
-      url: '',
-      logo: cmLogo,
-      preview: cmPreview,
-      github: 'https://github.com/juls-ian/checkmate'
-    },
     {
       name: 'Encryptify',
       type: 'web',
@@ -172,24 +208,6 @@
       logo: encLogo,
       preview: encPreview,
       github: 'https://github.com/juls-ian/encryptify'
-    },
-    {
-      name: 'CheckMate API',
-      type: 'web',
-      urlPreview: '',
-      url: '',
-      logo: cmApiLogo,
-      preview: cmApiPreview,
-      github: 'https://github.com/juls-ian/checkmate-api'
-    },
-    {
-      name: 'Product Manager',
-      type: 'web',
-      urlPreview: 'encryptify.vercel.app',
-      url: '',
-      logo: pmLogo,
-      preview: pmPreview,
-      github: 'https://github.com/juls-ian/product-manager'
     }
   ]);
 

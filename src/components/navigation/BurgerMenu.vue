@@ -87,7 +87,7 @@
     justify-content: center;
     align-items: center;
     background-image: linear-gradient(to left bottom, #3b82f6, #3175ef, #2868e8, #215be0, #1d4ed8);
-    width: 100vw;
+    width: 100%;
     height: 100vh;
     position: absolute; // overlays the main slot content
 
