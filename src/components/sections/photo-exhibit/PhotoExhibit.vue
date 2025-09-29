@@ -214,14 +214,16 @@
               duration: 2,
               scale: 1.2
             },
-            '<-0.5'
+            // '<-0.5'
+            '<-0.2'
           )
           .to(
             highlights,
             {
               clipPath: 'inset(0 0 100% 0)'
             },
-            '>-0.2'
+            // '>-0.2'
+            '>-0.5'
           )
           .to([heading.title, heading.terms, heading.subtitle], { yPercent: -150 }, '>-0.7');
       });
