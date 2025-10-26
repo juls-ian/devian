@@ -19,7 +19,7 @@
 
       <div class="navbar__item">
         <!-- Re-emit event from Burger to MainLayout-->
-        <Burger
+        <BurgerButton
           class="navbar__burger"
           @toggle-burger="$emit('toggle', $event)"
           @click="toggleIconsVisibility"
@@ -32,10 +32,11 @@
 <script setup>
   import IconGithub from '@/components/icons/IconGitHub.vue';
   import IconLinkedin from '@/components/icons/IconLinkedin.vue';
-  import Burger from '@/components/navigation/Burger.vue';
+  import BurgerButton from '@/components/navigation/BurgerButton.vue';
   import ColorModeSwitcher from '@/components/navigation/ColorModeSwitcher.vue';
   import { ref } from 'vue';
 
+  // EMIT TOGGLE EVENT TO PARENT: MainLayout
   const emit = defineEmits(['toggle']);
 
   const isHidden = ref(false);

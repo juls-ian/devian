@@ -16,7 +16,7 @@
 
   const handleToggle = () => {
     isActive.value = !isActive.value;
-    // EMIT TOGGLE EVENT TO THE PARENT
+    // EMIT TOGGLE EVENT TO THE PARENT: HorizontalNav
     emit('toggle-burger', isActive.value);
   };
 </script>
