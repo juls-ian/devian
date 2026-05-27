@@ -1,6 +1,5 @@
 import AboutPage from '@/pages/AboutPage.vue';
-import ConstructionNotice from '@/pages/errors/ConstructionNotice.vue';
-import HomePage from '@/pages/HomePage.vue';
+import ConstructionNotice from '@/pages/advisories/ConstructionNotice.vue';
 import PhotoExhibitPage from '@/pages/PhotoExhibitPage.vue';
 import ProjectsPage from '@/pages/ProjectsPage.vue';
 import ResumePage from '@/pages/ResumePage.vue';
