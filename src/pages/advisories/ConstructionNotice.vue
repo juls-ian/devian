@@ -41,6 +41,10 @@
         height: auto;
         width: 100%;
       }
+
+      @include respond-to(lg) {
+        margin-top: 2rem;
+      }
     }
 
     &__footer {
@@ -48,12 +52,8 @@
       margin-top: -5rem;
       z-index: 1;
 
-      @include respond-to(sm) {
-        margin-top: -8rem;
-      }
-
       @include respond-to(lg) {
-        margin-top: -20rem;
+        margin-top: -8rem;
       }
     }
   }
