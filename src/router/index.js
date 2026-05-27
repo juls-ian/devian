@@ -1,4 +1,5 @@
 import AboutPage from '@/pages/AboutPage.vue';
+import ConstructionNotice from '@/pages/errors/ConstructionNotice.vue';
 import HomePage from '@/pages/HomePage.vue';
 import PhotoExhibitPage from '@/pages/PhotoExhibitPage.vue';
 import ProjectsPage from '@/pages/ProjectsPage.vue';
@@ -11,7 +12,7 @@ const router = createRouter({
   routes: [
     {
       path: '/',
-      component: HomePage,
+      component: ConstructionNotice,
       meta: { title: 'Julius Ian - Full Stack Developer' }
     },
     {
@@ -53,7 +54,12 @@ router.beforeEach((to, from, next) => {
   preload.show();
   document.title = to.meta.title || 'Julius Ian - Full Stack Developer';
   document.body.classList.remove('hidden');
-  next();
+
+  if (to.path !== '/') {
+    next('/');
+  } else {
+    next();
+  }
 });
 
 router.afterEach(async () => {
