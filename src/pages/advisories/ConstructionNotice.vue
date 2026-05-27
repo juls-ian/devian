@@ -35,6 +35,7 @@
       height: 40rem;
       max-width: 100%;
       position: relative;
+      z-index: 2;
 
       @include respond-to(sm) {
         height: auto;
@@ -44,10 +45,15 @@
 
     &__footer {
       position: relative;
-      margin-top: -2rem;
+      margin-top: -5rem;
+      z-index: 1;
 
       @include respond-to(sm) {
-        margin-top: -7rem;
+        margin-top: -8rem;
+      }
+
+      @include respond-to(lg) {
+        margin-top: -20rem;
       }
     }
   }
