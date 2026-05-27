@@ -1,30 +1,28 @@
 <template>
-  <section class="footer" id="footer">
-    <div class="footer__socials">
-      <a href="https://www.instagram.com/juls.ian/">
-        <IconInstagram class="icon" />
-      </a>
-      <a href="https://github.com/juls-ian">
-        <IconGitHub class="icon" />
-      </a>
-      <a href="https://www.linkedin.com/in/julius-ian-valdez">
-        <IconLinkedin class="icon" />
-      </a>
-      <a href="https://gitlab.com/juls-ian">
-        <IconGitlab class="icon" />
-      </a>
-      <a href="https://music.apple.com/profile/juls_iann">
-        <IconAppleMusic class="icon" />
-      </a>
+  <div class="footer__socials">
+    <a href="https://www.instagram.com/juls.ian/">
+      <IconInstagram class="icon" />
+    </a>
+    <a href="https://github.com/juls-ian">
+      <IconGitHub class="icon" />
+    </a>
+    <a href="https://www.linkedin.com/in/julius-ian-valdez">
+      <IconLinkedin class="icon" />
+    </a>
+    <a href="https://gitlab.com/juls-ian">
+      <IconGitlab class="icon" />
+    </a>
+    <a href="https://music.apple.com/profile/juls_iann">
+      <IconAppleMusic class="icon" />
+    </a>
 
-      <a href="https://www.facebook.com/juliusianvaldez">
-        <IconFacebook class="icon" />
-      </a>
-      <a href="">
-        <IconTwitter class="icon" />
-      </a>
-    </div>
-  </section>
+    <a href="https://www.facebook.com/juliusianvaldez">
+      <IconFacebook class="icon" />
+    </a>
+    <a href="">
+      <IconTwitter class="icon" />
+    </a>
+  </div>
 </template>
 
 <script setup>
@@ -40,7 +38,7 @@
 <style lang="scss" scoped>
   @import '@/assets/main.scss';
 
-  .footer {
+  .footer__socials {
     display: flex;
     align-items: center;
     justify-content: center;
